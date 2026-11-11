@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-palette="taller">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Componentes Web Factory · Galería</title>
+<meta name="description" content="Galería interna de componentes reutilizables de Web Factory para sitios de comercios de barrio.">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<script src="components.js" defer></script>
+<style>
+/* Estilos SOLO de esta galería (doc-*). No se copian a sitios de clientes. */
+.doc-top { padding-block: var(--wf-space-5) var(--wf-space-6); }
+.doc-top h1 { font-size: var(--wf-text-3xl); margin-top: var(--wf-space-3); }
+.doc-top p { max-width: 42rem; }
+.doc-barra {
+  position: sticky; top: 0; z-index: 40;
+  padding-block: var(--wf-space-2);
+  background: var(--wf-bg);
+  border-block: var(--wf-borde) solid var(--wf-ink);
+}
+.doc-indice { display: flex; flex-wrap: wrap; gap: 0 var(--wf-space-4); margin: var(--wf-space-4) 0 0; padding: 0; list-style: none; font-size: var(--wf-text-s); }
+.doc-indice a { display: inline-flex; align-items: center; min-height: var(--wf-tap); color: inherit; text-underline-offset: 0.22em; }
+.doc-sec { padding-top: var(--wf-space-7); scroll-margin-top: 4.5rem; }
+.doc-head { padding-bottom: var(--wf-space-4); }
+.doc-head h2 { font-size: var(--wf-text-xl); }
+.doc-head h2 code { font-family: var(--wf-font-mono); font-size: var(--wf-text-s); font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--wf-ink-soft); }
+.doc-head p { max-width: 44rem; margin: var(--wf-space-2) 0 0; }
+.doc-head dl { display: grid; gap: var(--wf-space-1); margin: var(--wf-space-3) 0 0; font-size: var(--wf-text-s); }
+.doc-head dt { font-family: var(--wf-font-mono); font-size: var(--wf-text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--wf-ink-soft); }
+.doc-head dd { margin: 0 0 var(--wf-space-2); }
+.doc-head code, .doc-top code { font-family: var(--wf-font-mono); font-size: 0.9em; overflow-wrap: anywhere; }
+.doc-demo { border-block: 1px dashed var(--wf-line-strong); }
+.doc-variante { margin: 0; padding-block: var(--wf-space-3); font-family: var(--wf-font-mono); font-size: var(--wf-text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--wf-ink-soft); }
+.doc-pie { padding-block: var(--wf-space-6) calc(var(--wf-space-6) + 4.5rem + env(safe-area-inset-bottom, 0px)); font-size: var(--wf-text-s); color: var(--wf-ink-soft); }
+@media (min-width: 48rem) {
+  .doc-head dl { grid-template-columns: 9rem minmax(0, 1fr); gap: var(--wf-space-1) var(--wf-space-4); }
+  .doc-head dd { margin-bottom: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Sprite de íconos: copiar este <svg> completo al inicio del <body> del sitio -->
+<svg class="wf-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="wf-i-herramienta" viewBox="0 0 24 24"><path d="M5 4h10l4 3v3H5z"/><path d="M12 10v10"/></symbol>
+  <symbol id="wf-i-carrito" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.3l2-7.5H6.6"/><circle cx="9.5" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></symbol>
+  <symbol id="wf-i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="wf-i-ubicacion" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.800-6.5 11-6.500 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="wf-i-telefono" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="wf-i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="wf-i-calendario" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+  <symbol id="wf-i-tijera" viewBox="0 0 24 24"><circle cx="6.5" cy="17.500" r="2.5"/><circle cx="17.500" cy="17.500" r="2.5"/><path d="M8 15.500L17 4M16 15.500L7 4"/></symbol>
+  <symbol id="wf-i-diente" viewBox="0 0 24 24"><path d="M7.5 3.5c-2.3 0-3.5 1.800-3.5 4 0 2 .8 3.2 1.200 5 .5 2.3.6 8 2.300 8 1.600 0 1.200-5 3-5h3c1.800 0 1.400 5 3 5 1.700 0 1.800-5.700 2.300-8 .4-1.800 1.200-3 1.200-5 0-2.200-1.200-4-3.500-4-1.800 0-2.700 1-4.500 1s-2.700-1-4.500-1z"/></symbol>
+  <symbol id="wf-i-casa" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.500V20h12V9.500"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="wf-i-pata" viewBox="0 0 24 24"><path d="M12 12c-2.800 0-5 2.300-5 4.600 0 1.600 1.200 2.400 2.600 2.400 1 0 1.500-.5 2.400-.5s1.400.5 2.400.5c1.400 0 2.600-.8 2.600-2.400 0-2.300-2.200-4.600-5-4.600z"/><circle cx="6" cy="10" r="1.600"/><circle cx="9.500" cy="6" r="1.600"/><circle cx="14.500" cy="6" r="1.600"/><circle cx="18" cy="10" r="1.600"/></symbol>
+  <symbol id="wf-i-pelota" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8l3.800 2.800-1.500 4.400H9.700l-1.500-4.400z"/><path d="M12 8V3.200M15.800 10.800l4.600-1.600M14.300 15.200l2.900 4M9.700 15.200l-2.900 4M8.200 10.800L3.600 9.200"/></symbol>
+  <symbol id="wf-i-impresora3d" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M6 20V4h12v16"/><path d="M6 8h12"/><path d="M10.500 8v2.500h3V8M12 10.500V12"/><path d="M9 20v-4h6v4"/></symbol>
+  <symbol id="wf-i-etiqueta" viewBox="0 0 24 24"><path d="M3.500 12.500V4.500a1 1 0 0 1 1-1h8l8 8a1.400 1.400 0 0 1 0 2l-7 7a1.400 1.400 0 0 1-2 0z"/><circle cx="8" cy="8" r="1.300"/></symbol>
+  <symbol id="wf-i-camion" viewBox="0 0 24 24"><path d="M2.500 6h11v10h-11z"/><path d="M13.500 9.500h4l3 3.500v3h-7"/><circle cx="7" cy="17.500" r="2"/><circle cx="17" cy="17.500" r="2"/></symbol>
+  <symbol id="wf-i-tarjeta" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></symbol>
+  <symbol id="wf-i-estrella" viewBox="0 0 24 24"><path d="M12 3.500l2.600 5.400 5.900.8-4.300 4.100 1 5.900L12 16.900l-5.200 2.800 1-5.900-4.300-4.100 5.900-.8z"/></symbol>
+  <symbol id="wf-i-check" viewBox="0 0 24 24"><path d="M4.500 12.500l5 5L19.500 7"/></symbol>
+  <symbol id="wf-i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="wf-i-cerrar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<header class="doc-top wf-container">
+  <a class="wf-link" href="../">← Previews Fable</a>
+  <h1 class="wf-display">Componentes Web Factory</h1>
+  <p>Piezas estáticas para armar webs de comercios de barrio: se copian, se les cambia la paleta y se completan los <code>{{PLACEHOLDERS}}</code> con datos reales del cliente. Acá no hay ni un precio, teléfono, dirección o reseña inventados: todo lo que va entre llaves lo pone el negocio.</p>
+  <nav aria-label="Componentes">
+    <ul class="doc-indice">
+      <li><a href="#c-hero">hero</a></li>
+      <li><a href="#c-catalogo">catalogo</a></li>
+      <li><a href="#c-tarifario">tarifario</a></li>
+      <li><a href="#c-galeria">galeria</a></li>
+      <li><a href="#c-turnos">turnos</a></li>
+      <li><a href="#c-faq">faq</a></li>
+      <li><a href="#c-whatsapp-flotante">whatsapp-flotante</a></li>
+      <li><a href="#c-horarios-ubicacion">horarios-ubicacion</a></li>
+      <li><a href="#c-testimonios">testimonios</a></li>
+      <li><a href="#c-cta-banda">cta-banda</a></li>
+      <li><a href="#c-footer">footer</a></li>
+      <li><a href="#c-iconos">iconos</a></li>
+      <li><a href="#c-tokens">tokens</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Selector de paleta: lo muestra components.js (sin JS queda la paleta "taller") -->
+<div class="doc-barra" data-wf-paleta hidden>
+  <div class="wf-container wf-paleta" role="group" aria-label="Paleta de la galería">
+    <p class="wf-paleta__rotulo">Paleta</p>
+    <button type="button" class="wf-chip" data-wf-paleta-op="taller" aria-pressed="true">Taller</button>
+    <button type="button" class="wf-chip" data-wf-paleta-op="almacen" aria-pressed="false">Almacén</button>
+    <button type="button" class="wf-chip" data-wf-paleta-op="salud" aria-pressed="false">Salud</button>
+    <button type="button" class="wf-chip" data-wf-paleta-op="noche" aria-pressed="false">Noche</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ====================================================================== HERO -->
+<section id="c-hero" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Hero <code>.wf-hero</code></h2>
+    <p>Lo primero que se ve. Abre con la oferta local (rubro, barrio, horario) y un solo botón a WhatsApp. Dos variantes: asimétrica con foto, y “cartel” tipográfico para cuando el cliente todavía no tiene fotos.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todos. La asimétrica en gastro, salud y estética (la foto manda); el cartel en oficios, ferreterías, canchas y eventos.</dd>
+      <dt>Necesita</dt><dd><code>.wf-hero</code>, <code>.wf-hero--cartel</code> + <code>.wf-cartel</code>, <code>.wf-btn</code>, <code>.wf-icon</code> · tokens.css, components.css, sprite de íconos. En el sitio real el título va en <code>&lt;h1&gt;</code>.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <p class="doc-variante wf-container">Variante 1 · asimétrica con foto</p>
+    <div class="wf-hero">
+      <div class="wf-container wf-hero__grid">
+        <div class="wf-hero__texto">
+          <p class="wf-kicker">{{RUBRO}} · {{BARRIO}}</p>
+          <h3 class="wf-hero__titulo">{{NOMBRE_NEGOCIO}}</h3>
+          <p class="wf-hero__bajada">{{PROPUESTA_EN_UNA_LINEA}}</p>
+          <ul class="wf-hero__datos">
+            <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-reloj"/></svg><span>{{HORARIO_RESUMEN}}</span></li>
+            <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-ubicacion"/></svg><span>{{DIRECCION}}, {{LOCALIDAD}}</span></li>
+            <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-etiqueta"/></svg><span>{{PROMO_O_PRECIO_DESDE}}</span></li>
+          </ul>
+          <div class="wf-hero__acciones">
+            <a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Vi%20la%20web%20y%20quiero%20consultar.">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+              Escribinos por WhatsApp
+            </a>
+            <a class="wf-link" href="https://www.google.com/maps/search/?api=1&amp;query={{DIRECCION_URLENCODED}}">Cómo llegar</a>
+          </div>
+        </div>
+        <figure class="wf-hero__media">
+          <!-- Reemplazar por <img> con foto real del local, del trabajo o del plato -->
+          <svg viewBox="0 0 400 420" role="img" aria-label="Ilustración provisoria de un local a la calle. Va la foto real del negocio.">
+            <rect class="wf-art__pared" width="400" height="420"/>
+            <rect class="wf-art__cartel" x="40" y="36" width="320" height="64"/>
+            <text class="wf-art__cartel-txt" x="200" y="77" text-anchor="middle">{{FOTO_HERO}}</text>
+            <polygon class="wf-art__toldo-a" points="30,120 98,120 86,180 10,180"/>
+            <polygon class="wf-art__toldo-b" points="98,120 166,120 162,180 86,180"/>
+            <polygon class="wf-art__toldo-a" points="166,120 234,120 238,180 162,180"/>
+            <polygon class="wf-art__toldo-b" points="234,120 302,120 314,180 238,180"/>
+            <polygon class="wf-art__toldo-a" points="302,120 370,120 390,180 314,180"/>
+            <polygon class="wf-art__linea" points="30,120 370,120 390,180 10,180"/>
+            <rect class="wf-art__vidrio" x="40" y="212" width="190" height="150"/>
+            <path class="wf-art__linea" d="M40 212h190v150H40zM135 212v150M40 287h190"/>
+            <rect class="wf-art__puerta" x="262" y="212" width="98" height="188"/>
+            <circle class="wf-art__toldo-a" cx="280" cy="310" r="6"/>
+            <rect class="wf-art__vereda" y="400" width="400" height="20"/>
+          </svg>
+          <figcaption class="wf-hero__sello">{{DATO_DESTACADO}}</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p class="doc-variante wf-container">Variante 2 · cartel tipográfico, sin foto</p>
+    <div class="wf-hero wf-hero--cartel">
+      <div class="wf-container">
+        <div class="wf-cartel">
+          <p class="wf-cartel__nombre">{{NOMBRE_NEGOCIO}}</p>
+          <h3 class="wf-cartel__rubro">{{RUBRO}}</h3>
+          <p class="wf-cartel__donde">en {{BARRIO}}</p>
+          <div class="wf-cartel__pie">
+            <ul class="wf-cartel__datos">
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-reloj"/></svg><span>{{HORARIO_RESUMEN}}</span></li>
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-ubicacion"/></svg><span>{{DIRECCION}}, {{LOCALIDAD}}</span></li>
+            </ul>
+            <a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Vi%20la%20web%20y%20quiero%20consultar.">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+              Consultá por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================== CATÁLOGO -->
+<section id="c-catalogo" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Catálogo <code>.wf-catalogo</code></h2>
+    <p>Productos o servicios con filtro por categoría. En el celular es una lista densa tipo carta; en pantalla grande, grilla con una tarjeta destacada que rompe el ritmo. El precio siempre lo pasa el cliente.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Ferreterías, almacenes, viandas, impresión 3D, pet shops, servicios de estética con lista de prestaciones.</dd>
+      <dt>Necesita</dt><dd><code>.wf-catalogo</code>, <code>.wf-card</code>, <code>.wf-chip</code>, <code>.wf-ph</code> · components.js para el filtro (<code>data-wf-catalogo</code>, <code>data-wf-filtros</code>, <code>data-wf-filtro</code>, <code>data-wf-cat</code>). Sin JS se ve todo el listado.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-catalogo wf-section" data-wf-catalogo>
+      <div class="wf-container">
+        <p class="wf-kicker">{{CATALOGO_KICKER}}</p>
+        <h3 class="wf-titulo">Lo que tenemos</h3>
+        <p class="wf-bajada">Si no encontrás lo que buscás, preguntanos: {{ACLARACION_STOCK}}.</p>
+
+        <div class="wf-catalogo__filtros" data-wf-filtros role="group" aria-label="Filtrar por categoría" hidden>
+          <button type="button" class="wf-chip" data-wf-filtro="todos" aria-pressed="true">Todo</button>
+          <button type="button" class="wf-chip" data-wf-filtro="cat-1" aria-pressed="false">{{CATEGORIA_1}}</button>
+          <button type="button" class="wf-chip" data-wf-filtro="cat-2" aria-pressed="false">{{CATEGORIA_2}}</button>
+          <button type="button" class="wf-chip" data-wf-filtro="cat-3" aria-pressed="false">{{CATEGORIA_3}}</button>
+        </div>
+        <p class="wf-catalogo__estado" data-wf-estado aria-live="polite"></p>
+
+        <ul class="wf-catalogo__grilla">
+          <li class="wf-card wf-card--destacado" data-wf-cat="cat-1">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 1">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-estrella"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_1}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_1}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_1}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_1}}</p>
+              <p class="wf-card__precio">{{PRECIO_1}}</p>
+            </div>
+          </li>
+          <li class="wf-card" data-wf-cat="cat-1">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 2">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-etiqueta"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_2}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_1}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_2}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_2}}</p>
+              <p class="wf-card__precio">{{PRECIO_2}}</p>
+            </div>
+          </li>
+          <li class="wf-card" data-wf-cat="cat-2">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 3">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-carrito"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_3}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_2}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_3}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_3}}</p>
+              <p class="wf-card__precio">{{PRECIO_3}}</p>
+            </div>
+          </li>
+          <li class="wf-card" data-wf-cat="cat-2">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 4">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-herramienta"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_4}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_2}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_4}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_4}}</p>
+              <p class="wf-card__precio">{{PRECIO_4}}</p>
+            </div>
+          </li>
+          <li class="wf-card" data-wf-cat="cat-3">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 5">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-camion"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_5}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_3}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_5}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_5}}</p>
+              <p class="wf-card__precio">{{PRECIO_5}}</p>
+            </div>
+          </li>
+          <li class="wf-card" data-wf-cat="cat-3">
+            <div class="wf-card__foto wf-ph" role="img" aria-label="Foto pendiente del producto 6">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-tarjeta"/></svg>
+              <span class="wf-ph__txt">{{FOTO_PRODUCTO_6}}</span>
+            </div>
+            <div class="wf-card__cuerpo">
+              <p class="wf-card__cat">{{CATEGORIA_3}}</p>
+              <h4 class="wf-card__nombre">{{PRODUCTO_6}}</h4>
+              <p class="wf-card__detalle">{{DETALLE_PRODUCTO_6}}</p>
+              <p class="wf-card__precio">{{PRECIO_6}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= TARIFARIO -->
+<section id="c-tarifario" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Tarifario <code>.wf-tarifario</code></h2>
+    <p>Tres planes o tarifas. En el celular son renglones con nombre a la izquierda y precio a la derecha; desde 900px pasan a tres columnas y el destacado sube un escalón.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Gimnasios, canchas por hora, abonos de consultorio, salones de eventos, lavaderos, clases.</dd>
+      <dt>Necesita</dt><dd><code>.wf-tarifario</code>, <code>.wf-plan</code>, <code>.wf-plan--destacado</code>, <code>.wf-btn</code> · sin JS.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-tarifario wf-section">
+      <div class="wf-container">
+        <p class="wf-kicker">{{TARIFARIO_KICKER}}</p>
+        <h3 class="wf-titulo">Cuánto sale</h3>
+        <p class="wf-bajada">Precios vigentes a {{FECHA_ACTUALIZACION_PRECIOS}}. {{MEDIOS_DE_PAGO}}.</p>
+
+        <ul class="wf-tarifario__lista">
+          <li class="wf-plan">
+            <h4 class="wf-plan__nombre">{{PLAN_1_NOMBRE}}</h4>
+            <p class="wf-plan__precio">{{PLAN_1_PRECIO}}</p>
+            <p class="wf-plan__unidad">{{PLAN_1_UNIDAD}}</p>
+            <ul class="wf-plan__items">
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_1_ITEM_1}}</span></li>
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_1_ITEM_2}}</span></li>
+            </ul>
+            <a class="wf-btn wf-btn--linea wf-btn--ancho wf-plan__cta" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Quiero%20consultar%20por%20{{PLAN_1_NOMBRE_URLENCODED}}.">Consultar por este</a>
+          </li>
+          <li class="wf-plan wf-plan--destacado">
+            <p class="wf-plan__etiqueta">{{ETIQUETA_DESTACADO}}</p>
+            <h4 class="wf-plan__nombre">{{PLAN_2_NOMBRE}}</h4>
+            <p class="wf-plan__precio">{{PLAN_2_PRECIO}}</p>
+            <p class="wf-plan__unidad">{{PLAN_2_UNIDAD}}</p>
+            <ul class="wf-plan__items">
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_2_ITEM_1}}</span></li>
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_2_ITEM_2}}</span></li>
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_2_ITEM_3}}</span></li>
+            </ul>
+            <a class="wf-btn wf-btn--ancho wf-plan__cta" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Quiero%20consultar%20por%20{{PLAN_2_NOMBRE_URLENCODED}}.">Consultar por este</a>
+          </li>
+          <li class="wf-plan">
+            <h4 class="wf-plan__nombre">{{PLAN_3_NOMBRE}}</h4>
+            <p class="wf-plan__precio">{{PLAN_3_PRECIO}}</p>
+            <p class="wf-plan__unidad">{{PLAN_3_UNIDAD}}</p>
+            <ul class="wf-plan__items">
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_3_ITEM_1}}</span></li>
+              <li><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><span>{{PLAN_3_ITEM_2}}</span></li>
+            </ul>
+            <a class="wf-btn wf-btn--linea wf-btn--ancho wf-plan__cta" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Quiero%20consultar%20por%20{{PLAN_3_NOMBRE_URLENCODED}}.">Consultar por este</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== GALERÍA -->
+<section id="c-galeria" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Galería <code>.wf-galeria</code></h2>
+    <p>Mosaico de fotos con tamaños desparejos. Con JS, cada foto se amplía en un lightbox: Esc cierra, las flechas pasan de foto y el foco no se escapa del cuadro.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Trabajos terminados (herrería, pintura, tapicería), platos, cortes, antes y después, salones y canchas.</dd>
+      <dt>Necesita</dt><dd><code>.wf-galeria</code>, <code>.wf-galeria__item</code> (<code>--grande</code>, <code>--ancho</code>) · components.js para el lightbox (<code>data-wf-galeria</code>, <code>data-wf-lightbox</code>, opcional <code>data-wf-full="foto-grande.jpg"</code>). Sin JS queda el mosaico fijo.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-galeria wf-section" data-wf-galeria>
+      <div class="wf-container">
+        <p class="wf-kicker">{{GALERIA_KICKER}}</p>
+        <h3 class="wf-titulo">Mirá cómo queda</h3>
+        <div class="wf-nota">
+          <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg>
+          <span>Nota interna: solo fotos reales del cliente, con permiso de quien aparezca. Cada <code>.wf-ph</code> se reemplaza por un <code>&lt;img&gt;</code> con <code>alt</code> descriptivo.</span>
+        </div>
+        <div class="wf-galeria__grilla">
+          <figure class="wf-galeria__item wf-galeria__item--grande" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 1">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-casa"/></svg>
+              <span class="wf-ph__txt">{{FOTO_1}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_1}}</figcaption>
+          </figure>
+          <figure class="wf-galeria__item" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 2">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-herramienta"/></svg>
+              <span class="wf-ph__txt">{{FOTO_2}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_2}}</figcaption>
+          </figure>
+          <figure class="wf-galeria__item" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 3">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-tijera"/></svg>
+              <span class="wf-ph__txt">{{FOTO_3}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_3}}</figcaption>
+          </figure>
+          <figure class="wf-galeria__item wf-galeria__item--ancho" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 4">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-pelota"/></svg>
+              <span class="wf-ph__txt">{{FOTO_4}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_4}}</figcaption>
+          </figure>
+          <figure class="wf-galeria__item wf-galeria__item--ancho" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 5">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-pata"/></svg>
+              <span class="wf-ph__txt">{{FOTO_5}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_5}}</figcaption>
+          </figure>
+          <figure class="wf-galeria__item wf-galeria__item--ancho" data-wf-lightbox>
+            <div class="wf-ph" role="img" aria-label="Foto pendiente 6">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-impresora3d"/></svg>
+              <span class="wf-ph__txt">{{FOTO_6}}</span>
+            </div>
+            <figcaption>{{EPIGRAFE_6}}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== TURNOS -->
+<section id="c-turnos" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Turnos <code>.wf-turnos</code></h2>
+    <p>Formulario corto que no guarda nada: arma un mensaje de WhatsApp con servicio, día, franja y nombre, y lo abre listo para enviar. El negocio confirma por chat.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Barberías, peluquerías, consultorios, odontología, estética, veterinarias, canchas, talleres con turno.</dd>
+      <dt>Necesita</dt><dd><code>.wf-turnos</code>, <code>.wf-campo</code>, <code>.wf-opcion</code>, <code>.wf-aviso</code>, <code>.wf-btn</code> · components.js (<code>data-wf-turnos</code>, <code>data-wf-whatsapp</code>, <code>data-wf-campo</code>). Sin JS el botón abre WhatsApp con un mensaje genérico.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-turnos wf-section">
+      <div class="wf-container wf-turnos__grid">
+        <div class="wf-turnos__intro">
+          <p class="wf-kicker">{{TURNOS_KICKER}}</p>
+          <h3 class="wf-titulo">Pedí tu turno</h3>
+          <p class="wf-bajada">Elegí qué necesitás y cuándo te queda cómodo. Te armamos el mensaje y lo mandás vos desde tu WhatsApp.</p>
+          <p class="wf-aviso">
+            <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+            <span>El turno no queda reservado hasta que te lo confirmemos por WhatsApp.</span>
+          </p>
+        </div>
+
+        <form class="wf-turnos__form" action="https://wa.me/{{WHATSAPP}}" method="get" target="_blank" rel="noopener" data-wf-turnos data-wf-whatsapp="{{WHATSAPP}}">
+          <!-- Respaldo sin JS: se manda solo este texto -->
+          <input type="hidden" name="text" value="¡Hola! Quiero pedir un turno.">
+
+          <div class="wf-campo">
+            <label class="wf-campo__label" for="wf-turno-servicio">¿Qué necesitás?</label>
+            <select class="wf-campo__control" id="wf-turno-servicio" data-wf-campo="servicio" required>
+              <option value="">Elegí un servicio</option>
+              <option>{{SERVICIO_1}}</option>
+              <option>{{SERVICIO_2}}</option>
+              <option>{{SERVICIO_3}}</option>
+            </select>
+          </div>
+
+          <div class="wf-campo">
+            <label class="wf-campo__label" for="wf-turno-dia">¿Qué día?</label>
+            <input class="wf-campo__control" type="date" id="wf-turno-dia" data-wf-campo="dia" required>
+          </div>
+
+          <fieldset class="wf-campo">
+            <legend class="wf-campo__label">¿En qué franja?</legend>
+            <!-- Ajustar las franjas a {{HORARIO_*}} del negocio -->
+            <div class="wf-opciones">
+              <label class="wf-opcion"><input type="radio" name="franja" value="Mañana" data-wf-campo="franja" required><span>Mañana</span></label>
+              <label class="wf-opcion"><input type="radio" name="franja" value="Mediodía" data-wf-campo="franja"><span>Mediodía</span></label>
+              <label class="wf-opcion"><input type="radio" name="franja" value="Tarde" data-wf-campo="franja"><span>Tarde</span></label>
+            </div>
+          </fieldset>
+
+          <div class="wf-campo">
+            <label class="wf-campo__label" for="wf-turno-nombre">Tu nombre</label>
+            <input class="wf-campo__control" type="text" id="wf-turno-nombre" data-wf-campo="nombre" autocomplete="given-name" required>
+          </div>
+
+          <button class="wf-btn wf-btn--ancho" type="submit">
+            <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-calendario"/></svg>
+            Armar mensaje de WhatsApp
+          </button>
+          <p class="wf-turnos__salida" data-wf-turnos-salida aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================= FAQ -->
+<section id="c-faq" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Preguntas frecuentes <code>.wf-faq</code></h2>
+    <p>Acordeón nativo con <code>&lt;details&gt;</code>: funciona sin JS y con teclado. Sirve para sacarle al dueño las cinco preguntas que contesta todos los días por WhatsApp.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todos. Especialmente turnos, medios de pago, envíos, garantías y estacionamiento.</dd>
+      <dt>Necesita</dt><dd><code>.wf-faq</code>, <code>.wf-faq__item</code> · sin JS. Los ítems marcados “Ejemplo” son guía de redacción: se reemplazan o se borran.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-faq wf-section">
+      <div class="wf-container">
+        <p class="wf-kicker">Antes de escribirnos</p>
+        <h3 class="wf-titulo">Lo que más nos preguntan</h3>
+        <div class="wf-faq__lista">
+          <details class="wf-faq__item">
+            <summary>{{PREGUNTA_1}}</summary>
+            <p>{{RESPUESTA_1}}</p>
+          </details>
+          <details class="wf-faq__item">
+            <summary>{{PREGUNTA_2}}</summary>
+            <p>{{RESPUESTA_2}}</p>
+          </details>
+          <details class="wf-faq__item">
+            <summary>{{PREGUNTA_3}}</summary>
+            <p>{{RESPUESTA_3}}</p>
+          </details>
+          <details class="wf-faq__item">
+            <summary><span><span class="wf-faq__ejemplo">Ejemplo</span>¿Hay que sacar turno o puedo pasar directamente?</span></summary>
+            <p>Ejemplo, reemplazar: contá si atendés con turno, por orden de llegada o las dos cosas. {{RESPUESTA_TURNOS}}</p>
+          </details>
+          <details class="wf-faq__item">
+            <summary><span><span class="wf-faq__ejemplo">Ejemplo</span>¿Cómo se puede pagar?</span></summary>
+            <p>Ejemplo, reemplazar: listá solo los medios que el negocio acepta de verdad. {{MEDIOS_DE_PAGO}}</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= WHATSAPP FLOTANTE -->
+<section id="c-whatsapp-flotante" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">WhatsApp flotante <code>.wf-wa</code></h2>
+    <p>Botón fijo abajo a la derecha (lo estás viendo en esta página). En el celular es solo el ícono; desde 640px suma el texto. Respeta la zona segura del teléfono y el footer deja aire para que no le tape el crédito.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todos los que atienden por WhatsApp. Uno solo por página, al final del <code>&lt;body&gt;</code>.</dd>
+      <dt>Necesita</dt><dd><code>.wf-wa</code>, <code>.wf-icon</code> + símbolo <code>#wf-i-chat</code> (ícono propio, no el logo oficial) · sin JS.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-container">
+      <p>El componente es este enlace; por ser <code>position: fixed</code> aparece en la esquina y no acá adentro.</p>
+    </div>
+    <a class="wf-wa" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Vi%20la%20web%20y%20quiero%20consultar." aria-label="Escribinos por WhatsApp">
+      <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+      <span class="wf-wa__texto" aria-hidden="true">Escribinos</span>
+    </a>
+  </div>
+</section>
+
+<!-- ======================================================= HORARIOS Y UBICACIÓN -->
+<section id="c-horarios-ubicacion" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Horarios y ubicación <code>.wf-donde</code></h2>
+    <p>Tabla de horarios y un bloque de mapa dibujado con CSS que lleva a Google Maps. No carga iframes ni nada de afuera, así la página sigue liviana.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todo local a la calle. Para quien trabaja a domicilio, cambiar el mapa por la zona de cobertura.</dd>
+      <dt>Necesita</dt><dd><code>.wf-donde</code>, <code>.wf-horarios</code>, <code>.wf-mapa</code>, <code>.wf-btn</code> · sin JS.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-donde wf-section">
+      <div class="wf-container">
+        <p class="wf-kicker">{{BARRIO}} · {{LOCALIDAD}}</p>
+        <h3 class="wf-titulo">Cuándo y dónde</h3>
+        <div class="wf-donde__grid">
+          <table class="wf-horarios">
+            <caption>Horarios de atención</caption>
+            <tbody>
+              <tr><th scope="row">Lunes a viernes</th><td>{{HORARIO_LUN_VIE}}</td></tr>
+              <tr><th scope="row">Sábados</th><td>{{HORARIO_SABADO}}</td></tr>
+              <tr><th scope="row">Domingos</th><td>{{HORARIO_DOMINGO}}</td></tr>
+              <tr><th scope="row">Feriados</th><td>{{HORARIO_FERIADOS}}</td></tr>
+            </tbody>
+          </table>
+
+          <div class="wf-mapa">
+            <p class="wf-mapa__leyenda">Mapa ilustrativo</p>
+            <span class="wf-mapa__pin" aria-hidden="true">
+              <svg class="wf-icon" focusable="false"><use href="#wf-i-ubicacion"/></svg>
+            </span>
+            <div class="wf-mapa__ficha">
+              <p><strong>{{DIRECCION}}</strong></p>
+              <p>{{LOCALIDAD}} · {{REFERENCIA_COMO_LLEGAR}}</p>
+              <a class="wf-link" href="https://www.google.com/maps/search/?api=1&amp;query={{DIRECCION_URLENCODED}}" target="_blank" rel="noopener">
+                Cómo llegar
+                <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-flecha"/></svg>
+                <span class="wf-sr-only">(abre Google Maps en otra pestaña)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== TESTIMONIOS -->
+<section id="c-testimonios" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Testimonios <code>.wf-testimonios</code></h2>
+    <p>Estructura para reseñas reales: una grande y dos de apoyo. Si el cliente no tiene reseñas con permiso para publicar, esta sección no va.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Oficios, salud, estética y eventos, donde la recomendación pesa más que la foto.</dd>
+      <dt>Necesita</dt><dd><code>.wf-testimonios</code>, <code>.wf-testimonio</code>, <code>.wf-testimonio--grande</code> · sin JS. Formato: <code>{{TESTIMONIO_1}} — {{NOMBRE_CLIENTE_1}}</code>.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-testimonios wf-section">
+      <div class="wf-container">
+        <p class="wf-kicker">Lo dicen los clientes</p>
+        <h3 class="wf-titulo">Así nos fue con ellos</h3>
+        <div class="wf-nota">
+          <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-estrella"/></svg>
+          <span>Usar solo reseñas reales con permiso. Nunca inventar ni “mejorar” un testimonio. Borrar esta nota al publicar.</span>
+        </div>
+        <div class="wf-testimonios__grilla">
+          <figure class="wf-testimonio wf-testimonio--grande">
+            <blockquote><p>{{TESTIMONIO_1}}</p></blockquote>
+            <figcaption>— {{NOMBRE_CLIENTE_1}}<span class="wf-testimonio__fuente">{{FUENTE_RESENA_1}}</span></figcaption>
+          </figure>
+          <figure class="wf-testimonio">
+            <blockquote><p>{{TESTIMONIO_2}}</p></blockquote>
+            <figcaption>— {{NOMBRE_CLIENTE_2}}<span class="wf-testimonio__fuente">{{FUENTE_RESENA_2}}</span></figcaption>
+          </figure>
+          <figure class="wf-testimonio">
+            <blockquote><p>{{TESTIMONIO_3}}</p></blockquote>
+            <figcaption>— {{NOMBRE_CLIENTE_3}}<span class="wf-testimonio__fuente">{{FUENTE_RESENA_3}}</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= CTA BANDA -->
+<section id="c-cta-banda" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">CTA banda <code>.wf-cta</code></h2>
+    <p>Franja de color pleno para cortar la página y empujar al WhatsApp. Una pregunta concreta, un dato local y un botón; nada más.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todos. Va bien después del catálogo o del tarifario, y antes del footer.</dd>
+      <dt>Necesita</dt><dd><code>.wf-cta</code>, <code>.wf-btn</code> · sin JS.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-cta">
+      <div class="wf-container wf-cta__grid">
+        <div>
+          <h3 class="wf-cta__titulo">¿No sabés si es para vos? Preguntanos.</h3>
+          <p class="wf-cta__sub">Atendemos {{HORARIO_RESUMEN}} en {{BARRIO}}.</p>
+        </div>
+        <a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=%C2%A1Hola%21%20Vi%20la%20web%20y%20quiero%20consultar.">
+          <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== FOOTER -->
+<section id="c-footer" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Footer <code>.wf-footer</code></h2>
+    <p>Cierre con los datos que la gente busca al final: dirección, teléfono, redes. Incluye el crédito de Web Factory y aire abajo para el botón flotante.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Todos. Borrar los renglones de redes que el negocio no use.</dd>
+      <dt>Necesita</dt><dd><code>.wf-footer</code>, <code>.wf-icon</code> · sin JS.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <footer class="wf-footer">
+      <div class="wf-container">
+        <div class="wf-footer__grid">
+          <div>
+            <h3 class="wf-footer__nombre">{{NOMBRE_NEGOCIO}}</h3>
+            <p>{{RUBRO}} en {{BARRIO}}, {{LOCALIDAD}}.</p>
+          </div>
+          <div>
+            <h4 class="wf-footer__subtitulo">Contacto</h4>
+            <ul class="wf-footer__lista">
+              <li><a href="https://www.google.com/maps/search/?api=1&amp;query={{DIRECCION_URLENCODED}}"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-ubicacion"/></svg>{{DIRECCION}}</a></li>
+              <li><a href="tel:{{TELEFONO_LINK}}"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-telefono"/></svg>{{TELEFONO}}</a></li>
+              <li><a href="https://wa.me/{{WHATSAPP}}"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>WhatsApp {{WHATSAPP_VISIBLE}}</a></li>
+              <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="wf-footer__subtitulo">Redes</h4>
+            <ul class="wf-footer__lista">
+              <li><a href="https://www.instagram.com/{{INSTAGRAM_USUARIO}}/">Instagram @{{INSTAGRAM_USUARIO}}</a></li>
+              <li><a href="https://www.facebook.com/{{FACEBOOK_USUARIO}}">Facebook {{FACEBOOK_USUARIO}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="wf-footer__credito">© {{ANIO}} {{NOMBRE_NEGOCIO}} · Sitio hecho por Web Factory</p>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<!-- ==================================================================== ÍCONOS -->
+<section id="c-iconos" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Íconos <code>.wf-icon</code></h2>
+    <p>Un solo juego de trazo, dibujado para esta librería, a un único grosor. Se usan con <code>&lt;svg class="wf-icon"&gt;&lt;use href="#wf-i-reloj"/&gt;&lt;/svg&gt;</code> y toman el color del texto.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Datos de contacto, listas de tarifario, botones. No usarlos para armar “tres tarjetas con ícono”.</dd>
+      <dt>Necesita</dt><dd>El <code>&lt;svg class="wf-sprite"&gt;</code> del inicio de esta página pegado en el <code>&lt;body&gt;</code> + <code>.wf-icon</code>. Si el ícono es decorativo, <code>aria-hidden="true"</code>.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-container wf-section">
+      <ul class="wf-iconos">
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-herramienta"/></svg><code>wf-i-herramienta</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-carrito"/></svg><code>wf-i-carrito</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-reloj"/></svg><code>wf-i-reloj</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-ubicacion"/></svg><code>wf-i-ubicacion</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-telefono"/></svg><code>wf-i-telefono</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg><code>wf-i-chat</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-calendario"/></svg><code>wf-i-calendario</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-tijera"/></svg><code>wf-i-tijera</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-diente"/></svg><code>wf-i-diente</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-casa"/></svg><code>wf-i-casa</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-pata"/></svg><code>wf-i-pata</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-pelota"/></svg><code>wf-i-pelota</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-impresora3d"/></svg><code>wf-i-impresora3d</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-etiqueta"/></svg><code>wf-i-etiqueta</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-camion"/></svg><code>wf-i-camion</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-tarjeta"/></svg><code>wf-i-tarjeta</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-estrella"/></svg><code>wf-i-estrella</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-check"/></svg><code>wf-i-check</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-flecha"/></svg><code>wf-i-flecha</code></li>
+        <li class="wf-iconos__item"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-cerrar"/></svg><code>wf-i-cerrar</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== TOKENS -->
+<section id="c-tokens" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Tokens <code>.wf-tokens</code></h2>
+    <p>Muestras de la paleta activa y de la escala tipográfica. Cambiá la paleta arriba y mirá cómo cambian color, tipografía display, radios y sombras de toda la página.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Uso interno: para mostrarle al cliente las variantes y para chequear contraste antes de tocar un token.</dd>
+      <dt>Necesita</dt><dd><code>.wf-tokens</code> · tokens.css. No va en sitios de clientes.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-tokens wf-container wf-section">
+      <h3 class="wf-display">Color</h3>
+      <ul class="wf-tokens__colores">
+        <li class="wf-tokens__color" style="--m: var(--wf-bg)">--wf-bg</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-surface)">--wf-surface</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-surface-2)">--wf-surface-2</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-ink)">--wf-ink</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-ink-soft)">--wf-ink-soft</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-line)">--wf-line</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-line-strong)">--wf-line-strong</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-primary)">--wf-primary</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-on-primary)">--wf-on-primary</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-accent)">--wf-accent</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-on-accent)">--wf-on-accent</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-accent-ink)">--wf-accent-ink</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-btn-bg)">--wf-btn-bg</li>
+        <li class="wf-tokens__color" style="--m: var(--wf-btn-ink)">--wf-btn-ink</li>
+      </ul>
+
+      <h3 class="wf-display">Tipografía</h3>
+      <ul class="wf-tokens__tipos">
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-cartel)"><span class="wf-display">Cartel</span><code>--wf-text-cartel · display</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-3xl)"><span class="wf-display">Título de hero</span><code>--wf-text-3xl · display</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-2xl)"><span class="wf-display">Título de sección</span><code>--wf-text-2xl · display</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-xl)"><span class="wf-display">Nombre de plan o precio</span><code>--wf-text-xl · display</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-l)"><span>Bajada y nombre de producto</span><code>--wf-text-l · body</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-m)"><span>Texto corrido: pasá, preguntá, te esperamos.</span><code>--wf-text-m · body</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-s)"><span>Detalle, aviso y footer</span><code>--wf-text-s · body</code></li>
+        <li class="wf-tokens__tipo" style="--t: var(--wf-text-xs)"><span>Rótulos y notas</span><code>--wf-text-xs · mono</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="doc-pie wf-container">
+  <p>Galería interna de Web Factory. No indexar ni compartir como sitio de cliente. <a class="wf-link" href="../">← Previews Fable</a></p>
+</footer>
+
+</body>
+</html>

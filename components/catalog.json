@@ -1,0 +1,119 @@
+[
+  {
+    "id": "hero",
+    "nombre": "Hero",
+    "clase": "wf-hero",
+    "descripcion": "Apertura con la oferta local y un solo CTA a WhatsApp. Dos variantes: asimétrica con foto o ilustración (wf-hero) y cartel tipográfico de rubro sin foto (wf-hero wf-hero--cartel).",
+    "rubros": ["todos", "gastro", "salud", "estetica", "oficios", "ferreteria", "canchas", "eventos"],
+    "placeholders": ["NOMBRE_NEGOCIO", "RUBRO", "BARRIO", "PROPUESTA_EN_UNA_LINEA", "HORARIO_RESUMEN", "DIRECCION", "LOCALIDAD", "PROMO_O_PRECIO_DESDE", "DATO_DESTACADO", "FOTO_HERO", "WHATSAPP", "DIRECCION_URLENCODED"],
+    "js": false
+  },
+  {
+    "id": "catalogo",
+    "nombre": "Catálogo",
+    "clase": "wf-catalogo",
+    "descripcion": "Grilla de productos o servicios con filtro por categoría. Lista densa en móvil, grilla con tarjeta destacada en escritorio. Precios siempre como placeholder.",
+    "rubros": ["ferreteria", "almacen", "viandas", "impresion-3d", "pet-shop", "estetica"],
+    "placeholders": ["CATALOGO_KICKER", "ACLARACION_STOCK", "CATEGORIA_n", "PRODUCTO_n", "DETALLE_PRODUCTO_n", "PRECIO_n", "FOTO_PRODUCTO_n"],
+    "js": true
+  },
+  {
+    "id": "tarifario",
+    "nombre": "Tarifario",
+    "clase": "wf-tarifario",
+    "descripcion": "Tres planes o tarifas: renglones en móvil, tres columnas en escritorio, uno destacado con colores invertidos.",
+    "rubros": ["gimnasios", "canchas", "consultorios", "eventos", "lavaderos", "clases"],
+    "placeholders": ["TARIFARIO_KICKER", "FECHA_ACTUALIZACION_PRECIOS", "MEDIOS_DE_PAGO", "ETIQUETA_DESTACADO", "PLAN_n_NOMBRE", "PLAN_n_PRECIO", "PLAN_n_UNIDAD", "PLAN_n_ITEM_n", "PLAN_n_NOMBRE_URLENCODED", "WHATSAPP"],
+    "js": false
+  },
+  {
+    "id": "galeria",
+    "nombre": "Galería",
+    "clase": "wf-galeria",
+    "descripcion": "Mosaico de fotos con tamaños desparejos y lightbox accesible (Esc cierra, flechas navegan, foco atrapado). Sin JS queda el mosaico.",
+    "rubros": ["oficios", "gastro", "barberia", "estetica", "eventos", "canchas"],
+    "placeholders": ["GALERIA_KICKER", "FOTO_n", "EPIGRAFE_n"],
+    "js": true
+  },
+  {
+    "id": "turnos",
+    "nombre": "Turnos",
+    "clase": "wf-turnos",
+    "descripcion": "Formulario de servicio, día, franja y nombre que arma un mensaje de WhatsApp. Aclara que el turno se confirma por chat. Sin JS abre WhatsApp con un mensaje genérico.",
+    "rubros": ["barberia", "peluqueria", "consultorios", "odontologia", "estetica", "veterinaria", "canchas", "talleres"],
+    "placeholders": ["TURNOS_KICKER", "WHATSAPP", "SERVICIO_n"],
+    "js": true
+  },
+  {
+    "id": "faq",
+    "nombre": "Preguntas frecuentes",
+    "clase": "wf-faq",
+    "descripcion": "Acordeón nativo con details/summary. Incluye ítems de ejemplo marcados como tales para guiar la redacción.",
+    "rubros": ["todos"],
+    "placeholders": ["PREGUNTA_n", "RESPUESTA_n", "RESPUESTA_TURNOS", "MEDIOS_DE_PAGO"],
+    "js": false
+  },
+  {
+    "id": "whatsapp-flotante",
+    "nombre": "WhatsApp flotante",
+    "clase": "wf-wa",
+    "descripcion": "Botón fijo abajo a la derecha con ícono de chat propio y aria-label. Respeta safe-area y no tapa el footer en móvil.",
+    "rubros": ["todos"],
+    "placeholders": ["WHATSAPP"],
+    "js": false
+  },
+  {
+    "id": "horarios-ubicacion",
+    "nombre": "Horarios y ubicación",
+    "clase": "wf-donde",
+    "descripcion": "Tabla de horarios y bloque de mapa estático dibujado con CSS, con link Cómo llegar a Google Maps. Sin iframe.",
+    "rubros": ["todos", "locales-a-la-calle"],
+    "placeholders": ["HORARIO_LUN_VIE", "HORARIO_SABADO", "HORARIO_DOMINGO", "HORARIO_FERIADOS", "DIRECCION", "LOCALIDAD", "BARRIO", "REFERENCIA_COMO_LLEGAR", "DIRECCION_URLENCODED"],
+    "js": false
+  },
+  {
+    "id": "testimonios",
+    "nombre": "Testimonios",
+    "clase": "wf-testimonios",
+    "descripcion": "Estructura para una reseña grande y dos de apoyo. Solo reseñas reales con permiso; si no hay, la sección no va.",
+    "rubros": ["oficios", "salud", "estetica", "eventos"],
+    "placeholders": ["TESTIMONIO_n", "NOMBRE_CLIENTE_n", "FUENTE_RESENA_n"],
+    "js": false
+  },
+  {
+    "id": "cta-banda",
+    "nombre": "CTA banda",
+    "clase": "wf-cta",
+    "descripcion": "Franja de color pleno con una pregunta concreta, un dato local y un botón a WhatsApp.",
+    "rubros": ["todos"],
+    "placeholders": ["HORARIO_RESUMEN", "BARRIO", "WHATSAPP"],
+    "js": false
+  },
+  {
+    "id": "footer",
+    "nombre": "Footer",
+    "clase": "wf-footer",
+    "descripcion": "Datos de contacto, redes y crédito Sitio hecho por Web Factory. Deja aire abajo para el botón flotante.",
+    "rubros": ["todos"],
+    "placeholders": ["NOMBRE_NEGOCIO", "RUBRO", "BARRIO", "LOCALIDAD", "DIRECCION", "DIRECCION_URLENCODED", "TELEFONO", "TELEFONO_LINK", "WHATSAPP", "WHATSAPP_VISIBLE", "EMAIL", "INSTAGRAM_USUARIO", "FACEBOOK_USUARIO", "ANIO"],
+    "js": false
+  },
+  {
+    "id": "iconos",
+    "nombre": "Íconos",
+    "clase": "wf-icon",
+    "descripcion": "Sprite SVG inline de 20 íconos de trazo propios a un solo grosor: herramienta, carrito, reloj, ubicación, teléfono, chat, calendario, tijera, diente, casa, pata, pelota, impresora 3D, etiqueta, camión, tarjeta, estrella, check, flecha y cerrar.",
+    "rubros": ["todos"],
+    "placeholders": [],
+    "js": false
+  },
+  {
+    "id": "tokens",
+    "nombre": "Tokens",
+    "clase": "wf-tokens",
+    "descripcion": "Muestras de color de la paleta activa y escala tipográfica. Uso interno para mostrar variantes y revisar contraste.",
+    "rubros": ["interno"],
+    "placeholders": [],
+    "js": false
+  }
+]

@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Web Factory · tokens.css
+   Tokens de diseño. Se copian tal cual; los componentes solo leen de acá.
+   Paleta: <html data-palette="taller|almacen|salud|noche"> o en cualquier
+   contenedor (ej. <section data-palette="noche">).
+   ========================================================================== */
+
+:root {
+  /* --- Tipografía: pilas de sistema con carácter (sin fuentes web) --- */
+  --wf-font-cond: "Avenir Next Condensed", "DIN Condensed", Bahnschrift,
+    "Franklin Gothic Demi Cond", "Liberation Sans Narrow", "Nimbus Sans Narrow",
+    sans-serif-condensed, Impact, sans-serif;
+  --wf-font-almacen: "Bookman Old Style", "URW Bookman", "Iowan Old Style",
+    "Palatino Linotype", Palatino, "Book Antiqua", "Noto Serif", Georgia, serif;
+  --wf-font-clinica: Charter, "Bitstream Charter", "Sitka Display", "Sitka Text",
+    Cambria, "Noto Serif", serif;
+  --wf-font-body: Seravek, "Gill Sans Nova", "Gill Sans", Candara, Ubuntu,
+    "Noto Sans", "DejaVu Sans", sans-serif;
+  /* Solo para ids, placeholders y notas técnicas */
+  --wf-font-mono: ui-monospace, "Cascadia Mono", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+
+  /* --- Escala tipográfica fluida (390px → 1280px) --- */
+  --wf-text-xs: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --wf-text-s: clamp(0.9375rem, 0.91rem + 0.12vw, 1rem);
+  --wf-text-m: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --wf-text-l: clamp(1.1875rem, 1.1rem + 0.45vw, 1.4375rem);
+  --wf-text-xl: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  --wf-text-2xl: clamp(2rem, 1.55rem + 2.2vw, 3.25rem);
+  --wf-text-3xl: clamp(2.5rem, 1.7rem + 4vw, 5rem);
+  --wf-text-cartel: clamp(3rem, 1.2rem + 9vw, 8.5rem);
+  --wf-lh: 1.6;
+
+  /* --- Espaciado --- */
+  --wf-space-1: 0.25rem;
+  --wf-space-2: 0.5rem;
+  --wf-space-3: 0.75rem;
+  --wf-space-4: 1rem;
+  --wf-space-5: 1.5rem;
+  --wf-space-6: 2rem;
+  --wf-space-7: 3rem;
+  --wf-space-8: clamp(3rem, 2rem + 5vw, 6rem);
+  --wf-ancho: 72rem;
+  --wf-margen: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+
+  /* --- Medidas de interacción --- */
+  --wf-tap: 2.75rem; /* 44px mínimo táctil */
+  --wf-borde: 2px;
+  --wf-borde-grueso: 4px;
+  --wf-focus-w: 3px;
+  --wf-radius-pill: 999px;
+
+  /* --- Movimiento --- */
+  --wf-dur-1: 120ms;
+  --wf-dur-2: 240ms;
+  --wf-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* --- Capa del lightbox (igual en todas las paletas) --- */
+  --wf-overlay: rgb(12 14 13 / 0.92);
+  --wf-on-overlay: #f5f5f0;
+}
+
+/* --------------------------------------------------------------------------
+   TALLER · oficio / ferretería · acero + amarillo seguridad (por defecto)
+   -------------------------------------------------------------------------- */
+:root,
+[data-palette="taller"] {
+  color-scheme: light;
+  --wf-bg: #eceef0;
+  --wf-surface: #ffffff;
+  --wf-surface-2: #dde1e5;
+  --wf-ink: #16191d;
+  --wf-ink-soft: #454c55;
+  --wf-line: #aab1b9;
+  --wf-line-strong: #6b7480;
+  --wf-primary: #1f2429;
+  --wf-on-primary: #f4f5f6;
+  --wf-accent: #ffd100;
+  --wf-on-accent: #16191d;
+  --wf-accent-ink: #6b5200;
+  --wf-btn-bg: #ffd100;
+  --wf-btn-ink: #16191d;
+  --wf-btn-edge: #16191d;
+  --wf-band-btn-bg: #ffd100;
+  --wf-band-btn-ink: #16191d;
+  --wf-focus: #16191d;
+
+  --wf-font-display: var(--wf-font-cond);
+  --wf-display-weight: 700;
+  --wf-display-stretch: 75%;
+  --wf-display-case: uppercase;
+  --wf-display-tracking: 0.02em;
+  --wf-display-lh: 0.98;
+
+  --wf-radius-s: 2px;
+  --wf-radius-m: 3px;
+  --wf-radius-l: 4px;
+  --wf-shadow-1: 3px 3px 0 #16191d;
+  --wf-shadow-2: 6px 6px 0 #16191d;
+}
+
+/* --------------------------------------------------------------------------
+   ALMACÉN · comercio / gastro · crema + bordó
+   -------------------------------------------------------------------------- */
+[data-palette="almacen"] {
+  color-scheme: light;
+  --wf-bg: #f6efe0;
+  --wf-surface: #fffaf0;
+  --wf-surface-2: #ebe0c8;
+  --wf-ink: #2a1a16;
+  --wf-ink-soft: #5c4740;
+  --wf-line: #cdbf9f;
+  --wf-line-strong: #8a7558;
+  --wf-primary: #6e1423;
+  --wf-on-primary: #fff4e2;
+  --wf-accent: #e0a526;
+  --wf-on-accent: #2a1a16;
+  --wf-accent-ink: #6e1423;
+  --wf-btn-bg: #6e1423;
+  --wf-btn-ink: #fff4e2;
+  --wf-btn-edge: #6e1423;
+  --wf-band-btn-bg: #fff4e2;
+  --wf-band-btn-ink: #6e1423;
+  --wf-focus: #2a1a16;
+
+  --wf-font-display: var(--wf-font-almacen);
+  --wf-display-weight: 700;
+  --wf-display-stretch: 100%;
+  --wf-display-case: none;
+  --wf-display-tracking: -0.01em;
+  --wf-display-lh: 1.08;
+
+  --wf-radius-s: 6px;
+  --wf-radius-m: 8px;
+  --wf-radius-l: 12px;
+  --wf-shadow-1: 0 1px 0 #cdbf9f;
+  --wf-shadow-2: 0 14px 28px -16px rgb(42 26 22 / 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   SALUD · consultorio / odontología / estética · blanco hueso + verde agua
+   -------------------------------------------------------------------------- */
+[data-palette="salud"] {
+  color-scheme: light;
+  --wf-bg: #f7f5ef;
+  --wf-surface: #ffffff;
+  --wf-surface-2: #e3efec;
+  --wf-ink: #17302d;
+  --wf-ink-soft: #45605c;
+  --wf-line: #c5d6d2;
+  --wf-line-strong: #6d8a85;
+  --wf-primary: #0f5e56;
+  --wf-on-primary: #f4fbf9;
+  --wf-accent: #8fd9cb;
+  --wf-on-accent: #0c2e2a;
+  --wf-accent-ink: #0f5e56;
+  --wf-btn-bg: #0f5e56;
+  --wf-btn-ink: #ffffff;
+  --wf-btn-edge: #0f5e56;
+  --wf-band-btn-bg: #ffffff;
+  --wf-band-btn-ink: #0b4a44;
+  --wf-focus: #17302d;
+
+  --wf-font-display: var(--wf-font-clinica);
+  --wf-display-weight: 600;
+  --wf-display-stretch: 100%;
+  --wf-display-case: none;
+  --wf-display-tracking: -0.005em;
+  --wf-display-lh: 1.12;
+
+  --wf-radius-s: 10px;
+  --wf-radius-m: 16px;
+  --wf-radius-l: 24px;
+  --wf-shadow-1: 0 1px 2px rgb(23 48 45 / 0.12);
+  --wf-shadow-2: 0 18px 36px -20px rgb(23 48 45 / 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   NOCHE · eventos / canchas · oscuro + lima
+   -------------------------------------------------------------------------- */
+[data-palette="noche"] {
+  color-scheme: dark;
+  --wf-bg: #101311;
+  --wf-surface: #1a1f1b;
+  --wf-surface-2: #252c26;
+  --wf-ink: #f1f4ec;
+  --wf-ink-soft: #b4bcae;
+  --wf-line: #3a443b;
+  --wf-line-strong: #7c8a7d;
+  --wf-primary: #c6f432;
+  --wf-on-primary: #10130f;
+  --wf-accent: #c6f432;
+  --wf-on-accent: #10130f;
+  --wf-accent-ink: #c6f432;
+  --wf-btn-bg: #c6f432;
+  --wf-btn-ink: #10130f;
+  --wf-btn-edge: #c6f432;
+  --wf-band-btn-bg: #10130f;
+  --wf-band-btn-ink: #c6f432;
+  --wf-focus: #f1f4ec;
+
+  --wf-font-display: var(--wf-font-cond);
+  --wf-display-weight: 800;
+  --wf-display-stretch: 75%;
+  --wf-display-case: uppercase;
+  --wf-display-tracking: 0.03em;
+  --wf-display-lh: 0.94;
+
+  --wf-radius-s: 0px;
+  --wf-radius-m: 0px;
+  --wf-radius-l: 0px;
+  --wf-shadow-1: 0 0 0 1px #3a443b;
+  --wf-shadow-2: 0 0 0 1px #7c8a7d;
+}
+
+/* Un contenedor con paleta propia pinta su fondo y su texto */
+[data-palette] {
+  color: var(--wf-ink);
+  background-color: var(--wf-bg);
+}
