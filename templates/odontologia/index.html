@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#154e43">
+<meta name="description" content="{{DESCRIPCION_SEO: 140-160 caracteres, rubro + barrio + qué ofrecés}}">
+<title>{{NOMBRE}} · {{RUBRO}} en {{BARRIO}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<style>body{overflow-wrap:anywhere}</style><div class="tpl-banner" role="note" style="background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;padding:8px 16px;text-align:center">Plantilla Web Factory: los textos entre {{ }} y las fotos son de ejemplo. Reemplazalos con datos reales del cliente antes de publicar.</div>
+<a class="skip" href="#reservar">Ir directo a reservar</a>
+
+<header class="header">
+  <a class="brand" href="#" aria-label="{{NOMBRE}}, inicio">
+    <svg viewBox="0 0 42 44" width="36" height="38" aria-hidden="true"><path d="M21 9C10-1 1 8 6 22c3 8 3 18 8 17 4 0 2-14 7-14s3 14 7 14c5 1 5-9 8-17C41 8 32-1 21 9Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 14q7 5 14 0" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    <span>{{NOMBRE}}<small>CONSULTORIO ODONTOLÓGICO</small></span>
+  </a>
+  <nav aria-label="Principal">
+    <a href="#servicios">Tratamientos</a>
+    <a href="#consultorio">El consultorio</a>
+    <button class="nav-admin" id="open-admin" type="button">Agenda</button>
+  </nav>
+  <a class="button small" href="#reservar">Reservá turno</a>
+</header>
+
+<main id="public-view">
+
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Consultorio odontológico · turnos online</p>
+      <h1>Tu turno con el dentista, <em>sin vueltas.</em></h1>
+      <p class="hero-lead">Elegís la atención, el día y el horario desde el celular. Odontología cercana y sin apuros: te escuchamos y te explicamos cada paso.</p>
+      <div class="hero-actions">
+        <a href="#reservar" class="button">Encontrá tu próximo turno
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a href="#servicios" class="text-link">Ver tratamientos</a>
+      </div>
+      <dl class="hero-facts">
+        <div><dt>Días</dt><dd>{{DIAS_ATENCION}}</dd></div>
+        <div><dt>Horarios</dt><dd>{{HORARIOS_ATENCION}}</dd></div>
+        <div><dt>Duración</dt><dd>Turnos de 30 minutos</dd></div>
+      </dl>
+      <p class="hero-note">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        Días y horarios de esta demo. Elegí tu horario; nosotros nos ocupamos del resto.
+      </p>
+    </div>
+
+    <div class="hero-photo">
+      <img width="1400" height="936" src="assets/hero-sillon.webp" fetchpriority="high" decoding="async" alt="Consultorio odontológico luminoso con sillón y terminaciones en madera">
+      <div class="photo-label">
+        <span class="label-icon">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/></svg>
+        </span>
+        <div>Sentite en confianza.<small>El cuidado empieza por escucharte.</small></div>
+      </div>
+      <span class="photo-index">Un lugar para tu bienestar · foto ilustrativa</span>
+    </div>
+  </section>
+
+  <section class="principles wrap" aria-labelledby="pasos-titulo">
+    <h2 id="pasos-titulo">Así se pide<br>un turno</h2>
+    <ol>
+      <li>
+        <span aria-hidden="true">01</span>
+        <div><h3>Decinos qué atención necesitás</h3><p>Limpieza, extracción, consulta de ortodoncia o blanqueamiento.</p></div>
+      </li>
+      <li>
+        <span aria-hidden="true">02</span>
+        <div><h3>Elegí el día y el horario</h3><p>Ves los horarios libres al instante y reservás cuando te quede cómodo.</p></div>
+      </li>
+      <li>
+        <span aria-hidden="true">03</span>
+        <div><h3>Lo confirmamos nosotros</h3><p>Tu turno queda pendiente hasta que el consultorio lo confirme.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="reservar" class="booking-section">
+    <div class="wrap booking-layout">
+      <div class="section-intro">
+        <span class="section-kicker">Hacete un lugar</span>
+        <h2>El primer paso<br>es un turno.</h2>
+        <p>Elegí qué necesitás y buscá un horario libre. Nos va a encantar recibirte.</p>
+        <div class="booking-aside">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 2v6m10-6v6M3 11h18m-12 5 2 2 4-4"/></svg>
+          <div>Un momento para vos<small>Turnos de 30 minutos en esta demo.</small></div>
+        </div>
+        <div id="connection" class="connection">Conectando con el consultorio…</div>
+      </div>
+
+      <form id="booking-form" class="booking-card">
+        <div class="form-heading">
+          <h3>Reservá tu turno</h3>
+          <span>Es simple y rápido</span>
+        </div>
+        <div class="form-grid">
+          <label>Nombre y apellido
+            <input name="name" placeholder="¿Cómo te llamás?" required minlength="2" maxlength="100" autocomplete="name">
+          </label>
+          <label>Teléfono
+            <input name="phone" placeholder="Ej. 11 2345 6789" required pattern="\+?[0-9\s()\-]{7,25}" autocomplete="tel" type="tel">
+          </label>
+          <label class="full">¿Qué atención necesitás?
+            <select name="serviceId" id="service-select" required><option value="">Elegí un servicio</option></select>
+          </label>
+          <label class="full">Elegí una fecha
+            <input id="booking-date" name="date" type="date" required>
+          </label>
+          <fieldset class="full slots-field">
+            <legend>Horarios disponibles <span>· elegí uno</span></legend>
+            <div id="slots" class="slots"><p class="muted">Seleccioná una fecha para ver los horarios.</p></div>
+            <input type="hidden" name="time" id="chosen-time">
+          </fieldset>
+        </div>
+        <div id="booking-error" class="form-error" role="alert"></div>
+        <button class="button submit" type="submit">Solicitar turno
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </button>
+        <p class="form-foot">Tu turno queda pendiente hasta que lo confirmemos.</p>
+      </form>
+      <div id="booking-success" class="booking-card success" hidden></div>
+    </div>
+  </section>
+
+  <section id="servicios" class="services-section wrap">
+    <div class="section-top">
+      <div>
+        <span class="section-kicker">Cuidado para cada sonrisa</span>
+        <h2>¿Cómo podemos ayudarte?</h2>
+      </div>
+      <p>Desde el cuidado de todos los días hasta ese cambio que venís pensando. Tocá una atención y te llevamos al formulario con esa opción ya elegida.</p>
+    </div>
+    <div id="services-list" class="services-list"></div>
+  </section>
+
+  <section id="consultorio" class="clinic-section wrap">
+    <div class="clinic-main">
+      <img width="1400" height="935" src="assets/recepción.webp" loading="lazy" decoding="async" alt="Espacio de recepción de un consultorio odontológico">
+      <div class="clinic-copy">
+        <span class="section-kicker">El consultorio</span>
+        <h2>Un lugar tranquilo.<br>Un trato cercano.</h2>
+        <p>Sabemos que ir al dentista puede generar dudas. Por eso, queremos que cada visita empiece con una conversación y siga con la tranquilidad de entender qué vamos a hacer.</p>
+        <ul class="clinic-points">
+          <li><strong>Atención con tiempo</strong> Para escuchar lo que necesitás.</li>
+          <li><strong>Todo claro, desde el inicio</strong> Te explicamos cada paso.</li>
+        </ul>
+        <a href="#reservar" class="text-link">Coordinemos tu visita
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img width="1000" height="667" src="assets/sonrisa.webp" loading="lazy" decoding="async" alt="Retrato ilustrativo de una persona sonriendo">
+        <figcaption>El cuidado está en los detalles.</figcaption>
+      </figure>
+      <figure>
+        <img width="1000" height="1250" src="assets/equipo.webp" loading="lazy" decoding="async" alt="Retrato ilustrativo de un profesional de salud">
+        <figcaption>Personas que cuidan a personas.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="closing wrap">
+    <span>Nos vemos en el consultorio.</span>
+    <a class="button" href="#reservar">Dale un espacio a tu sonrisa
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </section>
+</main>
+
+<main id="admin-view" class="wrap admin" hidden>
+  <button id="back-public" class="text-link" type="button">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+    Volver al consultorio
+  </button>
+  <div class="section-top">
+    <div>
+      <span class="section-kicker">Administración · demo abierta</span>
+      <h1>La agenda.</h1>
+    </div>
+    <button id="refresh" class="button small" type="button">Actualizar
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 6.3M20 5v6h-6"/></svg>
+    </button>
+  </div>
+  <p class="muted">Gestioná los turnos y reservá espacios sin atención. Usá solo datos ficticios.</p>
+  <div class="admin-toolbar">
+    <label>Fecha<input type="date" id="admin-date"></label>
+    <label>Estado
+      <select id="admin-status">
+        <option value="">Todos los estados</option>
+        <option value="pending">Pendientes</option>
+        <option value="confirmed">Confirmados</option>
+        <option value="cancelled">Cancelados</option>
+      </select>
+    </label>
+    <button id="clear-filters" class="text-link" type="button">Ver todos</button>
+  </div>
+  <div id="admin-message" role="status"></div>
+  <h2 class="admin-sub">Turnos</h2>
+  <div id="appointments-list"></div>
+  <section class="block-section">
+    <h2>Bloquear un horario</h2>
+    <form id="block-form">
+      <label>Fecha<input type="date" name="date" required></label>
+      <label>Horario<select name="time" id="block-time"></select></label>
+      <label>Motivo<input name="reason" placeholder="Ej. Reunión" maxlength="200" required></label>
+      <button class="button" type="submit">Bloquear horario</button>
+    </form>
+    <div id="blocks-list"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <a href="#" class="footer-brand">{{NOMBRE}}<span>Una sonrisa empieza con confianza.</span></a>
+  <p>Demo de gestión de turnos. No realiza reservas reales.<br>Fotos ilustrativas. No ingreses datos personales reales.</p>
+  <span class="copyright">© 2026 {{NOMBRE}}</span>
+</footer>
+
+<dialog id="cancel-dialog" aria-labelledby="cancel-title">
+  <h2 id="cancel-title">¿Cancelar este turno?</h2>
+  <p>El horario volverá a estar disponible para reservar.</p>
+  <div class="dialog-actions">
+    <button id="keep-appointment" class="text-link" type="button">Conservar turno</button>
+    <button id="confirm-cancel" class="button" type="button">Sí, cancelar</button>
+  </div>
+</dialog>
+<div id="toast" role="status"></div>
+</body>
+</html>

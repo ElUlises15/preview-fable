@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#243c32">
+<title>{{NOMBRE}} · {{RUBRO}} en {{BARRIO}}</title>
+<meta name="description" content="{{DESCRIPCION_SEO: 140-160 caracteres, rubro + barrio + qué ofrecés}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="assets/images/hero-local.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
+<script src="seed.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<style>body{overflow-wrap:anywhere}</style><div class="tpl-banner" role="note" style="background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;padding:8px 16px;text-align:center">Plantilla Web Factory: los textos entre {{ }} y las fotos son de ejemplo. Reemplazalos con datos reales del cliente antes de publicar.</div><style>.brand{min-width:0;flex-shrink:1}.brand>span:last-child{white-space:normal;word-break:break-all;font-size:.8em}</style>
+<a class="skip-link" href="#app">Saltar al contenido</a>
+<div class="demo-strip">Un comercio de barrio. Todo lo que necesitás. <span>Plantilla Web Factory · datos de ejemplo</span></div>
+<header>
+<div class="header-inner">
+<a class="brand" href="#/" aria-label="{{NOMBRE}}, inicio"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg></span><span>{{NOMBRE_LINEA_1}}<span class="brand-light">{{NOMBRE_LINEA_2}}</span><small>FERRETERÍA DE BARRIO</small></span></a>
+<form id="search-form" class="search" role="search"><input id="search" type="search" placeholder="¿Qué necesitás arreglar hoy?" aria-label="Buscar productos"><button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button></form>
+<a href="#/admin" class="seller-link">Mi mostrador</a>
+<a href="#/cart" class="cart-link" aria-label="Ver carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6M9 20h.01M18 20h.01" stroke-linecap="round"/></svg><span id="cart-count">0</span></a>
+</div>
+</header>
+<nav class="main-nav" aria-label="Secciones del local"><div><a href="#/">El local</a><a href="#/catalog">Todos los productos</a><a href="#/catalog?offers=1">Ofertas del mostrador <span class="tiny-dot"></span></a><span class="nav-note">Comprá online, retirás por el local</span></div></nav>
+<main id="app"></main>
+<footer>
+<div class="footer-inner">
+<div class="footer-lead"><a class="footer-brand" href="#/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>{{NOMBRE}}</a><p>Las cosas se arreglan. Y acá empieza todo.</p></div>
+<nav class="footer-nav" aria-label="Pie de página"><a href="#/">El local</a><a href="#/catalog">Todos los productos</a><a href="#/catalog?offers=1">Ofertas del mostrador</a><a href="#/cart">Tu carrito</a><a href="#/admin">Mi mostrador</a></nav>
+<div class="footer-meta"><span>Plantilla Web Factory · comercio de ejemplo</span><span id="connection">Conectando…</span></div>
+<small>No se realizan cobros ni compras reales. Fotos generadas con IA.</small>
+</div>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><h2 id="confirm-title">Compra simulada lista</h2><p id="order-message"></p><p>El stock ya se actualizó. No se realizó ningún cobro.</p><button class="btn">Seguir recorriendo</button></form></dialog>
+</body>
+</html>
