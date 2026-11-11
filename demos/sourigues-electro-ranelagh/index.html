@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#23262a">
+<meta name="description" content="Demo no oficial de propuesta para Electro Ranelagh, comercio de electricidad en Camino General Belgrano 4427, Ranelagh.">
+<title>Electro Ranelagh · Demo no oficial</title>
+<style>
+:root{
+--g:#23262a;--o:#c8891e;--i:#fbf8f1;--p:#f4efe3;--m:#5d5a52;--l:#d9d2c2;
+--sans:"Bahnschrift","DIN Alternate","Avenir Next Condensed","Franklin Gothic Medium","Trebuchet MS",sans-serif;
+--mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Liberation Mono",monospace;
+--w:1120px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--i);color:var(--g);font:17px/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:2px}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--g);outline-offset:3px;box-shadow:0 0 0 3px var(--o)}
+.pf :focus-visible{outline-color:var(--i)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--o);color:var(--g);padding:12px 16px;font-weight:700;z-index:9}
+.skip:focus{left:8px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+
+/* Aviso demo + cabecera */
+.top{background:var(--g);color:var(--i);text-align:center;padding:8px 14px;font:700 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.head{border-bottom:2px solid var(--g);background:var(--i)}
+.head .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 16px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:52px;font-weight:700;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.brand svg{width:26px;height:26px;flex:none}
+.nav{display:flex;margin:0 -10px;padding:0;list-style:none}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font:700 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--o)}
+
+/* Tipografía */
+.idx{font:700 13px/1.4 var(--mono);color:var(--m);letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px}
+.idx::before{content:"";display:inline-block;width:22px;height:4px;background:var(--o);vertical-align:middle;margin-right:10px}
+h1{font-size:clamp(3rem,14vw,6rem);line-height:.9;margin:0 0 .3em;text-transform:uppercase;letter-spacing:-.01em;font-weight:700}
+h1 span{display:block}
+h2{font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.08;margin:0 0 .7em;font-weight:700;text-wrap:balance}
+h3{font-size:1.2rem;line-height:1.2;margin:0 0 .4em;font-weight:700}
+svg{display:block;width:100%;height:auto}
+figure{margin:0}
+figcaption{font:13px/1.45 var(--mono);color:var(--m);margin-top:10px}
+
+/* Hero */
+.hero{border-bottom:2px solid var(--g);background:
+linear-gradient(var(--p) 1px,transparent 1px) 0 0/100% 28px,
+linear-gradient(90deg,var(--p) 1px,transparent 1px) 0 0/28px 100%,var(--i)}
+.hero .wrap{display:grid;gap:34px;padding-top:34px;padding-bottom:44px}
+.lead{font-size:1.18rem;line-height:1.5;max-width:31em;margin-bottom:1.3em}
+.plate{display:inline-grid;gap:2px;margin:0 0 22px;padding:12px 16px 12px 20px;background:var(--g);color:var(--i);border-left:8px solid var(--o);font-family:var(--mono);max-width:100%}
+.plate small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--l)}
+.plate strong{font-size:1.02rem;letter-spacing:.03em}
+.cta{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;background:var(--o);color:var(--g);border:2px solid var(--g);box-shadow:5px 5px 0 var(--g);font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--g)}
+.btn svg{width:20px;height:20px;flex:none}
+.lnk{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.shot{position:relative;margin:0 10px 10px 0}
+.shot::before{content:"";position:absolute;inset:10px -10px -10px 10px;background:var(--o)}
+.shot svg{position:relative;border:2px solid var(--g)}
+.shot figcaption{position:relative;margin-top:20px}
+
+/* Secciones */
+.sec{padding:48px 0;border-bottom:2px solid var(--g)}
+.sec>.wrap{display:grid;gap:8px}
+.loc{display:grid;gap:26px}
+.loc>div{border-top:2px solid var(--g);padding-top:14px}
+.addr{font-size:clamp(1.5rem,6.4vw,2.2rem);line-height:1.12;font-weight:700;margin-bottom:.35em}
+.addr+p{font:700 14px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--m)}
+.loc .note{border-left:6px solid var(--o);padding-left:14px;margin-bottom:0}
+
+/* Guía */
+details{border-top:2px solid var(--g)}
+details:last-of-type{border-bottom:2px solid var(--g)}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:10px 0;font-weight:700;font-size:1.08rem;line-height:1.3;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;display:grid;place-items:center;width:32px;height:32px;border:2px solid var(--g);font:700 20px/1 var(--mono)}
+details[open] summary::after{content:"–";background:var(--o)}
+summary:hover{text-decoration:underline;text-decoration-color:var(--o);text-decoration-thickness:3px;text-underline-offset:4px}
+details p{max-width:36em;margin:0;padding:0 48px 18px 0}
+
+/* Simulador */
+.sim{display:grid;gap:22px;background:var(--p);border:2px solid var(--g);box-shadow:8px 8px 0 var(--g);padding:20px 18px 24px;margin-right:8px}
+.tag{display:inline-block;justify-self:start;margin:0;border:2px solid var(--g);background:var(--i);padding:5px 10px;font:700 12px/1.4 var(--mono);letter-spacing:.03em}
+.sim label{font-weight:700;display:block;margin:0 0 6px}
+.sim label~label{margin-top:16px}
+select,button{font:inherit;font-size:17px;min-height:50px;padding:8px 12px;border:2px solid var(--g);background:var(--i);color:var(--g);width:100%;max-width:100%;border-radius:0}
+button{background:var(--g);color:var(--i);font-weight:700;cursor:pointer;margin-top:20px;transition:background .15s,color .15s}
+button:hover{background:var(--o);color:var(--g)}
+#out{min-height:232px;padding:12px 16px 14px 28px;border:2px solid var(--g);border-left:8px double var(--o);white-space:pre-line;font:15px/29px var(--mono);overflow-wrap:anywhere;background:repeating-linear-gradient(var(--i) 0 28px,var(--l) 28px 29px)}
+
+/* PrintFactory */
+.pf{background:var(--g);color:var(--i);padding:52px 0 44px}
+.pf .idx,.pf figcaption{color:var(--l)}
+.pf .intro{max-width:36em;color:var(--l);margin-bottom:30px}
+.pf h2{max-width:20em}
+.pf .grid{display:grid;gap:34px}
+.pf article{display:grid;gap:14px;align-content:start;border-top:4px solid var(--o);padding-top:14px}
+.pf article p{margin:0}
+.pf .num{font:700 13px var(--mono);letter-spacing:.1em;color:var(--o)}
+.pf .est{justify-self:start;border:1px solid var(--l);padding:4px 10px;font:700 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--l)}
+.pf svg{background:var(--i)}
+.back{display:inline-flex;align-items:center;min-height:44px;margin-top:30px;font-weight:700;text-decoration-color:var(--o)}
+
+footer{padding:26px 0 40px;font-size:14px;line-height:1.6;color:var(--m)}
+footer p{max-width:62em;margin:0}
+footer strong{color:var(--g)}
+
+@media(min-width:720px){
+.sim{grid-template-columns:1fr 1fr;padding:28px;gap:22px 32px;align-items:start}
+.sim .tag{grid-column:1/-1}
+.loc{grid-template-columns:1.25fr 1fr;gap:40px}
+.pf .grid{grid-template-columns:1fr 1fr}
+.pf article:first-child{grid-column:1/-1;grid-template-columns:1fr 1.2fr;column-gap:32px}
+.pf article:first-child figure{grid-column:2;grid-row:1/span 5}
+}
+@media(min-width:960px){
+.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:end;gap:56px;padding-top:64px;padding-bottom:72px}
+.sec{padding:72px 0}
+.sec>.wrap{grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.sec h2{font-size:2rem}
+.pf{padding:76px 0 56px}
+.pf .grid{grid-template-columns:1.25fr 1fr;gap:40px 48px}
+.pf article:first-child{grid-column:1;grid-row:1/span 2;grid-template-columns:1fr}
+.pf article:first-child figure{grid-column:auto;grid-row:auto}
+.pf article:not(:first-child){grid-template-columns:1fr 200px;column-gap:22px}
+.pf article:not(:first-child) figure{grid-column:2;grid-row:1/span 5}
+}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="top" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<header class="head">
+<div class="wrap">
+<a class="brand" href="#main">
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" fill="#23262a"/><path d="M13.5 3.5 6.5 13.5h4.6l-1 7 7.4-10.4h-4.8z" fill="#c8891e"/></svg>
+Electro Ranelagh</a>
+<nav aria-label="Secciones">
+<ul class="nav">
+<li><a href="#ubicacion">Ubicación</a></li>
+<li><a href="#guia">Guía</a></li>
+<li><a href="#lista">Lista</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+<div class="wrap">
+<div>
+<p class="idx">01 · Electricidad · Ranelagh</p>
+<h1 id="h1">Electro <span>Ranelagh</span></h1>
+<p class="lead">Comercio del rubro electricidad sobre Camino General Belgrano, en Ranelagh. Si buscás un material o repuesto, llevá la referencia clara y la consulta sale más rápida.</p>
+<p class="plate"><small>Dirección</small><strong>CAMINO GRAL. BELGRANO 4427</strong></p>
+<div class="cta">
+<a class="btn" href="#lista">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+Armá tu lista antes de ir</a>
+<a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Camino+General+Belgrano+4427+Ranelagh+Berazategui" target="_blank" rel="noopener noreferrer">Buscar la dirección en Google Maps</a>
+</div>
+</div>
+<figure class="shot">
+<svg viewBox="0 0 320 240" role="img" aria-labelledby="ht"><title id="ht">Esquema original de un mostrador con lámpara de escritorio y fichas rotuladas</title>
+<rect width="320" height="240" fill="#f4efe3"/>
+<g stroke="#23262a" stroke-width="3" fill="none" stroke-linecap="round">
+<line x1="20" y1="170" x2="300" y2="170"/><line x1="40" y1="170" x2="40" y2="220"/><line x1="280" y1="170" x2="280" y2="220"/>
+<path d="M210 170 L210 160 L240 160 L240 170"/><path d="M225 160 L200 100 L150 70"/>
+<path d="M135 62 L170 52 L172 82 Z" fill="#c8891e"/></g>
+<path d="M150 82 L110 168 L200 168 Z" fill="#c8891e" opacity=".25"/>
+<g stroke="#23262a" stroke-width="2" fill="#fbf8f1">
+<rect x="56" y="130" width="40" height="40"/><rect x="66" y="120" width="40" height="40"/><rect x="250" y="138" width="34" height="32"/></g>
+<g font-family="monospace" font-size="14" fill="#23262a" font-weight="700">
+<text x="20" y="30">ÍNDICE · MOSTRADOR</text>
+<text x="70" y="146">A-01</text><text x="252" y="159">B</text>
+<text x="20" y="200" fill="#5d5a52">REF.</text></g>
+</svg>
+<figcaption>Ilustración original; no es foto del local</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="sec" id="ubicacion" aria-labelledby="h-loc">
+<div class="wrap">
+<div>
+<p class="idx">02 · Ubicación</p>
+<h2 id="h-loc">Dónde está</h2>
+</div>
+<div class="loc">
+<div><h3>Dirección</h3><p class="addr">Camino General Belgrano 4427</p><p>Ranelagh, Partido de Berazategui</p></div>
+<div><h3>Antes de ir</h3><p>Llevá anotado lo que buscás y, si podés, una foto de la pieza o del rótulo.</p><p class="note">Horarios y disponibilidad: confirmalos directamente con el comercio.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="guia" aria-labelledby="h-faq">
+<div class="wrap">
+<div>
+<p class="idx">03 · Guía de consulta</p>
+<h2 id="h-faq">Cómo preparar tu consulta de materiales eléctricos</h2>
+</div>
+<div>
+<details><summary>¿Qué datos conviene llevar de un repuesto?</summary><p>Marca, modelo y los valores impresos en la pieza o su caja. Una foto clara del rótulo ayuda a identificarla.</p></details>
+<details><summary>¿Sirve llevar la pieza vieja?</summary><p>Sí, como referencia de forma y medida. Hacelo siempre con la instalación desconectada y sin manipular nada que no conozcas.</p></details>
+<details><summary>¿Me pueden decir cómo instalarlo?</summary><p>Esta página no da instrucciones eléctricas. Para trabajos en una instalación, recurrí a un electricista matriculado.</p></details>
+<details><summary>¿Cómo sé si hay stock o qué cuesta?</summary><p>Esta demo no tiene esa información. Consultalo directamente en el comercio.</p></details>
+</div>
+</div>
+</section>
+
+<section class="sec" id="lista" aria-labelledby="h-sim">
+<div class="wrap">
+<div>
+<p class="idx">04 · Ejemplo interactivo</p>
+<h2 id="h-sim">Armá tu lista de referencia</h2>
+<p>Elegí qué vas a consultar y te queda el punteo de lo que conviene tener a mano en el mostrador.</p>
+</div>
+<div class="sim">
+<p class="tag">Simulación local; no envía consultas ni guarda datos</p>
+<div>
+<label for="tipo">¿Qué vas a consultar?</label>
+<select id="tipo"><option value="r">Un repuesto</option><option value="m">Material de instalación</option><option value="l">Iluminación</option></select>
+<label for="foto">¿Tenés foto del rótulo?</label>
+<select id="foto"><option value="s">Sí</option><option value="n">No</option></select>
+<button type="button" id="go">Generar lista</button>
+</div>
+<div id="out" aria-live="polite">Elegí opciones y generá tu lista.</div>
+</div>
+</div>
+</section>
+
+<section class="pf" id="printfactory" aria-labelledby="h-pf">
+<div class="wrap">
+<p class="idx">05 · Propuesta del vendedor · PrintFactory</p>
+<h2 id="h-pf">Piezas impresas para mostrador (oferta de PrintFactory, no del comercio)</h2>
+<p class="intro">Tres conceptos de catálogo de referencia demo. No son oferta vigente ni verificada; dos son conceptos nuevos.</p>
+<div class="grid">
+<article><p class="num" aria-hidden="true">PF-01</p><h3>Stand doble QR</h3><p>Uso: invitar a consultar por repuesto con foto y ver la ubicación.</p><p class="est">Estado: referencia de catálogo demo.</p>
+<figure><svg viewBox="0 0 320 240" role="img" aria-labelledby="p1"><title id="p1">Stand en A con dos paneles rotulados QR</title>
+<line x1="30" y1="215" x2="290" y2="215" stroke="#23262a" stroke-width="3"/>
+<path d="M160 30 L90 212 M160 30 L230 212" stroke="#23262a" stroke-width="8" stroke-linecap="round"/>
+<g transform="rotate(-20 118 115)"><rect x="84" y="72" width="68" height="86" fill="#f4efe3" stroke="#23262a" stroke-width="3"/><rect x="96" y="82" width="44" height="44" fill="none" stroke="#c8891e" stroke-width="3" stroke-dasharray="6 4"/><text x="118" y="110" text-anchor="middle" font-family="monospace" font-weight="700" font-size="16" fill="#23262a">QR</text></g>
+<g transform="rotate(20 202 115)"><rect x="168" y="72" width="68" height="86" fill="#f4efe3" stroke="#23262a" stroke-width="3"/><rect x="180" y="82" width="44" height="44" fill="none" stroke="#c8891e" stroke-width="3" stroke-dasharray="6 4"/><text x="202" y="110" text-anchor="middle" font-family="monospace" font-weight="700" font-size="16" fill="#23262a">QR</text></g>
+<text x="160" y="234" text-anchor="middle" font-family="monospace" font-size="14" fill="#5d5a52">REPUESTO · UBICACIÓN</text>
+</svg><figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada. QR solo como rótulo.</figcaption></figure></article>
+<article><p class="num" aria-hidden="true">PF-02</p><h3>Organizador de tarjetas técnicas</h3><p>Uso: ordenar fichas de referencia en el mostrador. 150×100×60 mm.</p><p class="est">Estado: concepto nuevo.</p>
+<figure><svg viewBox="0 0 320 240" role="img" aria-labelledby="p2"><title id="p2">Organizador con divisores y pestañas</title>
+<rect x="80" y="50" width="150" height="40" fill="#f4efe3" stroke="#23262a" stroke-width="2"/><rect x="100" y="40" width="40" height="14" fill="#c8891e" stroke="#23262a" stroke-width="2"/>
+<path d="M40 90 L240 90 L280 72 L280 160 L240 178 L40 178 Z" fill="#23262a"/>
+<line x1="110" y1="96" x2="110" y2="172" stroke="#c8891e" stroke-width="2"/><line x1="175" y1="96" x2="175" y2="172" stroke="#c8891e" stroke-width="2"/>
+<line x1="40" y1="196" x2="240" y2="196" stroke="#23262a"/>
+<g font-family="monospace" font-size="14" fill="#23262a"><text x="140" y="216" text-anchor="middle">150 mm</text><text x="250" y="200">100</text><text x="286" y="122">60</text></g>
+</svg><figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption></figure></article>
+<article><p class="num" aria-hidden="true">PF-03</p><h3>Rótulos de sección</h3><p>Uso: señalizar estanterías. 100×40×25 mm. Solo señalética, sin uso aislante ni eléctrico.</p><p class="est">Estado: concepto nuevo.</p>
+<figure><svg viewBox="0 0 320 240" role="img" aria-labelledby="p3"><title id="p3">Rótulos sobre el borde de un estante</title>
+<rect x="10" y="130" width="300" height="20" fill="#23262a"/>
+<g font-family="monospace" font-weight="700" font-size="16" fill="#23262a">
+<rect x="22" y="90" width="84" height="40" fill="#c8891e" stroke="#23262a" stroke-width="2"/><text x="64" y="116" text-anchor="middle">S-01</text>
+<rect x="118" y="90" width="84" height="40" fill="#f4efe3" stroke="#23262a" stroke-width="2"/><text x="160" y="116" text-anchor="middle">S-02</text>
+<rect x="214" y="90" width="84" height="40" fill="#f4efe3" stroke="#23262a" stroke-width="2"/><text x="256" y="116" text-anchor="middle">S-03</text></g>
+<g font-family="monospace" font-size="14" fill="#23262a"><line x1="22" y1="76" x2="106" y2="76" stroke="#23262a"/><text x="64" y="68" text-anchor="middle">100 mm</text>
+<text x="160" y="186" text-anchor="middle" fill="#5d5a52">SOLO SEÑALÉTICA</text><text x="160" y="208" text-anchor="middle" fill="#5d5a52">NO AISLANTE</text></g>
+</svg><figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption></figure></article>
+</div>
+<p><a class="back" href="../index.html">Volver a la galería</a></p>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p><strong>Demo no oficial</strong>, sin afiliación ni aprobación de Electro Ranelagh. Nombre, rubro y dirección tomados de su ficha pública en Google Maps (ID 0xe5969e32cd4c8d87) y corroborados en directorios y un proveedor (Borneras Elent). No se halló web propia en búsqueda nominal. Localidad inferida por coordenadas; horarios, contacto, stock y precios no verificados y omitidos. Ilustraciones originales.</p>
+</div>
+</footer>
+<script>
+document.getElementById('go').onclick=function(){
+var t=document.getElementById('tipo').value,f=document.getElementById('foto').value;
+var L={r:['Marca y modelo del equipo','Valores impresos en la pieza','Pieza vieja como referencia (desconectada)'],m:['Tipo de material y medida','Cantidad aproximada','Uso previsto, para orientar la consulta'],l:['Tipo de lámpara o luminaria','Medidas o rosca indicadas en la pieza','Ambiente donde se usará']}[t];
+if(f==='n')L.push('Sacar foto del rótulo antes de ir');
+document.getElementById('out').textContent='Tu lista:\n· '+L.join('\n· ');};
+</script>
+</body>
+</html>

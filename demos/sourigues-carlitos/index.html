@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Demo no oficial de propuesta para Carlitos, peluquería en Camino General Belgrano 4566. Sin afiliación ni aprobación del comercio.">
+<meta name="theme-color" content="#26241f">
+<title>Carlitos · Peluquería · Camino General Belgrano 4566 (demo no oficial)</title>
+<style>
+:root{
+--ink:#26241f;--cream:#f4ecdc;--paper:#fffdf7;--red:#c8202b;--blue:#2a4a8c;--mute:#6b645a;--line:#d8ccb4;
+--disp:Impact,Haettenschweiler,"Franklin Gothic Bold","Arial Narrow Bold",sans-serif;
+--body:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+--shadow:8px 8px 0 var(--ink)
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:1.0625rem/1.6 var(--body);overflow-x:hidden}
+.disp{font-family:var(--disp);letter-spacing:.015em;font-weight:400;text-transform:uppercase}
+a{color:var(--blue);text-underline-offset:.18em}
+p{margin:0 0 1rem}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.offer :focus-visible,.banner :focus-visible{outline-color:#fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--cream);padding:.8rem 1rem}
+.skip:focus{left:0;z-index:9}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.1rem}
+svg{display:block;width:100%;height:auto}
+figure{margin:0}
+figcaption{font-size:.85rem;color:var(--mute);margin-top:.5rem;font-style:italic}
+
+/* Aviso de demo */
+.banner{background:var(--ink);color:var(--cream);text-align:center;padding:.55rem 1rem;font-size:.9rem;letter-spacing:.02em}
+
+/* Cabecera */
+.mast{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 1rem;border-bottom:2px solid var(--ink);padding-top:.3rem;padding-bottom:.3rem}
+.brand{font-size:1.25rem;line-height:1;display:flex;align-items:center;gap:.5rem}
+.brand i{display:block;width:10px;height:26px;border:2px solid var(--ink);border-radius:5px;background:repeating-linear-gradient(-35deg,var(--red) 0 4px,#fff 4px 7px,var(--blue) 7px 11px,#fff 11px 14px)}
+.mast nav{display:flex;margin-right:-.5rem}
+.mast nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;color:var(--ink);font-size:.9rem;text-decoration:none;border-bottom:2px solid transparent}
+.mast nav a:hover{color:var(--red);text-decoration:underline}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;padding:2rem 0 2.6rem}.hero>*{min-width:0}
+.tag{display:inline-block;background:var(--red);color:#fff;padding:.2rem .7rem;font-size:.9rem;transform:rotate(-2deg);transform-origin:left center}
+h1{font-size:clamp(3.4rem,17vw,7.5rem);line-height:.84;margin:.7rem 0 1rem;margin-left:-.03em}
+h1::after{content:"";display:block;width:min(100%,5.2em);height:.07em;margin-top:.12em;background:linear-gradient(90deg,var(--red) 0 62%,transparent 62% 66%,var(--blue) 66%)}
+.lead{font-size:1.2rem;line-height:1.45;max-width:32ch;margin-bottom:1.3rem}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:.55rem 1.3rem;background:var(--red);color:#fff;font-family:var(--disp);font-size:1.25rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:none}
+.btn svg{width:20px;height:20px;flex:none}
+.lnk{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:700}
+.lnk:hover{color:var(--red)}
+.where{display:flex;gap:.7rem;align-items:baseline;margin:1.6rem 0 0;padding-top:.9rem;border-top:2px solid var(--ink);max-width:26rem}
+.where dt{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);flex:none}
+.where dd{margin:0;font-family:var(--disp);text-transform:uppercase;font-size:1.25rem;line-height:1.1}
+.hero figure{max-width:23rem;justify-self:center;width:100%}
+.hero figure svg{border:3px solid var(--ink);box-shadow:var(--shadow);transform:rotate(1.2deg)}
+.hero figcaption{margin-top:1.1rem;text-align:right}
+
+/* Franja de poste */
+.stripe{height:14px;border-block:2px solid var(--ink);background:var(--paper) repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paper) 14px 22px,var(--blue) 22px 36px,var(--paper) 36px 44px);background-size:62.23px 100%}
+@media(prefers-reduced-motion:no-preference){
+html{scroll-behavior:smooth}
+.stripe{animation:pole 3.5s linear infinite}
+@keyframes pole{to{background-position:62.23px 0}}
+}
+
+/* Secciones */
+section{padding:2.4rem 0;scroll-margin-top:1rem}
+h2{font-size:clamp(2.2rem,8vw,3rem);line-height:1;margin:0 0 1.2rem}
+.kick{display:block;font-family:var(--body);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:.45rem;font-weight:700}
+
+/* Dónde estamos */
+.card{background:var(--paper);border:3px solid var(--ink);padding:1.3rem;box-shadow:var(--shadow);margin-right:8px}
+.card .who{margin:0;color:var(--red);font-size:1.05rem}
+.plate{display:flex;flex-direction:column;background:var(--blue);color:#fff;border:3px solid #fff;outline:3px solid var(--blue);border-radius:6px;margin:1rem 3px 1.1rem;padding:.9rem 1rem .8rem;text-align:center}
+.addr{font-size:1.35rem;line-height:1.1;margin:0}
+.plate .num{font-family:var(--disp);font-size:clamp(4rem,22vw,6rem);line-height:.9;letter-spacing:.04em}
+.card .hint{margin:0;font-size:1rem}
+
+/* Antes de ir */
+details{border-top:2px solid var(--ink)}
+details:last-child{border-bottom:2px solid var(--ink)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:56px;padding:.7rem 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--disp);font-size:1.6rem;line-height:1;color:var(--red);flex:none;width:1.4rem;text-align:center}
+details[open] summary::after{content:"–"}
+summary:hover{color:var(--red)}
+details p{margin:0;padding:0 2.4rem 1.1rem 0;max-width:52ch}
+
+/* Simulador */
+.sim{position:relative;border:3px dashed var(--ink);padding:1.3rem 1.1rem 1.4rem;background:var(--paper)}
+.sim .lbl{font-size:.85rem;background:var(--ink);color:var(--cream);display:inline-block;padding:.25rem .6rem;margin-bottom:.9rem}
+.sim p{margin:0;max-width:46ch}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.1rem 0 1.3rem}
+.chips button{font:inherit;font-size:1rem;color:var(--ink);min-height:46px;border:2px solid var(--ink);border-radius:0;background:var(--cream);padding:.5rem .95rem;cursor:pointer;transition:background-color .15s,color .15s}
+.chips button::before{content:"+ ";font-weight:700;color:var(--red)}
+.chips button:hover{background:#fff}
+.chips button[aria-pressed=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.chips button[aria-pressed=true]::before{content:"✓ ";color:#fff}
+#out{min-height:3rem;border-left:6px solid var(--red);padding:.5rem .9rem .5rem 2.2rem;margin:0;background:linear-gradient(var(--cream),var(--cream)) no-repeat;line-height:1.45}
+#out li{padding:.3rem 0 .3rem .2rem}
+#out li::marker{font-family:var(--disp);color:var(--red)}
+#out li+li{border-top:1px dashed var(--line)}
+
+/* Propuesta del vendedor */
+.offer{background:var(--ink);color:var(--cream);margin:1rem -1.1rem 0;padding:2.2rem 1.1rem 2.4rem;border-top:8px solid var(--red)}
+.offer .kick{color:#f0b9a8}
+.offer a{color:#fff;display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.offer .sub{color:#cfc5b2;max-width:60ch;margin:0}
+.prods{display:grid;gap:1.4rem;margin-top:1.6rem}
+.prod{background:var(--cream);color:var(--ink);padding:1rem 1rem 1.1rem;border-left:8px solid var(--red);display:flex;flex-direction:column}
+.prod:nth-child(2){border-left-color:var(--blue)}
+.prod svg{border:2px solid var(--line)}
+.st{font-size:.78rem;font-weight:700;color:var(--blue);letter-spacing:.06em;text-transform:uppercase;margin-top:.9rem}
+.prod h3{margin:.3rem 0 .3rem;font:400 1.5rem/1.05 var(--disp);letter-spacing:.015em;text-transform:uppercase}
+.prod p{margin:0 0 .6rem}
+.prod figcaption{color:var(--mute);margin-top:auto;padding-top:.6rem;border-top:1px dashed var(--line)}
+
+footer{font-size:.88rem;line-height:1.55;color:var(--mute);padding:1.8rem 0 2.4rem}
+footer p{max-width:80ch;margin:0;overflow-wrap:anywhere}
+footer strong{color:var(--ink)}
+
+@media(min-width:820px){
+.hero{grid-template-columns:1.2fr .8fr;align-items:end;gap:3rem;padding:3.2rem 0 3.6rem}
+.hero figure{justify-self:end;margin-bottom:.4rem}
+.lead{font-size:1.35rem}
+.two{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start;padding-top:1rem}
+.sim{padding:1.8rem 1.8rem 2rem}
+.simgrid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.simgrid .chips{margin-bottom:0}
+.offer{margin:1.5rem 0 1rem;padding:2.6rem 2.2rem 2.8rem}
+.prods{grid-template-columns:repeat(3,1fr)}
+.prod:nth-child(2){transform:translateY(1.2rem)}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="banner" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<div class="wrap mast">
+<span class="brand disp"><i aria-hidden="true"></i>Carlitos</span>
+<nav aria-label="Secciones">
+<a href="#donde">Dónde</a>
+<a href="#antes">Antes de ir</a>
+<a href="#consulta">Consulta</a>
+</nav>
+</div>
+<main id="main">
+<div class="wrap">
+<header class="hero">
+<div>
+<span class="tag disp">Peluquería de barrio</span>
+<h1 class="disp">Carlitos</h1>
+<p class="lead">Tu peluquería en Camino General Belgrano 4566. Pasá, contá qué querés y salí con el corte resuelto.</p>
+<div class="cta">
+<a class="btn" href="#consulta">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg>
+Armá tu consulta</a>
+<a class="lnk" href="#donde">Ver dónde queda</a>
+</div>
+<dl class="where">
+<dt>Dirección</dt>
+<dd>Camino General Belgrano 4566</dd>
+</dl>
+</div>
+<figure>
+<svg viewBox="0 0 320 300" width="320" height="300" role="img" aria-labelledby="h1t"><title id="h1t">Ilustración de espejo de peluquería con poste rayado, tijera y peine</title>
+<rect width="320" height="300" fill="#f4ecdc"/>
+<rect x="30" y="20" width="170" height="230" rx="85" fill="#fff" stroke="#26241f" stroke-width="6"/>
+<rect x="46" y="36" width="138" height="198" rx="69" fill="none" stroke="#d8ccb4" stroke-width="3"/>
+<line x1="80" y1="70" x2="60" y2="110" stroke="#d8ccb4" stroke-width="6" stroke-linecap="round"/>
+<g fill="none" stroke="#26241f" stroke-width="5"><circle cx="96" cy="180" r="14"/><circle cx="134" cy="180" r="14"/></g>
+<path d="M104 168 L150 96 M126 168 L80 96" stroke="#26241f" stroke-width="6" stroke-linecap="round"/>
+<rect x="224" y="30" width="40" height="200" rx="20" fill="#fff" stroke="#26241f" stroke-width="5"/>
+<g clip-path="inset(0)"><path d="M228 60 l32 -20 v18 l-32 20z M228 110 l32 -20 v18 l-32 20z M228 160 l32 -20 v18 l-32 20z" fill="#c8202b"/><path d="M228 85 l32 -20 v10 l-32 20z M228 135 l32 -20 v10 l-32 20z M228 185 l32 -20 v10 l-32 20z" fill="#2a4a8c"/></g>
+<rect x="216" y="20" width="56" height="14" rx="5" fill="#26241f"/><rect x="216" y="226" width="56" height="14" rx="5" fill="#26241f"/>
+<rect x="20" y="262" width="280" height="10" fill="#26241f"/>
+<g fill="#26241f"><rect x="40" y="276" width="110" height="10" rx="3"/></g>
+<g stroke="#f4ecdc" stroke-width="3"><line x1="50" y1="276" x2="50" y2="286"/><line x1="62" y1="276" x2="62" y2="286"/><line x1="74" y1="276" x2="74" y2="286"/><line x1="86" y1="276" x2="86" y2="286"/><line x1="98" y1="276" x2="98" y2="286"/><line x1="110" y1="276" x2="110" y2="286"/><line x1="122" y1="276" x2="122" y2="286"/><line x1="134" y1="276" x2="134" y2="286"/></g>
+<text x="230" y="290" font-family="Impact,Haettenschweiler,sans-serif" font-size="18" text-anchor="middle" fill="#c8202b">CORTE</text>
+</svg>
+<figcaption>Ilustración original; no es foto del local</figcaption>
+</figure>
+</header>
+</div>
+<div class="stripe" aria-hidden="true"></div>
+<div class="wrap">
+<div class="two">
+<section id="donde" aria-labelledby="loc">
+<h2 id="loc" class="disp"><span class="kick">Sobre el Camino</span>Dónde estamos</h2>
+<div class="card">
+<p class="who disp">Carlitos · Peluquería</p>
+<p class="plate addr disp"><span>Camino General Belgrano</span> <span class="num">4566</span></p>
+<p class="hint">Buscá el número sobre el Camino General Belgrano. Si es tu primera vez, conviene consultar antes cómo se atiende.</p>
+</div>
+</section>
+<section id="antes" aria-labelledby="faq">
+<h2 id="faq" class="disp"><span class="kick">Para que el corte salga como querés</span>Antes de ir</h2>
+<details><summary>¿Cómo explico el corte que quiero?</summary><p>Llevá una foto de referencia y decí cuánto querés sacar en centímetros o dedos. Contá también cómo te peinás en casa.</p></details>
+<details><summary>¿Conviene ir con el pelo lavado?</summary><p>Preguntalo al llegar o al consultar: cada peluquería trabaja distinto.</p></details>
+<details><summary>¿Qué datos me sirven para pedir turno?</summary><p>Qué querés hacerte, qué días podés y si tenés algo especial para avisar (pelo muy largo, sensibilidad en el cuero cabelludo).</p></details>
+<details><summary>¿Cada cuánto conviene volver?</summary><p>Depende del largo y del estilo; los cortes cortos suelen pedir retoques más seguido. Consultalo en tu visita.</p></details>
+</section>
+</div>
+<section id="consulta" aria-labelledby="sim">
+<h2 id="sim" class="disp"><span class="kick">Llegá al sillón con las preguntas listas</span>Armá tu consulta</h2>
+<div class="sim">
+<span class="lbl">Simulación local; no envía consultas ni guarda datos</span>
+<div class="simgrid">
+<div>
+<p>Tocá lo que te interesa y te queda una lista de preguntas para llevar.</p>
+<div class="chips" id="chips">
+<button type="button" aria-pressed="false" data-q="¿Qué largo me recomendás para mi tipo de pelo?">Largo</button>
+<button type="button" aria-pressed="false" data-q="¿Cómo lo mantengo peinado en casa?">Peinado diario</button>
+<button type="button" aria-pressed="false" data-q="¿Cada cuánto debería volver para retocar?">Retoque</button>
+<button type="button" aria-pressed="false" data-q="¿Qué servicios hacen además del corte?">Otros servicios</button>
+<button type="button" aria-pressed="false" data-q="¿Cómo se pide turno y en qué horarios atienden?">Turnos</button>
+</div>
+</div>
+<ol id="out" aria-live="polite"><li>Elegí al menos un tema.</li></ol>
+</div>
+</div>
+</section>
+<section class="offer" aria-labelledby="pf">
+<h2 id="pf" class="disp"><span class="kick">Sección del vendedor</span>Propuesta PrintFactory</h2>
+<p class="sub">Sección del vendedor, separada de la información de Carlitos. Piezas impresas sugeridas para el local; nada de esto es oferta actual del comercio. <a href="../index.html">Volver a la galería</a></p>
+<div class="prods">
+<figure class="prod">
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="p1"><title id="p1">Atril en A con dos paneles QR ilustrativos, no operativos</title>
+<rect width="320" height="240" fill="#f4ecdc"/>
+<rect x="40" y="206" width="240" height="14" rx="3" fill="#26241f"/>
+<polygon points="70,206 130,46 190,46 250,206" fill="none" stroke="#26241f" stroke-width="4"/>
+<g transform="translate(90 70)"><rect width="68" height="110" rx="4" fill="#fff" stroke="#26241f" stroke-width="3"/><rect x="10" y="10" width="48" height="48" fill="none" stroke="#c8202b" stroke-width="3" stroke-dasharray="5 4"/><text x="34" y="40" font-family="Impact,Haettenschweiler,sans-serif" font-size="18" text-anchor="middle" fill="#c8202b">QR</text><text x="34" y="84" font-family="Georgia,serif" font-size="14" text-anchor="middle">Contacto</text></g>
+<g transform="translate(162 70)"><rect width="68" height="110" rx="4" fill="#fff" stroke="#26241f" stroke-width="3"/><rect x="10" y="10" width="48" height="48" fill="none" stroke="#2a4a8c" stroke-width="3" stroke-dasharray="5 4"/><text x="34" y="40" font-family="Impact,Haettenschweiler,sans-serif" font-size="18" text-anchor="middle" fill="#2a4a8c">QR</text><text x="34" y="84" font-family="Georgia,serif" font-size="14" text-anchor="middle">Instagram</text></g>
+<text x="160" y="30" font-family="Georgia,serif" font-size="14" text-anchor="middle" fill="#6b645a">QR · maqueta</text>
+</svg>
+<span class="st">Catálogo demo-referencia · no verificado</span>
+<h3>Stand doble QR</h3>
+<p>Para el mostrador: un lado lleva a contacto y el otro a Instagram.</p>
+<figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure class="prod">
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="p2"><title id="p2">Tres llaveros con franja de peluquería y espacio para logo</title>
+<rect width="320" height="240" fill="#f4ecdc"/>
+<g fill="none" stroke="#26241f" stroke-width="4"><circle cx="70" cy="44" r="15"/><circle cx="160" cy="36" r="15"/><circle cx="250" cy="46" r="15"/></g>
+<g transform="rotate(-8 70 125)"><rect x="40" y="62" width="60" height="120" rx="30" fill="#26241f"/><rect x="40" y="142" width="60" height="10" fill="#c8202b"/><rect x="40" y="158" width="60" height="8" fill="#2a4a8c"/><text x="70" y="112" font-family="Impact,Haettenschweiler,sans-serif" font-size="16" fill="#f4ecdc" text-anchor="middle">LOGO</text></g>
+<g><rect x="130" y="54" width="60" height="120" rx="30" fill="#c8202b"/><text x="160" y="110" font-family="Impact,Haettenschweiler,sans-serif" font-size="16" fill="#fff" text-anchor="middle">LOGO</text></g>
+<g transform="rotate(8 250 128)"><rect x="220" y="64" width="60" height="120" rx="30" fill="#fff" stroke="#26241f" stroke-width="3"/><text x="250" y="118" font-family="Impact,Haettenschweiler,sans-serif" font-size="16" text-anchor="middle">LOGO</text></g>
+<text x="160" y="222" font-family="Georgia,serif" font-size="14" text-anchor="middle" fill="#6b645a">Espacio para logo aprobado</text>
+</svg>
+<span class="st">Catálogo demo-referencia · no verificado</span>
+<h3>Llaveros con logo</h3>
+<p>Para regalar a clientes y que recomienden la peluquería en el barrio.</p>
+<figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure class="prod">
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="p3"><title id="p3">Bloque soporte con tarjeta en blanco y cotas de 100 por 60 por 30 milímetros</title>
+<rect width="320" height="240" fill="#f4ecdc"/>
+<polygon points="50,150 210,150 250,125 90,125" fill="#c8202b"/>
+<rect x="50" y="150" width="160" height="40" fill="#26241f"/>
+<polygon points="210,150 250,125 250,165 210,190" fill="#111"/>
+<rect x="110" y="45" width="100" height="94" rx="3" fill="#fff" stroke="#26241f" stroke-width="3" transform="skewX(-6)"/>
+<text x="148" y="68" font-family="Impact,Haettenschweiler,sans-serif" font-size="16" text-anchor="middle" fill="#26241f">TURNO</text>
+<g stroke="#6b645a"><line x1="104" y1="88" x2="186" y2="88"/><line x1="102" y1="106" x2="170" y2="106"/></g>
+<g stroke="#2a4a8c" stroke-width="2" font-family="Georgia,serif" font-size="14" fill="#2a4a8c"><line x1="50" y1="204" x2="210" y2="204"/><text x="130" y="224" stroke="none" text-anchor="middle">100 mm</text><line x1="262" y1="125" x2="262" y2="165"/><text x="268" y="150" stroke="none">30</text><line x1="216" y1="198" x2="252" y2="174"/><text x="250" y="206" stroke="none">60</text></g>
+<text x="16" y="28" font-family="Georgia,serif" font-size="14" fill="#6b645a">Medidas propuestas</text>
+</svg>
+<span class="st">Nuevo concepto</span>
+<h3>Soporte de tarjeta de turnos</h3>
+<p>Bloque de 100×60×30 mm para exhibir una tarjeta de turno junto al espejo o la caja.</p>
+<figcaption>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</div>
+</section>
+</div>
+</main>
+<footer class="wrap">
+<p><strong>Demo no oficial</strong> · sin afiliación ni aprobación del comercio. Datos públicos: nombre, rubro y dirección tomados de la ficha de directorio Ágora (market.agora.red, ID 0x95a3296c1811dcdd:0xf6c304d44479d248). No se encontró web propia en búsqueda nominal; la ficha no equivale a web propia. La ficha no indica localidad, horarios, servicios ni precios, por eso se omiten. Ilustraciones originales.</p>
+</footer>
+<script>
+(function(){var c=document.getElementById('chips'),o=document.getElementById('out');
+c.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+var s=c.querySelectorAll('[aria-pressed=true]');o.innerHTML='';
+if(!s.length){o.innerHTML='<li>Elegí al menos un tema.</li>';return}
+s.forEach(function(x){var li=document.createElement('li');li.textContent=x.dataset.q;o.appendChild(li)})});})();
+</script>
+</body>
+</html>
