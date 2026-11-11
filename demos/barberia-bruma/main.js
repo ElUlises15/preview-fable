@@ -1,0 +1,10 @@
+document.documentElement.classList.add('js');
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.focus()}});
+const motion=document.querySelector('.motion-toggle');
+motion?.addEventListener('click',()=>{const paused=motion.getAttribute('aria-pressed')!=='true';motion.setAttribute('aria-pressed',String(paused));document.querySelector('.fog').classList.toggle('paused',paused);motion.innerHTML=paused?'Activar bruma <span aria-hidden="true">▷</span>':'Pausar bruma <span aria-hidden="true">Ⅱ</span>'});
+const dialog=document.querySelector('.lightbox');
+document.querySelectorAll('.image-open').forEach(button=>button.addEventListener('click',()=>{dialog.querySelector('img').src=button.dataset.image;dialog.querySelector('img').alt=button.querySelector('img').alt;dialog.querySelector('p').textContent=button.dataset.caption;dialog.showModal()}));
+dialog?.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());
+dialog?.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1210">
+<meta name="description" content="Casa Fuego: demo de parrilla a leña en San Isidro. Conocé la carta, el patio y el formulario de reservas de demostración.">
+<meta property="og:title" content="Reservá tu mesa · Casa Fuego">
+<meta property="og:image" content="assets/hero-parrilla.webp">
+<title>Reservá tu mesa · Casa Fuego</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="Casa Fuego, inicio"><svg viewBox="0 0 32 40" fill="none" aria-hidden="true"><path d="M18 1c2 11-9 12-7 21 4-2 5-6 5-6 12 8 12 16 6 21C4 48-9 23 8 12c-1 8 2 9 2 9C8 11 18 8 18 1Z" fill="currentColor"/></svg><span>CASA FUEGO<small>PARRILLA A LEÑA</small></span></a>
+<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">Menú <span class="bars" aria-hidden="true"></span></button>
+<nav class="site-nav" id="nav" aria-label="Navegación principal">
+<a href="index.html">La casa</a>
+<a href="carta.html">La carta</a>
+<a href="eventos.html">Eventos</a>
+<a class="button small" href="reservas.html" aria-current="page">Reservá tu mesa <span class="arr" aria-hidden="true"></span></a>
+</nav>
+</header>
+<main id="main">
+<section class="reservation section">
+<div class="reservation-copy">
+<p class="eyebrow"><span class="dot"></span> TE GUARDAMOS UN LUGAR EN LA DEMO</p>
+<h1>LA MESA<br>ESTÁ PUESTA.</h1>
+<p>Elegí el día, juntá a los tuyos<br>y dejá que el fuego haga lo suyo.</p>
+<img width="1536" height="1024" src="assets/patio.webp" alt="Mesas del patio de noche bajo luces cálidas" fetchpriority="high">
+<div class="contact-line"><span>SAN ISIDRO · BUENOS AIRES</span><a href="https://wa.me/541155550909?text=Hola%20Casa%20Fuego%2C%20quiero%20reservar%20una%20mesa." target="_blank" rel="noopener">WhatsApp demo <span class="arr" aria-hidden="true"></span></a></div>
+</div>
+<div class="form-panel">
+<h2>HACETE UN LUGAR.</h2>
+<p class="demo-note">Formulario de demostración. No envía datos ni confirma reservas.</p>
+<form id="reservation-form">
+<div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" autocomplete="name" placeholder="¿Cómo te llamás?" required maxlength="100"></div>
+<div class="field"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="11 5555 0000" required minlength="6" maxlength="30"></div>
+<div class="form-grid">
+<div class="field"><label for="fecha">Fecha</label><input type="date" id="fecha" name="fecha" required></div>
+<div class="field"><label for="personas">Personas</label><select id="personas" name="personas" required><option value="">Elegí cuántos</option><option>1 persona</option><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5 personas</option><option>6 personas</option><option>7 o más personas</option></select></div>
+</div>
+<div class="form-grid">
+<div class="field"><label for="horario">Horario orientativo</label><select id="horario" name="horario" required><option value="">Elegí una opción</option><option>Mediodía</option><option>Noche</option></select></div>
+<div class="field"><label for="tipo">Tipo de encuentro</label><select id="tipo" name="tipo"><option value="mesa">Una mesa</option><option value="evento">Evento</option></select></div>
+</div>
+<div class="field"><label for="mensaje">¿Algo que debamos saber? <span>(opcional)</span></label><textarea id="mensaje" name="mensaje" rows="3" placeholder="Una celebración, una preferencia…" maxlength="1000"></textarea></div>
+<button class="button" type="submit">Probar reserva demo <span class="arr" aria-hidden="true"></span></button>
+<p class="fine">No se almacena información. La fecha y el horario son ilustrativos y no representan disponibilidad real.</p>
+</form>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<a class="brand" href="index.html"><svg viewBox="0 0 32 40" fill="none" aria-hidden="true"><path d="M18 1c2 11-9 12-7 21 4-2 5-6 5-6 12 8 12 16 6 21C4 48-9 23 8 12c-1 8 2 9 2 9C8 11 18 8 18 1Z" fill="currentColor"/></svg><span>CASA FUEGO<small>EL FUEGO NOS REÚNE.</small></span></a>
+<div>San Isidro, Buenos Aires<br><a href="https://wa.me/541155550909?text=Hola%20Casa%20Fuego%2C%20quiero%20reservar%20una%20mesa." target="_blank" rel="noopener">WhatsApp · +54 11 5555-0909 <span class="arr" aria-hidden="true"></span></a></div>
+<div class="fine">Proyecto de demostración.<br>Imágenes y carta ilustrativas. Sin reservas reales.</div>
+<div class="footer-bottom"><span>© 2026 Casa Fuego · Demo</span><a href="reservas.html">Nos vemos en la mesa <span class="arr" aria-hidden="true"></span></a></div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

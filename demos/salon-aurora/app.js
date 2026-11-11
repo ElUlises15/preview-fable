@@ -1,0 +1,9 @@
+const menu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#nav');
+menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('open')) { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.focus(); } });
+const motion = document.querySelector('.motion-toggle');
+if (motion) motion.addEventListener('click', () => { const paused = motion.getAttribute('aria-pressed') !== 'true'; motion.setAttribute('aria-pressed', String(paused)); motion.textContent = paused ? 'Activar luces' : 'Pausar luces'; document.body.classList.toggle('motion-paused', paused); });
+const form = document.querySelector('#inquiry');
+if (form) { const chosen = new URLSearchParams(location.search).get('evento'); if (['Cumpleaños','Quince','A tu manera'].includes(chosen)) form.elements.evento.value = chosen;
+form.addEventListener('submit', event => { event.preventDefault(); const data = new FormData(form); const date = data.get('fecha'); const message = `¡Hola, Aurora! Soy ${data.get('nombre').trim()}. Quiero consultar por ${data.get('evento')}, para aproximadamente ${data.get('invitados')} personas.${date ? ` Fecha tentativa: ${date.split('-').reverse().join('/')}.` : ' Todavía no tengo fecha definida.'}${data.get('mensaje').trim() ? ` ${data.get('mensaje').trim()}` : ''}`; const link = document.createElement('a'); link.href = 'https://wa.me/541155551010?text=' + encodeURIComponent(message); link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'Abrir mi consulta en WhatsApp ↗'; document.querySelector('#form-status').replaceChildren(link); window.open(link.href, '_blank', 'noopener'); }); }

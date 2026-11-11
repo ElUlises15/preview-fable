@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b2430">
+<meta name="description" content="Salón Aurora: una propuesta demo para celebrar cumpleaños y quince en Sourigues, zona sur GBA. Conocé los espacios y consultá tu fecha.">
+<meta property="og:title" content="Hablemos de tu fiesta · Salón Aurora">
+<meta property="og:description" content="Un lugar para encontrarnos, una noche para recordar. Demo en Sourigues.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-salon.webp">
+<title>Hablemos de tu fiesta · Salón Aurora</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header">
+  <a class="brand" href="index.html" aria-label="Salón Aurora, inicio"><span class="brand-sun" aria-hidden="true"></span><span><span class="brand-name">aurora</span><span class="brand-sub">SALÓN DE EVENTOS</span></span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú <span class="menu-icon" aria-hidden="true"></span></button>
+  <nav id="nav" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="espacios.html">Los espacios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="contacto.html" aria-current="page">Contacto</a>
+  </nav>
+  <a class="header-cta" href="#inquiry">Consultá tu fecha <span class="arr" aria-hidden="true"></span></a>
+</header>
+<main id="contenido">
+  <section class="contact section">
+    <div class="contact-copy">
+      <p class="eyebrow dark">Contacto</p>
+      <h1>Tu fiesta empieza<br>con un <em>hola.</em></h1>
+      <p class="lead">Contanos qué te gustaría celebrar.<br>El primer paso es imaginarlo juntos.</p>
+      <div class="contact-info">
+        <p>Sourigues · Zona sur GBA</p>
+        <a href="https://wa.me/541155551010" target="_blank" rel="noopener">+54 11 5555-1010</a>
+        <p class="demo-note">Número de demostración. Dirección, horarios y visitas a confirmar.</p>
+      </div>
+      <picture><source srcset="assets/mesa.webp" type="image/webp"><img width="1600" height="900" class="contact-photo" src="assets/mesa.webp" alt="Detalle ilustrativo de una mesa con lino y velas" loading="lazy"></picture>
+    </div>
+    <div class="contact-form">
+      <h2>¿Qué tenés en mente?</h2>
+      <p>Completá los datos y abrí tu consulta en WhatsApp.</p>
+      <form id="inquiry">
+        <label for="nombre">Tu nombre</label>
+        <input id="nombre" name="nombre" autocomplete="given-name" placeholder="¿Cómo te llamás?" required maxlength="80">
+        <label for="evento">¿Qué festejás?</label>
+        <select id="evento" name="evento" required>
+          <option value="">Elegí una opción</option>
+          <option>Cumpleaños</option>
+          <option>Quince</option>
+          <option>A tu manera</option>
+        </select>
+        <div class="form-row">
+          <div>
+            <label for="fecha">Fecha tentativa <span>(opcional)</span></label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+          <div>
+            <label for="invitados">Invitados aprox.</label>
+            <input type="number" id="invitados" name="invitados" min="1" max="10000" inputmode="numeric" placeholder="Ej. 60" required>
+          </div>
+        </div>
+        <label for="mensaje">Algo más que quieras contarnos <span>(opcional)</span></label>
+        <textarea id="mensaje" name="mensaje" rows="4" maxlength="1200" placeholder="La idea, el estilo, esa canción que no puede faltar…"></textarea>
+        <button class="button" type="submit">Armar consulta por WhatsApp <span class="arr" aria-hidden="true"></span></button>
+        <p class="form-note">Se abre WhatsApp con tu mensaje para que lo revises y envíes. No se guarda información en este sitio.</p>
+        <p id="form-status" role="status"></p>
+      </form>
+      <noscript><p>Podés hacer tu consulta <a href="https://wa.me/541155551010">directamente por WhatsApp</a>.</p></noscript>
+    </div>
+  </section>
+
+  <section class="closing">
+    <span class="small">La próxima historia puede ser la tuya</span>
+    <h2>¿Empezamos a imaginar tu fiesta?</h2>
+    <a class="button" href="https://wa.me/541155551010?text=Hola%20Aurora%2C%20quiero%20consultar%20una%20fecha%20para%20mi%20fiesta." target="_blank" rel="noopener">Escribinos por WhatsApp <span class="arr" aria-hidden="true"></span></a>
+  </section>
+</main>
+<footer>
+  <a class="brand footer-brand" href="index.html" aria-label="Salón Aurora, inicio"><span class="brand-sun" aria-hidden="true"></span><span class="brand-name">aurora</span></a>
+  <p>Sourigues · Zona sur GBA<br>Un lugar para celebrar cerca de casa.</p>
+  <a href="https://wa.me/541155551010" target="_blank" rel="noopener">WhatsApp · +54 11 5555-1010 <span class="arr" aria-hidden="true"></span></a>
+  <div class="footer-bottom"><span>© 2026 Salón Aurora · Sitio demo</span><span>Imágenes ilustrativas generadas con IA. Propuestas sujetas a confirmación.</span></div>
+</footer>
+</body>
+</html>
