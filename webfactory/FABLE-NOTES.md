@@ -1,0 +1,11 @@
+# Mejoras (Claude Fable 5.2)
+- Nada de esto está probado en navegador: faltan las capturas a 390px y 1280px, sobre todo de la galería, que estilé sin ver su HTML completo.
+- Robots quedó en "noindex, nofollow" por ser copia de prueba; no había aviso de versión de prueba, así que no agregué ninguno.
+- Hero: un solo CTA fuerte a WhatsApp y "Ver los tres planes" como link secundario; el precio "Desde $150.000" pasa a encabezar una ficha tipo remito justo debajo del botón.
+- Copy: retoqué título, bajada, kicker y textos de precios y contacto, y los botones de plan ahora dicen "Quiero la Básica/Intermedia/Completa". Sumé una bajada corta en beneficios y links internos en el footer; no hay datos nuevos.
+- Precios: cada plan es un panel con los mismos precios, mantenimiento, plazos y links; la Intermedia va en azul con el badge "La que recomendamos" (el JSON dice "La más elegida", dejé el del HTML).
+- Galería (solo CSS): tarjetas con barrita de navegador, badges y precio más ordenados, y "Ver web/Ver demo" como fila táctil de 48px.
+- Galería en el celu: cada categoría, salvo la primera, se recorre de costado con scroll-snap para no apilar las 26 tarjetas; la página no tiene scroll horizontal. Si preferís todo apilado, se borra el bloque `@media(max-width:719px)`.
+- Pasos: pasan a ser una línea de producción con estaciones numeradas (vertical en el celu, horizontal en desktop), en lugar de la escalera.
+- Rendimiento: la captura principal del hero ya no se anima y saqué las demoras de entrada; subí el CSS a `?v=6`.
+- Accesibilidad: el botón Menú tiene borde y estado abierto, los links del menú y del footer miden 44px o más, y los ticks de las listas están dibujados en CSS.

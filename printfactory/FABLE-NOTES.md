@@ -1,0 +1,11 @@
+# Mejoras (Claude Fable 5.2)
+- No lo probé en navegador: el HTML y el CSS están escritos contra el `app.js` y el `data.js` que pasaste, pero falta la revisión visual a 390px y 1280px.
+- Hero con la oferta local arriba: "Sourigues, Berazategui · pedidos por WhatsApp", un solo CTA principal verde y "Ver catálogo" como link secundario, para no tener dos botones iguales.
+- Nueva "ficha de impresión" en el hero (impresora, entrega, pedidos), armada solo con datos que ya estaban en el sitio.
+- Cada sección lleva una etiqueta "Capa 01…04" y un título más concreto, por ejemplo "Lo que ya tenemos diseñado" y "Tu marca en el mostrador y en el llavero".
+- Para negocios: los mismos tres productos y precios ($25.000, $8.000 c/u, A cotizar), ahora en filas con el precio destacado; el formulario suma una franja azul de marca.
+- Cómo comprar: números grandes 01–04 y, en desktop, los pasos suben en escalera como capas.
+- Catálogo: precio más grande, filtros tipo píldora, variantes con estado elegido más claro y detalles separados por una línea. Se mantienen todas las clases e ids que usa `app.js`.
+- La animación del título pasa de 1,7 s a 1,2 s para que el texto principal aparezca antes; `prefers-reduced-motion` se sigue respetando.
+- Accesibilidad: el botón del header y los links de navegación llegan a 44px, y el footer suma links a las secciones porque en el celular el menú del header está oculto.
+- Se conservan el `noindex, nofollow`, el aviso de versión de prueba, el WhatsApp, el Instagram y todos los links; no hay recursos externos ni datos nuevos.

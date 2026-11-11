@@ -1,0 +1,4 @@
+# Demo: permitir rastreo para que buscadores lean noindex en HTML/cabeceras.
+# Esto no vuelve privado al sitio; usar control de acceso si es confidencial.
+User-agent: *
+Allow: /
