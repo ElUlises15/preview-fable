@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NOMBRE}} · {{RUBRO}} en {{BARRIO}}</title>
+<meta name="description" content="{{DESCRIPCION_SEO: 140-160 caracteres, rubro + barrio + qué ofrecés}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1C1410">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<div class="tpl-banner" role="note" style="background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;padding:8px 16px;text-align:center">Plantilla Web Factory: los textos entre {{ }} y las fotos son de ejemplo. Reemplazalos con datos reales del cliente antes de publicar.</div>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></symbol>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="header">
+  <a class="wordmark" href="#" aria-label="{{NOMBRE}}, inicio">
+    <svg class="moon icon icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+    <span class="wordmark-name">{{NOMBRE}}</span>
+    <span class="wordmark-note">{{BARRIO}}<span class="wordmark-city"> · {{CIUDAD}}</span></span>
+  </a>
+  <nav aria-label="Navegación principal">
+    <a href="#historia">La casa</a>
+    <a href="#carta">La carta</a>
+    <a href="#rincones">Rincones</a>
+    <a class="nav-cta" href="#mesa">Pedí tu mesa <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-ur"/></svg></a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+<section class="hero" aria-labelledby="hero-title">
+  <img width="1600" height="900" class="hero-photo" src="assets/images/hero-latte.webp" alt="Latte en taza de cerámica con una luna de espuma, junto a la ventana iluminada" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-content">
+    <p class="eyebrow">Café de especialidad. Ritmo de barrio.</p>
+    <h1 id="hero-title">Quedate<br>un ratito <em>más.</em></h1>
+    <p class="hero-lead">Un buen café, una medialuna tibia y ese momento que es sólo tuyo.</p>
+    <div class="hero-actions">
+      <a class="button" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20vi%20la%20demo%20de%20%7B%7BNOMBRE%7D%7D.%20%C2%BFMe%20guard%C3%A1s%20una%20mesa%20junto%20a%20la%20ventana%3F" target="_blank" rel="noopener noreferrer">Pedí tu mesa por WhatsApp <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-ur"/></svg></a>
+      <a class="text-link" href="#mesa">Mirá los horarios</a>
+    </div>
+    <span class="hero-location">Hecho de pausas, en {{BARRIO}}. Demo conceptual: el número de WhatsApp es ficticio.</span>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-hours"><span>{{HORARIO_SEMANA}}</span><span>{{HORARIO_SABADO}}</span><span>{{HORARIO_DOMINGO}}</span><small>Horarios ficticios</small></p>
+    <a href="#historia">Pasá, estás en casa <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg></a>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-group">
+      <span>Café sin apuro</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Medialunas tibias</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Charlas que se alargan</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Un rincón en el barrio</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+    </div>
+    <div class="ticker-group">
+      <span>Café sin apuro</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Medialunas tibias</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Charlas que se alargan</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+      <span>Un rincón en el barrio</span><svg class="icon icon-moon" focusable="false"><use href="#i-moon"/></svg>
+    </div>
+  </div>
+</div>
+
+<section id="historia" class="story section">
+  <div class="story-title">
+    <p class="eyebrow">Nuestra manera de estar</p>
+    <h2>Hay lugares.<br>Y hay <em>tu lugar.</em></h2>
+    <svg class="drawn-moon icon icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+  </div>
+  <div class="story-copy reveal">
+    <p class="lead">Una mesa junto a la ventana.<br>El ruido del café cayendo.<br>Un disco de jazz, bajito.</p>
+    <p>Así imaginamos {{NOMBRE}}: un café de barrio donde podés abrir la compu, encontrarte con alguien o simplemente mirar la calle con una taza entre las manos.</p>
+    <p>En esta casa, la mejor parte del café es el rato que te regalás.</p>
+    <span class="signature">Nos vemos en {{NOMBRE}}.</span>
+  </div>
+</section>
+
+<section id="carta" class="specialties section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">De nuestra carta</p>
+      <h2>Pequeños <em>rituales.</em></h2>
+    </div>
+    <p>Sin vueltas. Cosas ricas,<br>hechas para acompañarte.</p>
+  </div>
+  <div class="menu-grid">
+    <article class="menu-item reveal">
+      <div class="image-wrap"><img width="1600" height="900" src="assets/images/hero-latte.webp" alt="Café latte cremoso con arte de luna" loading="lazy"></div>
+      <div class="item-heading"><h3>Latte de la casa</h3><span class="item-no" aria-hidden="true">01</span></div>
+      <p>Espresso, leche sedosa y una pequeña luna en tu taza. Suave, redondo, sin apuro.</p>
+      <span class="menu-note">El favorito de esta casa imaginaria</span>
+    </article>
+    <article class="menu-item reveal">
+      <div class="image-wrap"><img width="1448" height="1086" src="assets/images/medialunas.webp" alt="Medialunas doradas y brillantes sobre un plato de cerámica" loading="lazy"></div>
+      <div class="item-heading"><h3>Medialunas de manteca</h3><span class="item-no" aria-hidden="true">02</span></div>
+      <p>Doraditas por fuera, tiernas por dentro. De esas que piden otra servilleta y otro café.</p>
+      <span class="menu-note">La compañía de siempre</span>
+    </article>
+    <article class="menu-item reveal">
+      <div class="image-wrap"><img width="1448" height="1086" src="assets/images/barra.webp" alt="Máquina de espresso y tazas listas sobre la barra de madera" loading="lazy"></div>
+      <div class="item-heading"><h3>Un espresso en la barra</h3><span class="item-no" aria-hidden="true">03</span></div>
+      <p>Corto, intenso y con todo el aroma del café recién molido. Tu pausa entre una cosa y otra.</p>
+      <span class="menu-note">Para volver a empezar</span>
+    </article>
+  </div>
+  <p class="demo-note">Carta ilustrativa de una propuesta ficticia. No se realizan pedidos.</p>
+</section>
+
+<section id="rincones" class="gallery section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Puertas adentro</p>
+      <h2>Cada rincón,<br>una <em>excusa para volver.</em></h2>
+    </div>
+    <p>La luz de la tarde, la mesa de siempre.<br>Un poco de {{NOMBRE}} en imágenes.</p>
+  </div>
+  <div class="mosaic">
+    <figure class="gallery-main reveal">
+      <img width="1448" height="1086" src="assets/images/rincon.webp" alt="Rincón con libros, sillas de madera y una mesa junto a la ventana" loading="lazy">
+      <figcaption>Tu próxima pausa podría ser acá.</figcaption>
+    </figure>
+    <figure class="reveal">
+      <img width="1448" height="1086" src="assets/images/barra.webp" alt="La cálida barra de café bajo lámparas de luz ámbar" loading="lazy">
+      <figcaption>Donde empieza el ritual.</figcaption>
+    </figure>
+    <figure class="reveal">
+      <img width="1448" height="1086" src="assets/images/medialunas.webp" alt="Detalle de las capas doradas de nuestras medialunas ilustrativas" loading="lazy">
+      <figcaption>Algo rico, siempre cerca.</figcaption>
+    </figure>
+  </div>
+  <p class="demo-note">Un café imaginado. Todas las imágenes fueron creadas con IA para esta demo.</p>
+</section>
+
+<section id="mesa" class="visit section">
+  <div class="visit-copy">
+    <p class="eyebrow">Nos hacemos un lugar</p>
+    <h2>Vos traé las ganas.<br>El café <em>lo ponemos acá.</em></h2>
+    <p class="visit-lead">¿Venís a charlar o con la compu?<br>Escribinos y buscá tu mesa junto a la ventana.</p>
+    <a class="button" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20vi%20la%20demo%20de%20%7B%7BNOMBRE%7D%7D.%20%C2%BFMe%20guard%C3%A1s%20una%20mesa%20junto%20a%20la%20ventana%3F" target="_blank" rel="noopener noreferrer">Pedí tu mesa por WhatsApp <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-ur"/></svg></a>
+    <p class="contact-note">{{WHATSAPP_VISIBLE}} · Número ficticio de demo.<br>El enlace abre WhatsApp. No permite reservas reales.</p>
+  </div>
+  <aside class="hours">
+    <svg class="small-moon icon icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+    <h3>Un ratito en {{NOMBRE}}</h3>
+    <p>{{BARRIO}}, {{CIUDAD}}<br>Ubicación conceptual, sin local físico.</p>
+    <dl>
+      <div><dt>Lunes a viernes</dt><dd>{{HORARIO_SEMANA}}</dd></div>
+      <div><dt>Sábados</dt><dd>{{HORARIO_SABADO}}</dd></div>
+      <div><dt>Domingos</dt><dd>{{HORARIO_DOMINGO}}</dd></div>
+    </dl>
+    <p class="demo-note">Horarios ficticios · Sólo para esta demo</p>
+    <span class="hours-sign">Siempre hay tiempo para un café.</span>
+  </aside>
+</section>
+
+</main>
+
+<footer class="footer">
+  <a class="footer-logo" href="#"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg> {{NOMBRE}}</a>
+  <nav class="footer-nav" aria-label="Secciones">
+    <a href="#historia">La casa</a>
+    <a href="#carta">La carta</a>
+    <a href="#rincones">Rincones</a>
+    <a href="#mesa">Tu mesa</a>
+  </nav>
+  <a class="footer-top" href="#contenido">Volver arriba <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up"/></svg></a>
+  <div class="footer-legal">
+    <p>Demo conceptual — no es el sitio oficial</p>
+    <span class="footer-small">Un café imaginario. Un ratito de inspiración.</span>
+  </div>
+</footer>
+</body>
+</html>
