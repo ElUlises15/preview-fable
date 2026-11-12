@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1d1f22">
+<meta name="description" content="Demo no oficial de propuesta para Metal Motor, rubro automotor en Camino General Belgrano 4998. Guía para preparar tu consulta de motor.">
+<title>Metal Motor · Demo no oficial</title>
+<style>
+:root{
+  --ink:#1d1f22;--rust:#a8461f;--rust-lt:#f0a57e;--paper:#f4efe6;--card:#fffdf8;--line:#cfc6b6;--mid:#5a564f;
+  --display:"Bahnschrift","DIN Alternate","DIN Condensed","Franklin Gothic Medium","Arial Narrow",sans-serif;
+  --body:Charter,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --pad:18px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;color:var(--ink);font:17px/1.65 var(--body);
+  background-color:var(--paper);
+  background-image:linear-gradient(rgba(29,31,34,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(29,31,34,.045) 1px,transparent 1px);
+  background-size:24px 24px
+}
+a{color:var(--rust);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+p{margin:0 0 1em;max-width:62ch}
+figure{margin:0}
+svg{width:100%;height:auto;display:block}
+
+.skip{position:absolute;left:-999px}
+.skip:focus{left:8px;top:8px;background:var(--ink);color:var(--paper);padding:12px 16px;z-index:9}
+
+.banner{
+  background:var(--ink);color:var(--paper);text-align:center;padding:9px 12px;
+  font:600 13px/1.4 var(--display);letter-spacing:.09em;text-transform:uppercase;
+  border-bottom:3px solid var(--rust)
+}
+
+main,footer{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+main{counter-reset:sec}
+
+/* .mono se conserva como clase: rótulos de planilla en la tipografía display */
+.mono,.tag{font-family:var(--display);letter-spacing:.06em}
+
+/* ---------- Encabezado ---------- */
+.hero{display:grid;gap:28px;padding:30px 0 36px;border-bottom:3px solid var(--ink)}
+.tag{margin:0;font-size:13px;font-weight:600;color:var(--rust);text-transform:uppercase;letter-spacing:.16em}
+.tag::before{content:"";display:inline-block;width:28px;height:3px;background:var(--rust);vertical-align:middle;margin-right:10px}
+h1{
+  font:700 clamp(3.6rem,19vw,8rem)/.84 var(--display);
+  text-transform:uppercase;letter-spacing:-.015em;margin:.16em 0 .22em
+}
+h1 span{display:block;color:var(--rust)}
+.addr{
+  display:inline-block;margin:0 0 18px;padding:8px 12px;border:2px solid var(--ink);background:var(--card);
+  font:600 15px/1.35 var(--display);letter-spacing:.07em;text-transform:uppercase
+}
+.addr b{color:var(--rust);font-weight:600}
+.lead{font-size:1.08rem}
+.lead small{display:block;font-size:.85rem;color:var(--mid);margin-top:4px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:12px 20px;
+  background:var(--ink);color:var(--paper);text-decoration:none;
+  font:600 16px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:5px 5px 0 var(--rust);transition:transform .15s,box-shadow .15s
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--rust)}
+.btn svg{width:18px;height:18px;flex:none}
+.lnk{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--ink)}
+.hero figure svg{box-shadow:8px 8px 0 var(--ink)}
+figcaption{font-size:13.5px;line-height:1.5;color:var(--mid);margin-top:16px}
+
+/* ---------- Secciones ---------- */
+section{padding:38px 0;border-bottom:1px dashed var(--line)}
+h2{
+  font:700 clamp(1.55rem,6vw,2.1rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.01em;
+  margin:0 0 18px;display:flex;align-items:baseline;gap:12px
+}
+h2::before{
+  counter-increment:sec;content:counter(sec,decimal-leading-zero);
+  font-size:.62em;color:var(--rust);border:2px solid var(--rust);padding:3px 7px 2px;letter-spacing:.08em;flex:none
+}
+
+.wo{display:grid;grid-template-columns:104px 1fr;border:2px solid var(--ink);background:var(--card);margin:0 0 18px;box-shadow:5px 5px 0 var(--line)}
+.wo dt,.wo dd{margin:0;padding:13px 12px;border-bottom:1px solid var(--line);display:flex;align-items:center;min-height:48px}
+.wo dt{background:var(--ink);color:var(--paper);font-size:12.5px;font-weight:600;letter-spacing:.12em;border-bottom-color:#3a3d42}
+.wo dd{font-size:16px;font-weight:600;overflow-wrap:anywhere}
+.wo dt:nth-last-of-type(1),.wo dd:last-child{border-bottom:0}
+.wo a{display:inline-flex;align-items:center;min-height:44px}
+
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  min-height:56px;padding:10px 0
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";flex:none;width:30px;height:30px;display:grid;place-items:center;
+  border:2px solid var(--ink);font:700 20px/1 var(--display);color:var(--ink);background:var(--card)
+}
+details[open] summary::after{content:"–";background:var(--ink);color:var(--paper)}
+summary:hover{color:var(--rust)}
+details p{margin:0;padding:0 44px 16px 14px;border-left:3px solid var(--rust)}
+
+/* ---------- Hoja de síntomas ---------- */
+.note{
+  display:inline-block;font:600 13px/1.4 var(--display);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rust);border:1px dashed var(--rust);padding:6px 10px;margin:0 0 18px
+}
+.sim{display:grid;gap:10px;border:2px solid var(--ink);background:var(--card);padding:16px;box-shadow:6px 6px 0 var(--ink)}
+.sim label{
+  display:flex;gap:12px;align-items:center;min-height:52px;margin:0;padding:8px 12px;
+  border:1px solid var(--line);background:var(--paper);cursor:pointer;font-weight:600;line-height:1.3
+}
+.sim label:hover{border-color:var(--ink)}
+.sim label:has(input:checked){border-color:var(--ink);background:#fff;box-shadow:inset 5px 0 0 var(--rust)}
+.sim input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--rust)}
+.sim output{
+  display:block;margin-top:8px;padding:14px 14px 16px;background:var(--ink);color:var(--paper);
+  border-left:6px solid var(--rust);min-height:6.5em;font-size:16px;line-height:1.55;letter-spacing:.03em
+}
+.sim output::before{
+  content:"Tu resumen";display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--rust-lt);margin-bottom:6px
+}
+
+/* ---------- Propuesta del vendedor ---------- */
+.seller{background:var(--ink);color:var(--paper);margin:40px calc(var(--pad) * -1) 0;padding:40px var(--pad) 44px;border-bottom:0}
+.seller .tag{color:var(--rust-lt);margin-bottom:12px}
+.seller .tag::before{background:var(--rust-lt)}
+.seller h2::before{color:var(--rust-lt);border-color:var(--rust-lt)}
+.seller>p:not(.tag){color:#e2dccf}
+.prods{display:grid;gap:20px;margin-top:26px}
+.prods figure{background:var(--paper);color:var(--ink);padding:12px 12px 16px;border-top:6px solid var(--rust)}
+.prods svg{border:1px solid var(--line)}
+.prods figcaption{color:var(--ink);font-size:14px;margin-top:12px}
+.prods strong{display:block;font:700 1.3rem/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em;margin-bottom:-.9em}
+.st{
+  display:inline-block;font:600 12px/1.3 var(--display);letter-spacing:.1em;text-transform:uppercase;
+  background:var(--rust);color:#fff;padding:4px 8px;margin:8px 0 4px
+}
+
+footer{font-size:14px;line-height:1.6;color:var(--mid);padding:26px var(--pad) 48px}
+footer p{max-width:80ch}
+footer a{display:inline-block;padding:6px 0;font-weight:600}
+
+@media(min-width:800px){
+  :root{--pad:32px}
+  .hero{grid-template-columns:1.25fr .9fr;gap:48px;align-items:end;padding:52px 0 56px}
+  .hero figure{transform:rotate(1.6deg);margin-bottom:10px}
+  .two{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;border-bottom:1px dashed var(--line)}
+  .two section{border-bottom:0}
+  .sim{grid-template-columns:1fr 1fr;gap:10px 22px;padding:22px}
+  .sim label{grid-column:1}
+  .sim output{grid-column:2;grid-row:1 / span 5;margin-top:0}
+  .seller{margin:48px 0 0;padding:52px 44px 64px}
+  .prods{grid-template-columns:1.3fr 1fr 1fr;align-items:start}
+  .prods figure:nth-child(2){margin-top:32px}
+  .prods figure:nth-child(3){margin-top:64px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="banner" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<main id="main">
+<header class="hero">
+<div>
+<p class="tag mono">Orden de trabajo · Automotor</p>
+<h1>Metal <span>Motor</span></h1>
+<p class="addr"><b>Dirección</b> · Camino General Belgrano 4998</p>
+<p class="lead">Rubro automotor en Camino General Belgrano 4998. Antes de acercarte, ordená los datos de tu vehículo y lo que notaste: si llegás con la información clara, la consulta por tu motor es más precisa.</p>
+<div class="cta">
+<a class="btn" href="https://www.metal-motor.com/">Visitar la web oficial del comercio
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="lnk" href="#sm">Armá tu hoja de síntomas</a>
+</div>
+</div>
+<figure>
+<svg viewBox="0 0 320 220" width="320" height="220" role="img" aria-labelledby="h1t"><title id="h1t">Contorno técnico de un motor sobre una hoja de orden de trabajo</title>
+<rect x="6" y="6" width="308" height="208" fill="#fff" stroke="#1d1f22" stroke-width="2"/>
+<g stroke="#cfc6b6"><path d="M6 40H314M6 74H314M6 108H314M6 142H314M6 176H314"/></g>
+<g fill="none" stroke="#1d1f22" stroke-width="3"><rect x="70" y="70" width="150" height="90" rx="6"/><rect x="88" y="48" width="114" height="24"/><path d="M220 95h34v40h-34M70 100H44v30h26"/><circle cx="145" cy="115" r="26"/></g>
+<g stroke="#a8461f" stroke-width="3" fill="none"><circle cx="145" cy="115" r="10"/><path d="M110 72v-24M135 72v-24M160 72v-24M185 72v-24"/></g>
+<path d="M240 170l40-30" stroke="#a8461f" stroke-width="2"/>
+<text x="16" y="30" font-size="15" font-family="monospace" fill="#a8461f">CONSULTA DE MOTOR</text>
+<text x="200" y="200" font-size="14" font-family="monospace" fill="#1d1f22">REV. 01</text>
+</svg>
+<figcaption>Ilustración original; no es foto del local</figcaption>
+</figure>
+</header>
+
+<div class="two">
+<section aria-labelledby="ub">
+<h2 id="ub">Ubicación</h2>
+<dl class="wo mono">
+<dt>DIRECCIÓN</dt><dd>Camino General Belgrano 4998</dd>
+<dt>RUBRO</dt><dd>Automotor</dd>
+<dt>WEB</dt><dd><a href="https://www.metal-motor.com/">metal-motor.com</a></dd>
+</dl>
+<p>Según las preguntas frecuentes de su web, trabajan sobre motores, no sobre el vehículo completo. Confirmá horarios y modalidad de atención en la web oficial antes de ir.</p>
+</section>
+
+<section aria-labelledby="fq">
+<h2 id="fq">Guía para preparar tu consulta</h2>
+<details><summary>¿Qué datos del vehículo conviene tener a mano?</summary><p>Marca, modelo, año, motorización y kilometraje aproximado.</p></details>
+<details><summary>¿Cómo describo un ruido o falla?</summary><p>Anotá el código de motor, la pieza que buscás y cualquier dato que te haya pedido el profesional.</p></details>
+<details><summary>¿Sirve llevar historial?</summary><p>Sí: anotaciones de cambios de aceite, filtros o reparaciones previas ayudan a entender el caso.</p></details>
+<details><summary>¿Hay luces en el tablero?</summary><p>Anotá cuál se encendió y si queda fija o parpadea. Una foto propia del tablero es útil.</p></details>
+</section>
+</div>
+
+<section aria-labelledby="sm">
+<h2 id="sm">Armá tu hoja de síntomas</h2>
+<p>Tildá lo que le notaste al motor y llevá el resumen anotado cuando hagas la consulta.</p>
+<p class="note">Simulación local; no envía consultas ni guarda datos</p>
+<div class="sim" id="sim" role="group" aria-labelledby="sm">
+<label><input type="checkbox" value="Ruido en el motor"> Ruido en el motor</label>
+<label><input type="checkbox" value="Luz de tablero encendida"> Luz de tablero encendida</label>
+<label><input type="checkbox" value="Identificar un repuesto"> Identificar un repuesto</label>
+<label><input type="checkbox" value="Cuesta arrancar"> Cuesta arrancar</label>
+<label><input type="checkbox" value="Consulta por pieza de motor"> Consulta por pieza de motor</label>
+<output class="mono" id="out" aria-live="polite">Marcá síntomas para armar tu resumen.</output>
+</div>
+</section>
+
+<section class="seller" aria-labelledby="pf">
+<p class="tag mono">Espacio del vendedor · aparte del comercio</p>
+<h2 id="pf">Propuesta PrintFactory para mostrador</h2>
+<p>Oferta del vendedor PrintFactory, separada de la información del comercio. Solo objetos de mostrador y entrega; ninguna pieza del vehículo.</p>
+<div class="prods">
+<figure>
+<svg viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="p1"><title id="p1">Llavero rectangular con texto Metal Motor</title>
+<rect width="320" height="200" fill="#f4efe6"/><circle cx="70" cy="60" r="18" fill="none" stroke="#1d1f22" stroke-width="4"/>
+<rect x="80" y="70" width="180" height="80" rx="10" fill="#1d1f22"/><circle cx="100" cy="90" r="7" fill="#f4efe6"/>
+<text x="170" y="120" font-size="18" text-anchor="middle" fill="#f4efe6" font-family="monospace">METAL MOTOR</text></svg>
+<figcaption><strong>Llaveros con nombre</strong><br>Para entregar a clientes con el vehículo; no es pieza del auto.<br><span class="st">Referencia de catálogo demo</span><br>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="p2"><title id="p2">Stand de mostrador con dos códigos QR</title>
+<rect width="320" height="200" fill="#f4efe6"/><path d="M60 170h200l-20-130H80z" fill="#fff" stroke="#1d1f22" stroke-width="3"/>
+<g fill="#1d1f22"><rect x="95" y="70" width="50" height="50"/><rect x="175" y="70" width="50" height="50"/></g>
+<g fill="#fff"><rect x="103" y="78" width="14" height="14"/><rect x="183" y="78" width="14" height="14"/><rect x="125" y="100" width="12" height="12"/><rect x="205" y="100" width="12" height="12"/></g>
+<text x="120" y="148" font-size="15" text-anchor="middle" font-family="monospace">QR</text><text x="200" y="148" font-size="15" text-anchor="middle" font-family="monospace">QR</text></svg>
+<figcaption><strong>Stand doble QR</strong><br>Un QR para contacto y otro para ubicación. Ilustración: los QR no están codificados.<br><span class="st">Referencia de catálogo demo</span><br>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="p3"><title id="p3">Bandeja de mostrador para llaves con tres divisiones</title>
+<rect width="320" height="200" fill="#f4efe6"/><path d="M40 80l40-30h200l-40 30z" fill="#fff" stroke="#1d1f22" stroke-width="3"/>
+<path d="M40 80v50h200v-50M240 130l40-30v-50" fill="none" stroke="#1d1f22" stroke-width="3"/>
+<path d="M107 80l40-30M173 80l40-30" stroke="#a8461f" stroke-width="3"/>
+<text x="140" y="170" font-size="15" text-anchor="middle" font-family="monospace">150×100×25 mm</text></svg>
+<figcaption><strong>Bandeja para llaves</strong><br>Ordena llaves en el mostrador durante la recepción. Sin uso bajo capó.<br><span class="st">Concepto nuevo</span><br>Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</div>
+</section>
+</main>
+<footer>
+<p>Demo no oficial · sin afiliación ni aprobación del comercio. Fuente: nombre, rubro y dirección tomados de datos públicos y de <a href="https://www.metal-motor.com/">metal-motor.com</a> (web propia activa). No se incluyen horarios, servicios, precios ni contacto por no estar verificados. Ilustraciones originales. <a href="../index.html">Volver a la galería</a></p>
+</footer>
+<script>
+(function(){var s=document.getElementById('sim'),o=document.getElementById('out');
+s.addEventListener('change',function(){var v=[].map.call(s.querySelectorAll('input:checked'),function(i){return i.value});
+o.textContent=v.length?'Resumen para comentar: '+v.join(' · ')+'. Agregá cuándo ocurre y desde cuándo.':'Marcá síntomas para armar tu resumen.'})})();
+</script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demo no oficial de propuesta para ISAMAC ferretería, Camino General Belgrano 4125. Guía para pedir bien en el mostrador.">
+<meta name="theme-color" content="#1f1b18">
+<title>ISAMAC ferretería · Camino General Belgrano 4125 (demo no oficial)</title>
+<style>
+:root{
+--ink:#1f1b18;--rus:#9a4a24;--rus-d:#7c3817;--acc:#2f5d62;--ivory:#f6f0e4;--paper:#fffdf8;--line:#cfc3ad;--white:#fff;--muted:#5a5048;--pf:#e6ecea;
+--mono:ui-monospace,"SF Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;
+--disp:Rockwell,"Rockwell Nova",Clarendon,"Bookman Old Style","DejaVu Serif",Georgia,serif;
+--sans:"Gill Sans","Gill Sans Nova","Segoe UI Variable Text","Segoe UI","Trebuchet MS",Verdana,sans-serif
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:17px/1.65 var(--sans);overflow-x:hidden}
+a{color:var(--acc);text-underline-offset:3px}
+a:hover{color:var(--rus-d)}
+:focus-visible{outline:3px solid var(--rus);outline-offset:3px}
+p{margin:0 0 14px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:8px;top:8px;background:var(--paper);color:var(--ink);padding:12px 14px;z-index:9;border:2px solid var(--ink)}
+.banner{background:var(--ink);color:var(--ivory);text-align:center;font:600 13px/1.4 var(--mono);padding:9px 12px;letter-spacing:.02em}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Barra superior */
+.top{border-bottom:2px solid var(--ink);background:var(--paper)}
+.top .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 16px}
+.brand{font:700 1.25rem/1 var(--disp);letter-spacing:.04em;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:52px}
+.brand small{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--rus)}
+.nav{display:flex;flex-wrap:wrap;gap:0 4px;margin:0 -10px 0 0;padding:0;list-style:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 10px;font:600 13px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--rus-d);text-decoration:underline}
+
+/* Tipografía */
+h1,h2,h3{font-family:var(--disp);line-height:1.08;margin:0 0 14px;font-weight:700}
+h1{font-size:clamp(3.1rem,17vw,6.6rem);letter-spacing:-.02em;line-height:.9}
+h1 span{display:block;font-size:.42em;letter-spacing:0;color:var(--rus);line-height:1.1;margin-top:.12em}
+h2{font-size:clamp(1.7rem,6vw,2.4rem);letter-spacing:-.01em}
+h3{font-size:1.3rem}
+.tag{font:600 13px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--rus);margin:0 0 10px}
+
+/* Hero: papel milimetrado */
+.hero{
+background-color:var(--ivory);
+background-image:linear-gradient(rgba(31,27,24,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,27,24,.055) 1px,transparent 1px);
+background-size:20px 20px;padding:36px 0 40px
+}
+.hero .w{display:grid;gap:36px}
+.hero .lead{font-size:1.15rem;max-width:32em;margin-bottom:20px}
+.facts{margin:0 0 24px;border-top:2px solid var(--ink);background:var(--paper)}
+.facts div{display:grid;grid-template-columns:7.2em 1fr;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:2px solid var(--ink)}
+.facts dt{font:600 12px/1.9 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--rus)}
+.facts dd{margin:0;font-weight:600;line-height:1.4}
+.facts dd small{display:block;font-weight:400;font-size:.88rem;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 20px;border:2px solid var(--ink);font:700 15px/1.2 var(--mono);letter-spacing:.02em;text-decoration:none;color:var(--ink);background:var(--paper);box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{color:var(--ink);transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn-main{background:var(--rus);color:var(--white)}
+.btn-main:hover{background:var(--rus-d);color:var(--white)}
+.btn svg{width:18px;height:18px;flex:none}
+figure{margin:0}
+svg{width:100%;height:auto;display:block}
+figcaption{font:13px/1.5 var(--mono);color:var(--muted);margin-top:10px}
+.hero-fig{margin-right:8px}
+.hero-fig svg{background:var(--paper);box-shadow:8px 8px 0 var(--acc)}
+.hero-fig figcaption{margin-top:18px}
+
+/* Regla métrica decorativa */
+.ruler{height:24px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:
+repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 40px) left bottom/100% 14px no-repeat,
+repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 8px) left bottom/100% 7px no-repeat,
+#e9c98a}
+
+section{padding:48px 0}
+.sec-line{border-top:2px solid var(--ink)}
+
+/* Ubicación */
+.loc .w{display:grid;gap:24px}
+.addr{position:relative;margin:0 0 16px;background:var(--acc);color:var(--white);border:2px solid var(--ink);padding:26px 24px;box-shadow:6px 6px 0 var(--ink);
+background-image:radial-gradient(circle at 12px 12px,var(--ivory) 0 3px,transparent 3.5px),radial-gradient(circle at calc(100% - 12px) 12px,var(--ivory) 0 3px,transparent 3.5px),radial-gradient(circle at 12px calc(100% - 12px),var(--ivory) 0 3px,transparent 3.5px),radial-gradient(circle at calc(100% - 12px) calc(100% - 12px),var(--ivory) 0 3px,transparent 3.5px)}
+.addr small{display:block;font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.addr strong{display:block;font:700 clamp(1.5rem,6.4vw,2.2rem)/1.1 var(--disp)}
+.loc-note{border-left:4px solid var(--rus);padding:4px 0 4px 16px;align-self:end}
+.loc-note p:last-child{margin:0}
+.lnk{display:inline-flex;align-items:center;min-height:44px;font:700 15px var(--mono);color:var(--acc)}
+
+/* Guía + FAQ */
+.two{display:grid;gap:40px}
+.ledger{list-style:none;padding:0;margin:18px 0 0;border-top:2px solid var(--ink)}
+.ledger li{display:grid;grid-template-columns:3em 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ledger b{font:700 1.5rem/1 var(--disp);color:var(--rus)}
+.faq{background:var(--paper);border:2px solid var(--ink);padding:22px 20px 8px;align-self:start}
+.faq h3{margin-bottom:8px}
+details{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:700 1.3rem/1 var(--mono);color:var(--rus);flex:none;width:28px;height:28px;display:grid;place-items:center;border:2px solid var(--ink);background:var(--ivory)}
+details[open] summary::after{content:"–";background:var(--rus);color:var(--white)}
+summary:hover{color:var(--rus-d)}
+details p{margin:0 0 16px;padding-right:36px}
+
+/* Simulador: remito */
+.sim-sec{background:var(--ink);background-image:linear-gradient(rgba(246,240,228,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(246,240,228,.06) 1px,transparent 1px);background-size:20px 20px}
+.sim{background:var(--paper);border:2px dashed var(--rus);padding:24px 20px;display:grid;gap:8px 36px}
+.sim .tag{border-bottom:1px solid var(--line);padding-bottom:10px}
+.sim label{display:block;font:600 13px var(--mono);text-transform:uppercase;letter-spacing:.06em;margin:16px 0 6px}
+select,input{width:100%;font:16px/1.3 var(--sans);min-height:50px;padding:10px 12px;border:2px solid var(--ink);border-radius:0;background:var(--white);color:var(--ink)}
+input::placeholder{color:#6b6058;opacity:1}
+select:focus-visible,input:focus-visible{outline-offset:1px}
+#out{font:15px/1.7 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;background:var(--ivory);padding:18px 16px;margin-top:18px;border-left:4px solid var(--acc);
+background-image:repeating-linear-gradient(transparent 0 24.5px,rgba(31,27,24,.1) 24.5px 25.5px);min-height:9em}
+.sim-hint{font-size:.92rem;color:var(--muted);margin:12px 0 0}
+
+/* PrintFactory */
+.pf{background:var(--pf);border-top:6px solid var(--acc)}
+.pf-head{max-width:40em;margin-bottom:26px}
+.prods{display:grid;gap:22px}
+.prods figure{background:var(--paper);border:2px solid var(--ink);padding:16px;display:flex;flex-direction:column}
+.prods svg{margin-top:auto}
+.st{align-self:flex-start;display:inline-block;font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--acc);color:var(--acc);padding:4px 8px;margin-bottom:12px}
+.prods figcaption{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
+
+footer{background:var(--ink);color:var(--ivory);padding:32px 0;font-size:14px;line-height:1.6}
+footer p{max-width:62em}
+footer a{color:var(--ivory);display:inline-block;padding:12px 0;font-weight:700}
+footer a:hover{color:#e9c98a}
+footer :focus-visible{outline-color:#e9c98a}
+
+/* Clases de las ilustraciones SVG */
+.s-ivory{fill:var(--ivory)}.s-paper{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.s-line{fill:none;stroke:var(--ink);stroke-width:2.5}.s-thin{fill:none;stroke:var(--ink);stroke-width:1.5}
+.s-dash{fill:none;stroke:var(--ink);stroke-dasharray:5 4}.s-ink{fill:var(--ink)}
+.s-rus{fill:var(--rus)}.s-acc{fill:var(--acc)}
+.s-t{font:600 15px var(--mono);fill:var(--ink)}.s-tw{font:700 16px var(--mono);fill:var(--white)}.s-tm{font:14px var(--mono);fill:#5a5048}
+
+@media(min-width:800px){
+.hero{padding:64px 0 72px}
+.hero .w{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+.hero-fig{transform:rotate(1.6deg);margin-right:12px}
+section{padding:72px 0}
+.loc .w{grid-template-columns:1.2fr .8fr;gap:56px}
+.two{grid-template-columns:1.1fr .9fr;gap:56px}
+.faq{margin-top:38px;padding:28px 28px 10px}
+.sim{grid-template-columns:1fr 1fr;padding:36px}
+.sim .tag,.sim h2{grid-column:1/-1}
+.sim-out{align-self:stretch;display:flex;flex-direction:column}
+#out{flex:1;margin-top:16px}
+.prods{grid-template-columns:repeat(3,1fr)}
+.prods figure:nth-child(2){transform:translateY(22px)}
+.pf{padding-bottom:96px}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="banner" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<div class="top">
+<div class="w">
+<a class="brand" href="#main">ISAMAC <small>ferretería</small></a>
+<nav aria-label="Secciones">
+<ul class="nav">
+<li><a href="#ub">Ubicación</a></li>
+<li><a href="#gu">Guía</a></li>
+<li><a href="#si">Tu nota</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<main id="main">
+<header class="hero">
+<div class="w">
+<div>
+<p class="tag">Ferretería · Camino General Belgrano 4125</p>
+<h1>ISAMAC <span>ferretería</span></h1>
+<p class="lead">Ferretería de barrio sobre Camino General Belgrano. Traé la pieza, la medida o la foto de lo que necesitás resolver y consultalo en el mostrador.</p>
+<dl class="facts">
+<div><dt>Rubro</dt><dd>Ferretería</dd></div>
+<div><dt>Dirección</dt><dd>Camino General Belgrano 4125</dd></div>
+<div><dt>Horarios</dt><dd>Sin verificar <small>Confirmalos por los canales oficiales del comercio antes de ir.</small></dd></div>
+</dl>
+<div class="cta">
+<a class="btn btn-main" href="#si">Armá tu nota para el mostrador</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=ISAMAC+ferreter%C3%ADa+Camino+General+Belgrano+4125" rel="noopener noreferrer" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.800-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg>
+Cómo llegar<span class="skip"> (abre Google Maps en otra pestaña)</span></a>
+</div>
+</div>
+<figure class="hero-fig">
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="hs">
+<title id="hs">Mostrador de ferretería con libreta rayada, un tornillo, una tuerca y un tarugo rotulados como piezas de un despiece</title>
+<rect class="s-paper" x="8" y="8" width="304" height="244"/>
+<g class="s-thin"><line x1="8" y1="58" x2="312" y2="58"/><line x1="8" y1="108" x2="312" y2="108"/><line x1="8" y1="158" x2="312" y2="158"/><line x1="8" y1="208" x2="312" y2="208"/><line x1="54" y1="8" x2="54" y2="252" style="stroke:var(--rus)"/></g>
+<text class="s-t" x="16" y="40">01</text><text class="s-t" x="16" y="90">02</text><text class="s-t" x="16" y="140">03</text>
+<path class="s-line" d="M74 33h120"/><path class="s-rus" d="M194 22h22v22h-22z"/>
+<path class="s-thin" d="M84 27l6 12M98 27l6 12M112 27l6 12M126 27l6 12M140 27l6 12M154 27l6 12M168 27l6 12"/>
+<text class="s-t" x="228" y="40">tornillo</text>
+<polygon class="s-acc" points="86,72 100,64 114,72 114,88 100,96 86,88"/><circle class="s-paper" cx="100" cy="80" r="6"/>
+<text class="s-t" x="130" y="88">tuerca</text>
+<rect x="74" y="122" width="110" height="22" rx="4" class="s-paper"/><path class="s-thin" d="M92 122v22M110 122v22M128 122v22M146 122v22"/>
+<text class="s-t" x="196" y="139">tarugo</text>
+<rect class="s-rus" x="74" y="172" width="230" height="26"/>
+<text class="s-tw" x="86" y="191">medida → pregunta</text>
+<text class="s-tm" x="64" y="236">mostrador · despiece</text>
+</svg>
+<figcaption>Ilustración original; no es foto del local</figcaption>
+</figure>
+</div>
+</header>
+<div class="ruler" aria-hidden="true"></div>
+
+<section class="loc" aria-labelledby="ub">
+<div class="w">
+<div>
+<p class="tag">Ubicación</p>
+<h2 id="ub">Dónde está</h2>
+<p class="addr"><small>Dirección</small><strong>Camino General Belgrano 4125</strong></p>
+</div>
+<div class="loc-note">
+<p>Dirección tomada de su ficha pública en Google Maps. Antes de acercarte, conviene confirmar horarios y disponibilidad por los canales oficiales del comercio.</p>
+<p><a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=ISAMAC+ferreter%C3%ADa+Camino+General+Belgrano+4125" rel="noopener noreferrer" target="_blank">Buscar la dirección en Google Maps →<span class="skip"> (abre en otra pestaña)</span></a></p>
+</div>
+</div>
+</section>
+
+<section class="sec-line" aria-labelledby="gu">
+<div class="w">
+<div class="two">
+<div>
+<p class="tag">Guía de mostrador</p>
+<h2 id="gu">Cómo pedir bien en una ferretería</h2>
+<ol class="ledger">
+<li><b>01</b><span>Llevá la pieza vieja o una foto con una regla al lado.</span></li>
+<li><b>02</b><span>Medí diámetro y largo en milímetros; en caños, anotá si la rosca es interna o externa.</span></li>
+<li><b>03</b><span>Decí sobre qué superficie va: ladrillo, hormigón, durlock o madera.</span></li>
+<li><b>04</b><span>Contá cuántas unidades necesitás y para qué uso.</span></li>
+</ol>
+</div>
+<div class="faq">
+<h3>Preguntas frecuentes</h3>
+<details><summary>¿Cómo mido un tornillo?</summary><p>Diámetro del cuerpo y largo desde debajo de la cabeza (en cabeza fresada, el largo total).</p></details>
+<details><summary>¿Qué tarugo uso en durlock?</summary><p>Hay fijaciones específicas para placa hueca; mencioná el espesor de la placa y el peso aproximado de lo que vas a colgar.</p></details>
+<details><summary>¿M6 es lo mismo que 6 mm?</summary><p>M6 indica rosca métrica de 6 mm de diámetro; también importa el paso de rosca. Llevar la tuerca o la pieza evita errores.</p></details>
+<details><summary>¿Sirve una foto?</summary><p>Sí, mejor con algo de referencia de tamaño. Para roscas y conexiones, la pieza física es más segura.</p></details>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sim-sec" aria-labelledby="si">
+<div class="w">
+<div class="sim">
+<p class="tag">Simulación local; no envía consultas ni guarda datos</p>
+<h2 id="si">Armá tu nota para el mostrador</h2>
+<div>
+<label for="ti">Qué buscás</label>
+<select id="ti"><option>Tornillo</option><option>Bulón y tuerca</option><option>Tarugo / fijación</option><option>Conexión de caño</option></select>
+<label for="me">Medida que tenés (mm o la anotación de la pieza)</label>
+<input id="me" placeholder="Ej.: 6 x 40" autocomplete="off">
+<label for="su">Superficie o uso</label>
+<select id="su"><option>Ladrillo</option><option>Hormigón</option><option>Durlock</option><option>Madera</option><option>Metal</option></select>
+</div>
+<div class="sim-out">
+<div id="out" aria-live="polite"></div>
+<p class="sim-hint">La nota se arma en tu pantalla. Sacale una captura o copiala a mano y mostrala en el mostrador.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="pf" aria-labelledby="pf">
+<div class="w">
+<div class="pf-head">
+<p class="tag">Propuesta independiente · PrintFactory</p>
+<h2 id="pf">Ideas impresas para el mostrador</h2>
+<p>Sección del vendedor PrintFactory, separada del contenido del comercio. No representa ofertas de ISAMAC.</p>
+</div>
+<div class="prods">
+<figure>
+<span class="st">Catálogo de referencia demo</span>
+<svg viewBox="0 0 340 230" role="img" aria-labelledby="p1">
+<title id="p1">Tres llaveros con espacio reservado para logo, colgados de una tarjeta</title>
+<rect class="s-ivory" x="10" y="10" width="320" height="210"/><line class="s-thin" x1="20" y1="44" x2="320" y2="44"/>
+<text class="s-t" x="22" y="34">Pack clientes de obra</text>
+<circle class="s-line" cx="84" cy="66" r="11"/><circle class="s-line" cx="170" cy="66" r="11"/><circle class="s-line" cx="256" cy="66" r="11"/>
+<path class="s-thin" d="M84 77v14M170 77v14M256 77v14"/>
+<rect class="s-rus" x="46" y="91" width="76" height="98" rx="10"/><text class="s-tw" x="84" y="146" text-anchor="middle">LOGO</text>
+<rect class="s-paper" x="132" y="91" width="76" height="98" rx="34"/><text class="s-t" x="170" y="146" text-anchor="middle">LOGO</text>
+<rect class="s-acc" x="218" y="91" width="76" height="98" rx="4"/><text class="s-tw" x="256" y="146" text-anchor="middle">LOGO</text>
+<text class="s-tm" x="22" y="210">Espacio reservado, no logo real</text>
+</svg>
+<figcaption>Llaveros con logo para entregar a clientes de obra. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure>
+<span class="st">Concepto nuevo</span>
+<svg viewBox="0 0 340 260" role="img" aria-labelledby="p2">
+<title id="p2">Bandeja de mostrador de 150 por 100 milímetros con cuatro compartimentos y vista lateral de 30 milímetros</title>
+<line class="s-thin" x1="40" y1="30" x2="280" y2="30"/><path class="s-thin" d="M40 25v10M280 25v10"/>
+<text class="s-t" x="160" y="22" text-anchor="middle">150 mm</text>
+<rect class="s-paper" x="40" y="40" width="240" height="150" rx="6"/>
+<line class="s-line" x1="160" y1="40" x2="160" y2="190"/><line class="s-line" x1="40" y1="115" x2="280" y2="115"/>
+<g class="s-ink"><circle cx="70" cy="66" r="5"/><circle cx="100" cy="86" r="5"/><circle cx="128" cy="64" r="5"/><circle cx="86" cy="100" r="5"/></g>
+<path class="s-line" d="M190 62l40 10M196 86l44 6M214 102l46-8"/>
+<g class="s-acc"><polygon points="70,136 80,130 90,136 90,148 80,154 70,148"/><polygon points="112,156 122,150 132,156 132,168 122,174 112,168"/></g>
+<g class="s-thin"><circle cx="200" cy="146" r="9"/><circle cx="236" cy="138" r="9"/><circle cx="252" cy="170" r="9"/></g>
+<text class="s-t" x="288" y="114">100</text><text class="s-t" x="288" y="132">mm</text>
+<rect class="s-rus" x="40" y="204" width="240" height="28" rx="3"/>
+<text class="s-tw" x="160" y="224" text-anchor="middle">lateral · 30 mm</text>
+<text class="s-tm" x="40" y="252">Piezas secas · no estructural</text>
+</svg>
+<figcaption>Bandeja separadora de tornillería de mostrador 150×100×30 mm, no estructural. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+<figure>
+<span class="st">Concepto nuevo</span>
+<svg viewBox="0 0 340 230" role="img" aria-labelledby="p3">
+<title id="p3">Borde de estante con tres porta-rótulos M4, M5 y M6 y perfil lateral de 25 milímetros</title>
+<text class="s-tm" x="20" y="30">Rótulos de ejemplo, sin stock</text>
+<rect class="s-ivory" x="10" y="44" width="320" height="80"/>
+<rect class="s-paper" x="20" y="60" width="90" height="50" rx="3"/><rect class="s-acc" x="26" y="66" width="78" height="38"/><text class="s-tw" x="65" y="91" text-anchor="middle">M4</text>
+<rect class="s-paper" x="125" y="60" width="90" height="50" rx="3"/><rect class="s-rus" x="131" y="66" width="78" height="38"/><text class="s-tw" x="170" y="91" text-anchor="middle">M5</text>
+<rect class="s-paper" x="230" y="60" width="90" height="50" rx="3"/><rect class="s-acc" x="236" y="66" width="78" height="38"/><text class="s-tw" x="275" y="91" text-anchor="middle">M6</text>
+<path class="s-line" d="M30 150v50h36M30 150h12"/>
+<text class="s-t" x="76" y="190">perfil 25 mm</text>
+<line class="s-thin" x1="200" y1="150" x2="320" y2="150"/><path class="s-thin" d="M200 145v10M320 145v10"/>
+<text class="s-t" x="260" y="176" text-anchor="middle">100 × 40 mm</text>
+<text class="s-tm" x="208" y="210">frente</text>
+</svg>
+<figcaption>Porta-rótulos de estante 100×40×25 mm para separar medidas. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="w">
+<p><strong>Demo no oficial</strong>, sin afiliación ni aprobación de ISAMAC ferretería. <a href="../index.html">Volver a la galería</a>.</p>
+<p>Fuente: ficha pública de Google Maps (nombre, rubro y dirección). La búsqueda nominal limitada no encontró web propia; un directorio (Hardware1000) enlaza a Facebook, lo que no prueba ausencia de sitio. Sin horarios, teléfono, servicios ni precios verificados, por eso no se muestran. Ilustraciones originales.</p>
+</div>
+</footer>
+<script>
+(function(){
+var ti=document.getElementById('ti'),me=document.getElementById('me'),su=document.getElementById('su'),out=document.getElementById('out');
+var tip={'Tornillo':'Anotá diámetro, largo y tipo de cabeza.','Bulón y tuerca':'Llevá la tuerca: confirma rosca y paso.','Tarugo / fijación':'Indicá qué vas a colgar y su peso aproximado.','Conexión de caño':'Llevá la pieza: rosca interna o externa y material.'};
+function r(){var m=me.value.trim()||'(sin medida: llevá la pieza)';
+out.textContent='NOTA PARA EL MOSTRADOR\n— Busco: '+ti.value+'\n— Medida: '+m+'\n— Superficie/uso: '+su.value+'\n— Recordá: '+tip[ti.value];}
+[ti,me,su].forEach(function(e){e.addEventListener('input',r)});r();
+})();
+</script>
+</body>
+</html>

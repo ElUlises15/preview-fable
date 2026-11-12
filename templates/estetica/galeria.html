@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#121417">
+<title>Galería — {{NOMBRE}}</title>
+<meta name="description" content="{{DESCRIPCION_SEO: 140-160 caracteres, rubro + barrio + qué ofrecés}}">
+<meta property="og:title" content="Galería — {{NOMBRE}}">
+<meta property="og:description" content="{{NOMBRE}}: estética y cuidado en {{BARRIO}}. Plantilla de ejemplo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/font-1.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<style>body{overflow-wrap:anywhere}</style><div class="tpl-banner" role="note" style="background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;padding:8px 16px;text-align:center">Plantilla Web Factory: los textos entre {{ }} y las fotos son de ejemplo. Reemplazalos con datos reales del cliente antes de publicar.</div><style>.menu-toggle,.menu-toggle *{overflow-wrap:normal;white-space:nowrap}</style>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="header">
+<a class="brand" href="index.html" aria-label="{{NOMBRE}}, inicio">{{NOMBRE}}<span>ESTÉTICA</span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menú <span class="bars" aria-hidden="true"></span></button>
+<nav id="navigation" aria-label="Principal"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="galeria.html" aria-current="page">Galería</a><a href="contacto.html">Contacto</a></nav>
+<a class="header-book" href="https://wa.me/549XXXXXXXXXX?text=Hola%20%7B%7BNOMBRE%7D%7D%2C%20quiero%20consultar%20por%20un%20turno." target="_blank" rel="noopener"><span>Pedí <span class="hb-x">tu </span>turno</span> <span class="arrow" aria-hidden="true"></span></a>
+</header>
+<main id="contenido">
+<section class="page-head section">
+<p class="eyebrow">Galería / Dentro de {{NOMBRE}}</p>
+<h1>DE CERCA,<br>MEJOR.</h1>
+<div class="head-row"><p>Texturas, herramientas y esa luz de la mañana.<br>Una mirada al universo que imaginamos.</p><span class="note">Fotos de ejemplo (barbería): reemplazar por fotos del local</span></div>
+</section>
+<section class="gallery section" aria-label="Galería conceptual de {{NOMBRE}}">
+<figure class="gallery-item wide"><button class="image-open" type="button" data-image="assets/images/hero-sillon.webp" data-caption="El lugar donde bajás un cambio" aria-label="Ampliar: El lugar donde bajás un cambio"><img width="1600" height="900" src="assets/images/hero-sillon.webp" alt="Foto de ejemplo (barbería): reemplazar por una foto real del local y describirla acá" fetchpriority="high"></button><figcaption><span>El lugar donde bajás un cambio</span><span>01 / {{NOMBRE}}</span></figcaption></figure>
+<figure class="gallery-item"><button class="image-open" type="button" data-image="assets/images/fade-detalle.webp" data-caption="{{EPIGRAFE_FOTO_2}}" aria-label="Ampliar: {{EPIGRAFE_FOTO_2}}"><img width="1200" height="900" src="assets/images/fade-detalle.webp" alt="Foto de ejemplo (barbería): reemplazar por una foto real del local y describirla acá" loading="lazy" decoding="async"></button><figcaption><span>{{EPIGRAFE_FOTO_2}}</span><span>02 / {{NOMBRE}}</span></figcaption></figure>
+<figure class="gallery-item"><button class="image-open" type="button" data-image="assets/images/productos.webp" data-caption="{{EPIGRAFE_FOTO_3}}" aria-label="Ampliar: {{EPIGRAFE_FOTO_3}}"><img width="1200" height="900" src="assets/images/productos.webp" alt="Foto de ejemplo (barbería): reemplazar por una foto real del local y describirla acá" loading="lazy" decoding="async"></button><figcaption><span>{{EPIGRAFE_FOTO_3}}</span><span>03 / {{NOMBRE}}</span></figcaption></figure>
+<figure class="gallery-item"><button class="image-open" type="button" data-image="assets/images/equipo.webp" data-caption="{{EPIGRAFE_FOTO_4}}" aria-label="Ampliar: {{EPIGRAFE_FOTO_4}}"><img width="1200" height="900" src="assets/images/equipo.webp" alt="Foto de ejemplo (barbería): reemplazar por una foto real del local y describirla acá" loading="lazy" decoding="async"></button><figcaption><span>{{EPIGRAFE_FOTO_4}}</span><span>04 / {{NOMBRE}}</span></figcaption></figure>
+<figure class="gallery-item"><button class="image-open" type="button" data-image="assets/images/vidriera.webp" data-caption="Una mañana en {{BARRIO}}" aria-label="Ampliar: Una mañana en {{BARRIO}}"><img width="1200" height="900" src="assets/images/vidriera.webp" alt="Foto de ejemplo (barbería): reemplazar por una foto real del local y describirla acá" loading="lazy" decoding="async"></button><figcaption><span>Una mañana en {{BARRIO}}</span><span>05 / {{NOMBRE}}</span></figcaption></figure>
+</section>
+<section class="cta-strip">
+<h2>¿YA SABÉS QUÉ TE QUERÉS HACER?</h2>
+<a class="button" href="https://wa.me/549XXXXXXXXXX?text=Hola%20%7B%7BNOMBRE%7D%7D%2C%20quiero%20consultar%20por%20un%20turno." target="_blank" rel="noopener">Reservá por WhatsApp <span class="arrow" aria-hidden="true"></span></a>
+</section>
+<dialog class="lightbox" aria-label="Imagen ampliada"><button class="close-dialog" type="button" aria-label="Cerrar imagen">Cerrar ×</button><img width="1600" height="900" src="assets/images/hero-sillon.webp" alt="" loading="lazy"><p></p></dialog>
+</main>
+<footer>
+<div class="footer-top">
+<a class="brand" href="index.html" aria-label="{{NOMBRE}}, inicio">{{NOMBRE}}<span>ESTÉTICA</span></a>
+<p>Tu momento.<br>Un rato para vos.</p>
+<nav class="footer-nav" aria-label="Pie de página"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+<a class="footer-wa" href="https://wa.me/549XXXXXXXXXX?text=Hola%20%7B%7BNOMBRE%7D%7D%2C%20quiero%20consultar%20por%20un%20turno." target="_blank" rel="noopener">{{WHATSAPP_VISIBLE}} <span class="arrow" aria-hidden="true"></span><small>WhatsApp de demostración</small></a>
+</div>
+<div class="footer-mark" aria-hidden="true">{{NOMBRE}}</div>
+<div class="footer-bottom"><span>{{BARRIO}} · {{CIUDAD}}</span><span>Plantilla · fotos de ejemplo a reemplazar</span><a href="contacto.html">Hablemos</a></div>
+</footer>
+</body>
+</html>

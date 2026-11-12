@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3d5a2f">
+<meta name="description" content="Propuesta de demostración no oficial para Juguetería Bazar, bazar en Camino General Belgrano 4716. Sin afiliación ni aprobación del comercio.">
+<title>Juguetería Bazar · Bazar en Camino General Belgrano 4716 (demo no oficial)</title>
+<style>
+:root{
+ --moss:#3d5a2f;--moss-d:#2c4222;--tang:#e2681c;--tang-d:#a3410a;
+ --cream:#f5ecd8;--paper:#fffaf0;--ink:#22261d;--mute:#575c4c;--line:#d9cfb8;
+ --d:"Cooper Black","Rockwell Extra Bold","Rockwell","Bookman Old Style","Bookman",Georgia,serif;
+ --b:"Gill Sans","Gill Sans MT","Trebuchet MS",Candara,"Segoe UI",Verdana,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font:1.0625rem/1.6 var(--b);color:var(--ink);background:var(--cream);overflow-x:hidden}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--moss-d);text-underline-offset:.18em;text-decoration-thickness:.08em}
+a:hover{color:var(--tang-d)}
+p{margin:0 0 1em}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:8px;top:8px;background:var(--ink);color:var(--paper);padding:12px 16px;z-index:9}
+:focus-visible{outline:3px solid var(--tang);outline-offset:3px}
+#piezas:focus{outline:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 5vw}
+
+/* aviso de demo */
+.flag{background:var(--ink);color:var(--paper);font-size:.8rem;line-height:1.35;text-align:center;padding:8px 12px;margin:0;letter-spacing:.02em}
+
+/* cabecera */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:8px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font:900 1.05rem/1.1 var(--d)}
+.brand::before{content:"";width:.8em;height:.8em;background:var(--tang);border:2px solid var(--ink);transform:rotate(-8deg);flex:none}
+.bar a{display:inline-flex;align-items:center;min-height:44px;font-size:.92rem;text-align:right}
+
+/* tipografía */
+h1,h2,h3{font-family:var(--d);font-weight:900;line-height:1.08;margin:0 0 .5em}
+h2{font-size:clamp(1.7rem,6.4vw,2.9rem);letter-spacing:.005em}
+h3{font-size:clamp(1.3rem,4.6vw,1.7rem)}
+.tag{display:inline-block;font:700 .78rem/1.2 var(--b);text-transform:uppercase;letter-spacing:.14em;background:var(--moss);color:var(--paper);padding:6px 10px;margin:0}
+.lead{max-width:58ch;color:var(--mute);font-size:1.08rem}
+
+/* hero */
+.hero{display:grid;gap:2.2rem;padding-top:1.6rem;padding-bottom:3.2rem}
+.where{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin:0 0 1.1rem;font-weight:700;font-size:.98rem}
+.cut{display:flex;flex-direction:column;gap:.2em;margin:0;font:900 clamp(1.55rem,6.6vw,3.4rem)/1 var(--d)}
+.w{display:flex;flex-wrap:nowrap;gap:.1em;max-width:100%}
+.w+.w{margin-left:18%}
+.cut span span{display:inline-block;padding:.1em .12em;background:var(--paper);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--moss);transform:rotate(-2deg)}
+.cut span span:nth-child(3n){background:var(--tang);color:var(--ink);transform:rotate(2.5deg)}
+.cut span span:nth-child(4n){background:var(--moss);color:var(--cream);box-shadow:3px 3px 0 var(--tang);transform:rotate(-3deg) translateY(.06em)}
+.shelf{height:7px;background:var(--moss);margin:1.4rem 0;position:relative}
+.shelf::after{content:"";position:absolute;left:10%;top:7px;width:7px;height:9px;background:inherit;box-shadow:calc(var(--sw,200px)) 0 0 0 transparent}
+.s1{width:88%}
+.s2{width:62%;margin-left:auto;background:var(--tang)}
+.s3{width:74%;margin-left:8%}
+
+/* ficha de dirección */
+.side{background:var(--paper);border:2px solid var(--ink);padding:1.3rem 1.2rem 1.4rem;box-shadow:7px 7px 0 var(--tang);align-self:end;position:relative}
+.side::before{content:"";position:absolute;top:-11px;left:50%;width:74px;height:20px;margin-left:-37px;background:var(--line);opacity:.9;transform:rotate(-3deg)}
+.side p{margin:.7rem 0}
+.addr{font:900 clamp(1.45rem,6vw,1.8rem)/1.15 var(--d)}
+.addr .num{display:inline-block;background:var(--moss);color:var(--paper);padding:.05em .3em;border-radius:4px;letter-spacing:.04em}
+.fine{font-size:.86rem;color:var(--mute)}
+.acts{display:grid;gap:.8rem;margin-top:1.1rem}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;font:700 1rem/1.25 var(--b);background:var(--tang);color:var(--ink);border:2px solid var(--ink);padding:.7rem 1.1rem;text-decoration:none;text-align:center;cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{color:var(--ink);transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:none}
+.btn svg{flex:none;width:20px;height:20px}
+.btn-ghost{background:var(--paper);box-shadow:4px 4px 0 var(--moss)}
+.btn-ghost:hover{box-shadow:2px 2px 0 var(--moss)}
+
+/* secciones */
+section{padding:3.2rem 0}
+.band{background:var(--paper);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.guide{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:.4rem;counter-reset:q}
+.guide li{counter-increment:q;padding:1rem .4rem 1.1rem 3.4rem;position:relative;border-bottom:3px solid var(--moss)}
+.guide li:nth-child(even){margin-left:6%;border-color:var(--tang)}
+.guide li::before{content:counter(q);position:absolute;left:.2rem;top:.7rem;font:900 2.1rem/1 var(--d);color:var(--tang-d)}
+.guide b{display:block;font:900 1.12rem/1.25 var(--d);margin-bottom:.2rem}
+.find{border:2px solid var(--ink);background:var(--cream);padding:1.2rem;box-shadow:-7px 7px 0 var(--moss);margin-left:7px}
+.find p{margin:0 0 1rem;max-width:58ch}
+.find .btn{width:100%}
+
+/* piezas */
+.offer{counter-reset:p}
+.offer h2{color:var(--moss-d);margin-top:.7rem}
+.pz{counter-increment:p;display:grid;gap:1.4rem;padding:2.2rem 0;border-bottom:7px solid var(--moss)}
+.pz:nth-of-type(even){border-color:var(--tang)}
+.pz:last-of-type{border-bottom:0;padding-bottom:0}
+figure{margin:0;background:var(--paper);border:2px solid var(--ink);padding:.8rem;box-shadow:6px 6px 0 var(--ink)}
+figure svg{width:100%;border:1px solid var(--line)}
+svg text{font-family:var(--b)}
+figcaption{font-size:.84rem;color:var(--mute);margin-top:.6rem}
+.kind{font-size:.84rem;font-weight:700;color:var(--tang-d);text-transform:uppercase;letter-spacing:.09em;margin:0 0 .5rem}
+.kind::before{content:"0" counter(p) " / 03 · ";color:var(--ink)}
+.txt p{max-width:56ch}
+.sim{margin-top:1.2rem;padding:1rem;border:2px dashed var(--moss);background:var(--paper)}
+.sim small{display:block;font-weight:700;font-size:.86rem;margin-bottom:.5rem}
+.sim-q{margin:.2rem 0 .7rem}
+.sw{display:flex;flex-wrap:wrap;gap:.6rem}
+.sw button{min-height:44px;min-width:44px;font:700 .95rem var(--b);color:var(--ink);padding:.5rem 1rem;border:2px solid var(--ink);background:var(--cream);cursor:pointer}
+.sw button:hover{background:var(--line)}
+.sw button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+#out{margin:.8rem 0 0;font-size:.9rem}
+#cb{--pot:#3d5a2f;--face:#fffaf0;--rim:#e2681c}
+
+/* pie */
+footer{background:var(--ink);color:var(--cream);padding:2.2rem 0 2.6rem;font-size:.9rem}
+footer p{max-width:80ch}
+footer a{color:var(--cream)}
+footer a:hover{color:var(--paper)}
+footer .flag{background:var(--tang);color:var(--ink);font-weight:700;margin-bottom:1.2rem;max-width:none}
+.src{word-break:break-all}
+.back{display:inline-flex;align-items:center;min-height:44px}
+
+@media(min-width:600px){
+ .acts{grid-template-columns:auto auto;justify-content:start}
+ .find .btn{width:auto}
+}
+@media(min-width:900px){
+ .hero{grid-template-columns:1.55fr 1fr;align-items:end;gap:3rem;padding-top:3rem;padding-bottom:4.5rem}
+ .acts{grid-template-columns:1fr}
+ .side{transform:rotate(1.2deg)}
+ section{padding:4.5rem 0}
+ .split{display:grid;grid-template-columns:1fr 1.5fr;gap:3.5rem;align-items:start}
+ .split .intro{position:sticky;top:1.5rem}
+ .guide{margin-top:0}
+ .find{display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:center;max-width:920px;margin-left:8%;padding:1.6rem 1.8rem}
+ .find h3{grid-column:1/-1;margin:0}
+ .find p{margin:0}
+ .pz{grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:center;padding:3rem 0}
+ .pz figure{transform:rotate(-1.2deg)}
+ .pz:nth-of-type(even) figure{order:2;transform:rotate(1.2deg)}
+ .pz:nth-of-type(even) .txt{padding-left:6%}
+}
+@media(prefers-reduced-motion:no-preference){
+ html{scroll-behavior:smooth}
+ .btn{transition:transform .12s ease,box-shadow .12s ease}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .btn:hover,.btn:active{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<p class="flag">Propuesta no oficial · diseño de demostración · sin afiliación ni aprobación del comercio</p>
+<header class="wrap bar"><span class="brand">Juguetería Bazar</span><a href="../index.html">← Galería de propuestas</a></header>
+
+<main id="main">
+<div class="wrap hero">
+ <div>
+  <p class="where"><span class="tag">Bazar</span> Camino General Belgrano 4716</p>
+  <h1 class="cut" aria-label="Juguetería Bazar"><span class="w" aria-hidden="true"><span>J</span><span>u</span><span>g</span><span>u</span><span>e</span><span>t</span><span>e</span><span>r</span><span>í</span><span>a</span></span><span class="w" aria-hidden="true"><span>B</span><span>a</span><span>z</span><span>a</span><span>r</span></span></h1>
+  <div class="shelf s1"></div>
+  <p class="lead">Un bazar de barrio sobre Camino General Belgrano. Acercate, mirá con tiempo y consultá directamente en el local.</p>
+  <div class="shelf s2"></div>
+ </div>
+ <aside class="side" aria-label="Datos del comercio">
+  <p class="tag">Dirección</p>
+  <p class="addr">Camino General Belgrano <span class="num">4716</span></p>
+  <p>Rubro: bazar. Precios, horarios y disponibilidad se confirman en el local.</p>
+  <div class="acts">
+   <a class="btn" href="https://www.google.com/maps/place/Jugueteria+Bazar/data=!4m7!3m6!1s0x95a328f6a1291631:0xdd02ccb4e7518dfe!8m2!3d-34.80478!4d-58.2179449!16s%2Fg%2F11j130s9j5" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.800-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    Abrir la ficha en mapas
+   </a>
+   <a class="btn btn-ghost" href="#piezas">Ver las tres piezas para el mostrador</a>
+  </div>
+  <p class="fine">Dirección según una ficha pública de mapas, sin verificar en persona.</p>
+ </aside>
+</div>
+
+<section class="band" aria-labelledby="g">
+ <div class="wrap">
+  <div class="split">
+   <div class="intro">
+    <h2 id="g">Antes de ir al bazar</h2>
+    <p class="lead">Una guía corta para aprovechar la visita a cualquier bazar. No describe productos del local.</p>
+   </div>
+   <ol class="guide">
+    <li><b>Llevá las medidas</b>Si buscás algo para un estante, una mesada o un rincón, anotá ancho, alto y profundidad.</li>
+    <li><b>Contá para qué es</b>Decir el uso concreto ayuda a que te orienten mejor en el mostrador.</li>
+    <li><b>Confirmá precio y disponibilidad</b>Esta página no muestra stock ni precios: preguntalos en el momento.</li>
+    <li><b>Si es para regalar</b>Consultá en el local las condiciones de cambio antes de pagar.</li>
+   </ol>
+  </div>
+  <div class="shelf s3"></div>
+  <div class="find">
+   <h3>Cómo encontrarlo</h3>
+   <p>Camino General Belgrano 4716, según una ficha pública de mapas (ver fuente al pie). Verificá la ubicación exacta antes de salir.</p>
+   <a class="btn btn-ghost" href="https://www.google.com/maps/place/Jugueteria+Bazar/data=!4m7!3m6!1s0x95a328f6a1291631:0xdd02ccb4e7518dfe!8m2!3d-34.80478!4d-58.2179449!16s%2Fg%2F11j130s9j5" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.800-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    Ver la ficha de mapas
+   </a>
+  </div>
+ </div>
+</section>
+
+<section class="offer" id="piezas" aria-labelledby="o" tabindex="-1">
+ <div class="wrap">
+  <span class="tag">Para el comercio</span>
+  <h2 id="o">Tres piezas impresas para el mostrador</h2>
+  <p class="lead">Propuesta de PrintFactory. Las dos primeras son referencias de un catálogo de demostración (no verificadas en Instagram ni oferta vigente). La tercera es un concepto nuevo pensado para este bazar.</p>
+
+  <article class="pz">
+   <figure>
+    <svg id="cb" viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="t1"><title id="t1">Macetita decorativa con cara simpática, vacía; contorno punteado indica dónde iría una planta no incluida</title>
+     <rect width="320" height="240" fill="#f5ecd8"/>
+     <path d="M160 40c-14 0-18 14-18 26v40h36V66c0-12-4-26-18-26z" fill="none" stroke="#575c4c" stroke-width="2" stroke-dasharray="6 5"/>
+     <text x="196" y="60" font-size="11" fill="#575c4c" font-family="sans-serif">planta no incluida</text>
+     <rect x="96" y="104" width="128" height="18" rx="4" fill="var(--rim)"/>
+     <path d="M104 122h112l-12 86H116z" fill="var(--pot)"/>
+     <circle cx="142" cy="156" r="6" fill="var(--face)"/><circle cx="178" cy="156" r="6" fill="var(--face)"/>
+     <path d="M146 178q14 12 28 0" fill="none" stroke="var(--face)" stroke-width="4" stroke-linecap="round"/>
+     <rect x="60" y="208" width="200" height="6" fill="#22261d"/>
+    </svg>
+    <figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada.</figcaption>
+   </figure>
+   <div class="txt">
+    <p class="kind">Referencia de catálogo demo</p>
+    <h3>Macetita Cactibuddy chica</h3>
+    <p>Pieza de exhibición decorativa para sumar personalidad a un estante. La planta no está incluida. No es un juguete.</p>
+    <div class="sim" role="group" aria-labelledby="simt">
+     <small id="simt">Simulación local; no envía consultas ni guarda datos</small>
+     <p class="sim-q">Probá combinaciones de color sobre la ilustración:</p>
+     <div class="sw">
+      <button type="button" data-p="#3d5a2f,#fffaf0,#e2681c" aria-pressed="true">Musgo</button>
+      <button type="button" data-p="#e2681c,#22261d,#3d5a2f" aria-pressed="false">Mandarina</button>
+      <button type="button" data-p="#fffaf0,#3d5a2f,#e2681c" aria-pressed="false">Crema</button>
+     </div>
+     <p id="out" aria-live="polite">Paleta: Musgo. Solo cambia el dibujo.</p>
+    </div>
+   </div>
+  </article>
+
+  <article class="pz">
+   <figure>
+    <svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="t2"><title id="t2">Atril doble en forma de A con dos paneles que muestran la sigla QR como marcador, sin código real</title>
+     <rect width="320" height="240" fill="#f5ecd8"/>
+     <path d="M60 200l40-150h50l-20 150z" fill="#3d5a2f"/>
+     <path d="M170 200l-20-150h50l60 150z" fill="#e2681c"/>
+     <rect x="96" y="80" width="44" height="44" fill="#fffaf0"/><text x="118" y="109" text-anchor="middle" font-size="18" font-weight="900" font-family="sans-serif" fill="#22261d">QR</text>
+     <rect x="176" y="80" width="44" height="44" fill="#fffaf0"/><text x="198" y="109" text-anchor="middle" font-size="18" font-weight="900" font-family="sans-serif" fill="#22261d">QR</text>
+     <text x="118" y="146" text-anchor="middle" font-size="10" fill="#fffaf0" font-family="sans-serif">catálogo</text>
+     <text x="204" y="146" text-anchor="middle" font-size="10" fill="#22261d" font-family="sans-serif">contacto</text>
+     <rect x="40" y="200" width="240" height="6" fill="#22261d"/>
+     <text x="160" y="226" text-anchor="middle" font-size="11" fill="#575c4c" font-family="sans-serif">marcador QR no operativo</text>
+    </svg>
+    <figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada.</figcaption>
+   </figure>
+   <div class="txt">
+    <p class="kind">Referencia de catálogo demo</p>
+    <h3>Stand doble QR</h3>
+    <p>Atril de mostrador con dos caras: una para el catálogo y otra para el contacto del comercio. En la ilustración los paneles solo dicen QR; no hay códigos reales ni de pago, y no es funcional.</p>
+   </div>
+  </article>
+
+  <article class="pz">
+   <figure>
+    <svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="t3"><title id="t3">Soporte bajo con ranura que sostiene un cartel en blanco, con cotas propuestas de 100, 60 y 30 milímetros</title>
+     <rect width="320" height="240" fill="#f5ecd8"/>
+     <rect x="90" y="56" width="140" height="90" fill="#fffaf0" stroke="#22261d" stroke-width="3"/>
+     <rect x="108" y="78" width="70" height="8" fill="#3d5a2f"/><rect x="108" y="98" width="104" height="6" fill="#d9cfb8"/><rect x="108" y="114" width="84" height="6" fill="#d9cfb8"/>
+     <path d="M80 146h160l12 34H68z" fill="#e2681c" stroke="#22261d" stroke-width="3"/>
+     <rect x="96" y="144" width="128" height="6" fill="#22261d"/>
+     <g font-family="sans-serif" font-size="11" fill="#22261d">
+      <path d="M68 196h184" stroke="#22261d"/><text x="160" y="212" text-anchor="middle">100 mm</text>
+      <path d="M262 146v34" stroke="#22261d"/><text x="268" y="168">30 mm</text>
+      <path d="M58 56v124" stroke="#22261d"/><text x="22" y="122">60 mm</text>
+     </g>
+    </svg>
+    <figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada.</figcaption>
+   </figure>
+   <div class="txt">
+    <p class="kind">Concepto nuevo</p>
+    <h3>Soporte de carteles de precios</h3>
+    <p>Base de mostrador para exhibir carteles de precio con orden. Medidas propuestas: 100 × 60 × 30 mm, aún no validadas para fabricación. Es un accesorio de exhibición, no un juguete.</p>
+    <a class="btn btn-ghost" href="#main">Volver arriba</a>
+   </div>
+  </article>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p class="flag">Propuesta no oficial · diseño de demostración · sin afiliación ni aprobación del comercio</p>
+  <p><b>Juguetería Bazar</b> · Bazar · Camino General Belgrano 4716</p>
+  <p>Fuente: ficha pública de mapas, <a class="src" href="https://www.google.com/maps/place/Jugueteria+Bazar/data=!4m7!3m6!1s0x95a328f6a1291631:0xdd02ccb4e7518dfe!8m2!3d-34.80478!4d-58.2179449!16s%2Fg%2F11j130s9j5" rel="noopener noreferrer">https://www.google.com/maps/place/Jugueteria+Bazar/data=!4m7!3m6!1s0x95a328f6a1291631:0xdd02ccb4e7518dfe!8m2!3d-34.80478!4d-58.2179449!16s%2Fg%2F11j130s9j5</a>. Dirección sin verificar en persona. El nombre es genérico y el rubro exacto está por confirmar. No se encontró web propia en una búsqueda nominal limitada.</p>
+  <p>Esta página no ofrece contacto, reservas ni pagos. Todas las ilustraciones son originales; ninguna muestra el local ni productos fabricados.</p>
+  <p><a class="back" href="../index.html">Volver a la galería</a></p>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var f=document.getElementById('cb'),o=document.getElementById('out'),b=document.querySelectorAll('.sw button');
+ b.forEach(function(x){x.addEventListener('click',function(){
+  var c=x.dataset.p.split(',');
+  f.style.setProperty('--pot',c[0]);f.style.setProperty('--face',c[1]);f.style.setProperty('--rim',c[2]);
+  b.forEach(function(y){y.setAttribute('aria-pressed',y===x)});
+  o.textContent='Paleta: '+x.textContent+'. Solo cambia el dibujo.';
+ });});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Flecha Fútbol 5 · Sourigues · Demo no oficial</title>
+<meta name="description" content="Demo no oficial de propuesta para La Flecha Fútbol 5, Camino General Belgrano 4408, Sourigues.">
+<meta name="theme-color" content="#0c1d15">
+<style>
+:root{
+  --g:#0c1d15;--g2:#163d2b;--g3:#1d4a35;
+  --chalk:#f1eee4;--mute:#a9bcae;
+  --cu:#c0703f;--cu-l:#e09a66;--cu-d:#8a4519;
+  --f:"Trebuchet MS","Gill Sans","Gill Sans MT","Segoe UI",Tahoma,sans-serif;
+  --d:Impact,Haettenschweiler,"Franklin Gothic Bold","Arial Narrow Bold","Arial Narrow",sans-serif;
+  --pad:1.15rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--g);color:var(--chalk);font:1rem/1.65 var(--f);overflow-x:hidden}
+a{color:var(--chalk);text-underline-offset:.2em}
+a:hover{color:var(--cu-l)}
+:focus-visible{outline:3px solid var(--cu-l);outline-offset:3px}
+svg{display:block;width:100%;height:auto}
+figure{margin:0}
+p{margin:0 0 1rem}
+
+.skip{position:absolute;left:-999px;top:0;z-index:10;background:var(--cu);color:var(--g);padding:.8rem 1.1rem;font-weight:700}
+.skip:focus{left:0}
+.ban{background:var(--cu);color:var(--g);text-align:center;font-weight:700;padding:.55rem 1rem;font-size:.85rem;line-height:1.35;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+
+/* Tipografía */
+h1,h2,h3{font-family:var(--d);font-weight:400;letter-spacing:.03em;line-height:1;margin:0 0 .8rem;text-transform:uppercase}
+h1{font-size:clamp(3.3rem,17vw,7rem);line-height:.9;letter-spacing:.015em}
+h1 span{display:block;color:var(--cu-l)}
+h2{font-size:clamp(1.9rem,7vw,2.8rem)}
+.kick{display:block;font-family:var(--d);font-size:.95rem;letter-spacing:.22em;color:var(--cu-l);margin-bottom:.5rem;text-transform:uppercase}
+.tag{font-family:var(--d);color:var(--cu-l);letter-spacing:.22em;font-size:.95rem;margin:0 0 .9rem;display:flex;align-items:center;gap:.7rem}
+.tag::before{content:"";width:2.2rem;height:3px;background:var(--cu)}
+
+/* Barra superior */
+.top{border-bottom:1px dashed rgba(169,188,174,.5)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px}
+.mark{font-family:var(--d);letter-spacing:.12em;font-size:1.05rem;text-transform:uppercase}
+.mark i{font-style:normal;color:var(--cu-l)}
+.top a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:.92rem}
+
+/* Hero */
+.hero{padding:2rem 0 2.8rem;background:
+  linear-gradient(90deg,transparent calc(50% - 1px),rgba(241,238,228,.06) calc(50% - 1px),rgba(241,238,228,.06) calc(50% + 1px),transparent calc(50% + 1px)),
+  var(--g)}
+.hero .wrap{display:grid;gap:2.2rem}
+.lead{font-size:1.12rem;max-width:36ch;margin-bottom:1.3rem}
+.where{display:flex;gap:.7rem;align-items:flex-start;border-left:4px solid var(--cu);padding:.2rem 0 .2rem .9rem;margin:0 0 1.5rem;font-weight:700;line-height:1.4}
+.where small{display:block;font-weight:400;color:var(--mute);font-size:.9rem}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:.7rem 1.3rem;background:var(--chalk);color:var(--g);font:1.1rem var(--d);letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:0;box-shadow:5px 5px 0 var(--cu);transition:transform .15s,box-shadow .15s}
+.btn:hover{color:var(--g);transform:translate(2px,2px);box-shadow:3px 3px 0 var(--cu)}
+.btn svg{width:22px;height:22px;flex:none}
+.lnk{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.board{margin-right:10px}
+.board svg{border:6px solid #2a1d12;outline:1px solid rgba(241,238,228,.25);box-shadow:10px 10px 0 var(--cu)}
+figcaption{font-size:.85rem;color:var(--mute);margin-top:.6rem;line-height:1.5}
+.board figcaption{margin-top:1.3rem}
+
+/* Secciones */
+section{padding:3rem 0}
+.band{background:var(--g2);border-block:1px dashed rgba(169,188,174,.45)}
+.sheet{border:2px solid var(--mute);background:var(--g);padding:.2rem 1rem;position:relative}
+.sheet::before{content:"";position:absolute;top:-9px;left:50%;width:74px;height:16px;margin-left:-37px;background:var(--cu);border-radius:2px}
+.row{display:grid;grid-template-columns:6.2rem 1fr;gap:.8rem;align-items:center;border-bottom:1px dashed rgba(169,188,174,.6);padding:.35rem 0;min-height:52px}
+.row:last-child{border:0}
+.row b{font-family:var(--d);font-weight:400;letter-spacing:.1em;color:var(--cu-l);font-size:.95rem}
+.row span{overflow-wrap:anywhere}
+.row a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.info{display:grid;gap:2.8rem}
+
+details{border-bottom:1px dashed rgba(169,188,174,.6)}
+details:first-of-type{border-top:1px dashed rgba(169,188,174,.6)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.5rem 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:1.6rem/1 var(--d);color:var(--cu-l);flex:none;width:1.4rem;text-align:center}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 2rem 1.1rem 0;color:#dfe4d9;max-width:52ch}
+
+/* Simulador */
+.sim .wrap{display:grid;gap:1.6rem}
+.sim fieldset{border:0;padding:0;margin:0 0 1.2rem}
+.sim legend{font-weight:700;margin-bottom:.5rem;padding:0}
+.sim label{display:inline-flex;gap:.7rem;align-items:center;min-height:52px}
+.sim input{width:5.5rem;height:52px;padding:0 .6rem;background:var(--g);color:var(--chalk);border:2px solid var(--mute);font:1.6rem var(--d);letter-spacing:.05em;text-align:center;border-radius:0}
+.sim button{font:1.1rem var(--d);letter-spacing:.1em;background:var(--chalk);color:var(--g);border:0;min-height:52px;padding:.7rem 1.4rem;cursor:pointer;box-shadow:5px 5px 0 var(--cu);transition:transform .15s,box-shadow .15s}
+.sim button:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--cu)}
+.note{font-size:.88rem;color:var(--cu-l);font-weight:700}
+#out{min-height:9rem;border:2px dashed var(--mute);background:var(--g);padding:1.1rem;position:relative}
+#out:empty::before{content:"Acá aparece el reparto de pecheras.";color:var(--mute);font-size:.95rem}
+#out p{margin:0;font-size:1.05rem}
+#out p b{font:1.7rem var(--d);color:var(--cu-l);padding:0 .15rem}
+#out ul{list-style:none;margin:0 0 .9rem;padding:0;display:grid;gap:.7rem}
+#out li{margin:0;padding:.7rem .9rem;border-left:5px solid var(--chalk);background:var(--g2);letter-spacing:.04em;overflow-wrap:anywhere}
+#out li:nth-child(2){border-left-color:var(--cu)}
+#out li b{display:block;font:1.05rem var(--d);letter-spacing:.12em;text-transform:uppercase;color:var(--cu-l)}
+
+/* Propuesta del vendedor */
+.offer{background:var(--chalk);color:var(--g);border-top:8px solid var(--cu);padding-bottom:3.4rem}
+.offer .kick{color:var(--cu-d)}
+.offer-head{display:grid;gap:.4rem;margin-bottom:2rem}
+.offer-head p{max-width:46ch;margin:0}
+.prods{display:grid;gap:2.2rem}
+.prods figure{display:flex;flex-direction:column;align-items:flex-start}
+.prods svg{border:2px solid var(--g);box-shadow:6px 6px 0 var(--cu)}
+.st{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--cu-d);color:var(--cu-d);padding:.2rem .55rem;margin-bottom:.7rem}
+.offer figcaption{color:#2c3d33;font-size:.9rem;margin-top:1.1rem}
+.offer figcaption b{display:block;font:1.3rem var(--d);letter-spacing:.05em;text-transform:uppercase;color:var(--g);margin-bottom:.15rem}
+
+footer{border-top:2px dashed var(--mute);padding:2rem 0 2.6rem;font-size:.88rem;color:var(--mute)}
+footer p{max-width:78ch}
+footer strong{color:var(--chalk)}
+footer a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+
+@media(min-width:800px){
+  :root{--pad:2rem}
+  .hero{padding:3.5rem 0 4.5rem}
+  .hero .wrap{grid-template-columns:1fr 1.05fr;align-items:center;gap:3.5rem}
+  .board{transform:rotate(1.6deg);margin-right:0}
+  section{padding:4.5rem 0}
+  .info{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}
+  .sim .wrap{grid-template-columns:4fr 7fr;gap:3.5rem;align-items:start}
+  #out ul{grid-template-columns:1fr 1fr}
+  .offer-head{grid-template-columns:1fr 1fr;align-items:end;gap:3rem}
+  .prods{grid-template-columns:repeat(3,1fr);gap:2rem}
+  .prods figure:nth-child(2){margin-top:2.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="ban" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<header class="top">
+<div class="wrap">
+<span class="mark">La Flecha <i>F5</i></span>
+<a href="#ubi">Cómo llegar</a>
+</div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="wrap">
+<div>
+<p class="tag">DEPORTES · SOURIGUES</p>
+<h1>La Flecha <span>Fútbol 5</span></h1>
+<p class="lead">Fútbol 5 sobre Camino General Belgrano, en Sourigues. Armá el equipo, coordiná con tu grupo y consultá directo con el lugar antes de ir.</p>
+<p class="where"><span>Camino General Belgrano 4408<small>Sourigues · horarios y precios: consultá al comercio</small></span></p>
+<div class="cta">
+<a class="btn" href="https://www.instagram.com/laflechadeportes/" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+Consultá por Instagram</a>
+<a class="lnk" href="https://www.google.com/maps/search/La%20Flecha%20F%C3%BAtbol%205%20Camino%20General%20Belgrano%204408%20Sourigues" rel="noopener">Abrir en Maps</a>
+</div>
+</div>
+<figure class="board">
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="h1t">
+<title id="h1t">Pizarrón con líneas de cancha de fútbol 5, una flecha de jugada en cobre y cinco marcas de jugadores</title>
+<rect width="320" height="240" fill="#163d2b"/>
+<rect x="18" y="22" width="284" height="176" fill="none" stroke="#f1eee4" stroke-width="3" opacity=".85"/>
+<path d="M160 22v176" stroke="#f1eee4" stroke-width="2" opacity=".6"/>
+<circle cx="160" cy="110" r="30" fill="none" stroke="#f1eee4" stroke-width="2" opacity=".6"/>
+<path d="M18 74h40v72H18M302 74h-40v72h40" fill="none" stroke="#f1eee4" stroke-width="2" opacity=".6"/>
+<g fill="none" stroke="#f1eee4" stroke-width="3"><circle cx="60" cy="56" r="9"/><circle cx="60" cy="164" r="9"/><circle cx="118" cy="110" r="9"/></g>
+<g stroke="#f1eee4" stroke-width="3"><path d="M200 60l14 14M214 60l-14 14M228 150l14 14M242 150l-14 14"/></g>
+<path d="M70 158C120 190 170 170 196 120S250 70 278 104" fill="none" stroke="#c0703f" stroke-width="4" stroke-dasharray="8 5"/>
+<path d="M270 92l12 14-17 4z" fill="#c0703f"/>
+<text x="160" y="226" fill="#f1eee4" font-family="Impact,sans-serif" font-size="18" text-anchor="middle" letter-spacing="3">CINCO CONTRA CINCO</text>
+</svg>
+<figcaption>Ilustración original; no es foto del local.</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="band" aria-labelledby="ubi">
+<div class="wrap info">
+<div>
+<span class="kick" aria-hidden="true">Planilla del lugar</span>
+<h2 id="ubi">Cómo llegar</h2>
+<div class="sheet">
+<div class="row"><b>DIRECCIÓN</b><span>Camino General Belgrano 4408</span></div>
+<div class="row"><b>ZONA</b><span>Sourigues</span></div>
+<div class="row"><b>REDES</b><span><a href="https://www.instagram.com/laflechadeportes/" rel="noopener">@laflechadeportes</a></span></div>
+<div class="row"><b>MAPA</b><span><a href="https://www.google.com/maps/search/La%20Flecha%20F%C3%BAtbol%205%20Camino%20General%20Belgrano%204408%20Sourigues" rel="noopener">Abrir en Maps</a></span></div>
+</div>
+</div>
+<div>
+<span class="kick" aria-hidden="true">Charla previa</span>
+<h2 id="faq">Antes de reservar, preguntá</h2>
+<details><summary>¿Qué conviene confirmar al pedir un turno?</summary><p>Día, horario, duración del partido y si hay que señar. Confirmá siempre con el lugar.</p></details>
+<details><summary>¿Qué llevar?</summary><p>Calzado adecuado para el tipo de superficie (consultalo), canilleras, agua y pechera o dos colores de remera.</p></details>
+<details><summary>¿Y si llueve?</summary><p>Preguntá la política de reprogramación antes de confirmar.</p></details>
+<details><summary>¿Torneos o eventos?</summary><p>Consultá por redes si organizan o reciben torneos y cumpleaños.</p></details>
+</div>
+</div>
+</section>
+
+<section class="sim" aria-labelledby="simt">
+<div class="wrap">
+<div>
+<span class="kick" aria-hidden="true">Pizarra de vestuario</span>
+<h2 id="simt">Armá tu cinco</h2>
+<p>Poné cuántos confirmaron en el grupo y fijate si llegan a dos equipos o si falta gente.</p>
+<p class="note">Simulación local; no envía consultas ni guarda datos.</p>
+<fieldset><legend>Jugadores confirmados</legend>
+<label><input type="number" id="n" min="0" max="20" value="8" inputmode="numeric"> personas</label></fieldset>
+<button type="button" id="go">ARMAR EQUIPOS</button>
+</div>
+<div id="out" aria-live="polite"></div>
+</div>
+</section>
+
+<section class="offer" aria-labelledby="pf">
+<div class="wrap">
+<div class="offer-head">
+<div>
+<span class="kick" aria-hidden="true">Sección del vendedor</span>
+<h2 id="pf">Propuesta PrintFactory</h2>
+</div>
+<p>Sección del vendedor, separada del contenido del comercio. Piezas impresas sugeridas para un complejo de fútbol 5.</p>
+</div>
+<div class="prods">
+<figure>
+<span class="st">Catálogo de referencia</span>
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="p1"><title id="p1">Tres llaveros con forma de escudo colgando de una argolla</title>
+<rect width="320" height="240" fill="#0c1d15"/><circle cx="160" cy="34" r="20" fill="none" stroke="#d8dbd2" stroke-width="5"/>
+<path d="M146 50L82 92M160 54V96M174 50L238 92" stroke="#d8dbd2" stroke-width="3" stroke-dasharray="5 3"/>
+<g fill="#163d2b" stroke="#c0703f" stroke-width="3" font-family="Impact,sans-serif" text-anchor="middle">
+<g transform="translate(78,96) rotate(-10)"><path d="M-36 0h72v54l-36 28-36-28z"/><text y="50" font-size="22" fill="#f1eee4" stroke="none">5</text></g>
+<g transform="translate(160,100)"><path d="M-36 0h72v54l-36 28-36-28z"/><text y="50" font-size="22" fill="#f1eee4" stroke="none">7</text></g>
+<g transform="translate(242,96) rotate(10)"><path d="M-36 0h72v54l-36 28-36-28z"/><text y="50" font-size="22" fill="#f1eee4" stroke="none">10</text></g></g>
+<text x="160" y="222" fill="#a9bcae" font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">PACK DE EQUIPO</text></svg>
+<figcaption><b>Llaveros con logo</b>: packs para equipos, solo con permiso de marca. Concepto ilustrado; no es foto ni pieza fabricada validada.</figcaption>
+</figure>
+<figure>
+<span class="st">Catálogo de referencia</span>
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="p2"><title id="p2">Stand de mostrador con dos placas, consultas y ubicación, con recuadros QR</title>
+<rect width="320" height="240" fill="#0c1d15"/>
+<rect x="160" y="30" width="130" height="164" fill="#163d2b" stroke="#a9bcae" stroke-width="3"/>
+<text x="225" y="58" fill="#a9bcae" font-family="Impact,sans-serif" font-size="16" text-anchor="middle">UBICACIÓN</text>
+<rect x="250" y="76" width="30" height="30" fill="none" stroke="#a9bcae" stroke-dasharray="4 3" stroke-width="2"/>
+<rect x="30" y="48" width="140" height="152" fill="#f1eee4" stroke="#c0703f" stroke-width="3"/>
+<text x="100" y="76" fill="#0c1d15" font-family="Impact,sans-serif" font-size="16" text-anchor="middle">CONSULTAS</text>
+<rect x="62" y="90" width="76" height="76" fill="none" stroke="#0c1d15" stroke-dasharray="5 4" stroke-width="2"/>
+<text x="100" y="138" fill="#0c1d15" font-family="Impact,sans-serif" font-size="26" text-anchor="middle">QR</text>
+<rect x="20" y="200" width="280" height="16" fill="#c0703f"/></svg>
+<figcaption><b>Stand doble QR</b>: consultas y ubicación en mostrador. QR ilustrativo. Concepto ilustrado; no es foto ni pieza fabricada validada.</figcaption>
+</figure>
+<figure>
+<span class="st">Nuevo concepto</span>
+<svg viewBox="0 0 320 260" width="320" height="260" role="img" aria-labelledby="p3"><title id="p3">Trofeo de escritorio con pelota sobre columna y placa, cotas 160, 70 y 60 mm</title>
+<rect width="320" height="260" fill="#0c1d15"/>
+<circle cx="150" cy="62" r="28" fill="#f1eee4" stroke="#c0703f" stroke-width="3"/>
+<path d="M150 50l11 8-4 13h-14l-4-13z" fill="#163d2b"/>
+<path d="M142 90h16l6 70h-28z" fill="#c0703f"/>
+<rect x="122" y="160" width="56" height="12" fill="#f1eee4"/>
+<path d="M110 172h80l6 50h-92z" fill="#163d2b" stroke="#f1eee4" stroke-width="2"/>
+<rect x="118" y="184" width="64" height="26" fill="#c0703f"/>
+<text x="150" y="203" fill="#0c1d15" font-family="Impact,sans-serif" font-size="14" text-anchor="middle">TORNEO</text>
+<g stroke="#a9bcae" stroke-width="1.5" fill="#a9bcae" font-family="system-ui,sans-serif" font-size="14">
+<path d="M222 34V222M216 34h12M216 222h12"/><text x="232" y="124" stroke="none">160 mm</text>
+<text x="232" y="146" stroke="none">prof. 60</text>
+<path d="M104 236h92M104 230v12M196 230v12"/><text x="150" y="254" stroke="none" text-anchor="middle">70 mm</text></g></svg>
+<figcaption><b>Trofeo de escritorio</b> 160×70×60 mm para torneo amateur. Concepto ilustrado; no es foto ni pieza fabricada validada.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p><strong>Demo no oficial</strong>, sin afiliación ni aprobación de La Flecha Fútbol 5. Ilustraciones originales; sin fotos ni logos copiados.</p>
+<p>Fuentes: ficha de Google Maps (dirección 4408) e Instagram referenciado allí. Otras fuentes citan el 4398, que podría corresponder a un complejo contiguo; no se atribuye. No se verificó web propia. Horarios, precios y disponibilidad: consultar al comercio.</p>
+<p><a href="../index.html">Volver a la galería</a></p>
+</div>
+</footer>
+<script>
+document.getElementById('go').onclick=function(){
+var n=Math.max(0,Math.min(20,parseInt(document.getElementById('n').value,10)||0)),o=document.getElementById('out');
+if(n<10){o.innerHTML='<p>Faltan <b>'+(10-n)+'</b> para completar dos equipos de cinco.</p>';return}
+var a=[],b=[],i;for(i=1;i<=n;i++)(i%2?a:b).push('J'+i);
+o.innerHTML='<ul><li><b>Pechera A:</b> '+a.join(', ')+'</li><li><b>Pechera B:</b> '+b.join(', ')+'</li></ul>'+(n>10?'<p>'+(n-10)+' quedan para rotar cambios.</p>':'');
+};
+</script>
+</body>
+</html>

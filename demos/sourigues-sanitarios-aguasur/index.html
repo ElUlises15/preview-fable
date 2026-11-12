@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demo no oficial para Sanitarios Aguasur, Camino General Belgrano 4282: cómo llegar y qué medidas y fotos llevar al mostrador.">
+<title>Sanitarios Aguasur · Demo no oficial</title>
+<style>
+:root{
+--ink:#2b2d2f;--pri:#3a3d40;--acc:#a5571f;--acc-l:#e9b48a;--paper:#f4efe6;--iv:#fbf8f2;--mut:#6b6760;--ln:#d8cfc0;
+--disp:Rockwell,"Rockwell Nova",Clarendon,"Bookman Old Style",Georgia,serif;
+--body:"Gill Sans","Gill Sans MT","Gill Sans Nova",Calibri,"Trebuchet MS",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 var(--body);color:var(--ink);background-color:var(--paper);
+background-image:linear-gradient(rgba(216,207,192,.38) 1px,transparent 1px),linear-gradient(90deg,rgba(216,207,192,.38) 1px,transparent 1px);
+background-size:24px 24px;overflow-wrap:break-word}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
+p{margin:0 0 1em}
+a{color:var(--acc);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:8px;top:8px;background:var(--iv);padding:12px 16px;z-index:9}
+
+/* Aviso demo */
+.ban{background:var(--pri);color:var(--iv);text-align:center;padding:9px 14px;font-size:14px;letter-spacing:.04em}
+
+/* Cabecera */
+.top{max-width:1120px;margin:0 auto;padding:10px 20px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 20px;border-bottom:2px solid var(--ink)}
+.brand{font-family:var(--disp);font-weight:700;font-size:1.25rem;display:flex;align-items:center;gap:10px;min-height:44px}
+.brand svg{width:26px;height:26px;flex:none}
+.top ul{list-style:none;margin:0 0 0 -10px;padding:0;display:flex;flex-wrap:wrap}
+.top li a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;color:var(--ink);font-size:15px;text-transform:uppercase;letter-spacing:.08em;text-decoration:none}
+.top li a:hover{color:var(--acc);text-decoration:underline}
+
+main,footer{max-width:1120px;margin:0 auto;padding:0 20px}
+main{counter-reset:sec}
+section{padding:48px 0;border-bottom:1px solid var(--ln)}
+section[id],div[id]{scroll-margin-top:16px}
+
+/* Títulos con cota numerada */
+h2{font-size:clamp(1.6rem,5.2vw,2.3rem);counter-increment:sec}
+h2::before{content:"0" counter(sec);display:flex;align-items:center;gap:10px;font:700 14px/1 var(--body);letter-spacing:.14em;color:var(--acc);margin-bottom:12px;
+background:linear-gradient(var(--acc),var(--acc)) 30px 50%/56px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) 86px 50%/2px 10px no-repeat}
+
+/* Hero */
+.hero{display:grid;gap:32px;padding-top:32px}
+.tag{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--acc);border-bottom:2px solid var(--acc);padding-bottom:2px;margin-bottom:16px}
+h1{font-size:clamp(2.7rem,12.5vw,5.2rem);line-height:.95;letter-spacing:-.025em;margin-bottom:.35em}
+h1 span{display:block;font-size:.42em;letter-spacing:.02em;font-weight:400;color:var(--mut);margin-bottom:.25em}
+.lead{font-size:1.12rem;max-width:33em}
+.placa{margin:22px 0 0;padding:16px 0 0;border-top:2px solid var(--ink);display:grid;gap:14px}
+.placa p{margin:0}
+.dir{font-family:var(--disp);font-size:1.3rem;line-height:1.2}
+.dir small{display:block;font:700 13px/1.4 var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin-bottom:2px}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:12px 22px;background:var(--acc);color:var(--iv);font-weight:700;font-size:1.05rem;text-decoration:none;border-radius:2px;box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{color:var(--iv);background:var(--ink);box-shadow:4px 4px 0 var(--acc)}
+.btn:active{transform:translate(4px,4px);box-shadow:none}
+.btn svg{width:20px;height:20px;flex:none}
+.lnk{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:600}
+
+figure{margin:0}
+figcaption{font-size:14px;line-height:1.45;color:var(--mut);margin-top:10px}
+svg{display:block;width:100%;height:auto}
+.hero figure{padding-right:12px}
+.hero figure>svg{border:2px solid var(--ink);box-shadow:12px 12px 0 var(--acc)}
+.hero figcaption{margin-top:24px;padding-left:12px;border-left:2px solid var(--acc)}
+
+/* Clases de las ilustraciones */
+.s-gr{fill:var(--pri)}.s-cu{fill:var(--acc)}.s-iv{fill:var(--iv)}.s-pa{fill:var(--ln)}
+.s-ln,.s-dim{fill:none;stroke:var(--ink);stroke-width:2}
+.s-dash{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4}
+.s-pipe{fill:none;stroke:var(--acc);stroke-width:7;stroke-linecap:round}
+.s-tx{font:16px var(--body);fill:var(--ink)}.s-txl{font:bold 15px var(--body);fill:var(--iv)}
+.s-txs{font:14px var(--body);fill:var(--mut)}.s-qr{font:bold 22px var(--disp);fill:var(--ink)}
+
+/* Ubicación */
+.loc{display:grid;gap:36px}
+.card{background:var(--iv);border:1px solid var(--ln);border-left:6px solid var(--acc);padding:20px}
+dl{margin:0 0 14px}
+dt{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin-top:12px}
+dt:first-child{margin-top:0}
+dd{margin:0;font-family:var(--disp);font-size:1.2rem;line-height:1.25}
+.card p{margin:0}
+.card a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.nota{border-top:2px solid var(--ink);padding-top:14px;max-width:30em}
+
+/* Guía */
+.faq{max-width:760px}
+details{background:var(--iv);border:1px solid var(--ln);border-left:6px solid var(--pri);margin:10px 0}
+details[open]{border-left-color:var(--acc)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:56px;padding:10px 16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:28px;height:28px;display:grid;place-items:center;border:2px solid var(--ink);font:700 18px/1 var(--body)}
+details[open] summary::after{content:"–";background:var(--ink);color:var(--iv)}
+summary:hover{color:var(--acc)}
+details p{margin:0;padding:0 16px 16px;max-width:38em}
+
+/* Lista de consulta */
+.sim{background:var(--iv);border:2px dashed var(--pri);padding:20px;max-width:760px}
+.lab{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.1em}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
+.opts button{font:600 1rem var(--body);min-height:48px;padding:10px 18px;border:2px solid var(--pri);background:var(--paper);color:var(--ink);border-radius:2px;cursor:pointer;transition:background .15s,color .15s}
+.opts button:hover{border-color:var(--acc);color:var(--acc)}
+.opts button[aria-pressed=true]{background:var(--pri);border-color:var(--pri);color:var(--iv);box-shadow:3px 3px 0 var(--acc)}
+#out{list-style:square;margin:0;padding:16px 0 0 22px;border-top:2px solid var(--ink)}
+#out li{padding:5px 0 5px 4px}
+#out li::marker{color:var(--acc)}
+
+/* Propuesta PrintFactory */
+.offer{background:var(--pri);color:var(--iv);margin:48px -20px 0;padding:48px 20px;border-bottom:0;border-top:8px solid var(--acc)}
+.offer h2,.offer a{color:var(--iv)}
+.offer h2::before{color:var(--acc-l);background:linear-gradient(var(--acc-l),var(--acc-l)) 30px 50%/56px 2px no-repeat,linear-gradient(var(--acc-l),var(--acc-l)) 86px 50%/2px 10px no-repeat}
+.offer .lab{color:var(--acc-l)}
+.offer>p{max-width:36em}
+.prods{display:grid;gap:22px;margin-top:28px}
+.prod{background:var(--iv);color:var(--ink);padding:18px;border-radius:2px;border-top:4px solid var(--acc)}
+.st{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--acc);margin-bottom:6px}
+.prod h3{font-size:1.25rem;margin-bottom:14px}
+.prod svg{background:var(--paper);border:1px solid var(--ln)}
+.prod figcaption{color:var(--mut)}
+
+footer{font-size:15px;color:var(--mut);padding:28px 20px 48px}
+footer p{max-width:60em}
+footer strong{color:var(--ink)}
+footer a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+
+@media(min-width:800px){
+.top{padding-top:14px}
+.hero{grid-template-columns:1.05fr 1fr;gap:56px;align-items:end;padding:56px 0 72px}
+.hero figure{transform:translateY(28px)}
+.placa{grid-template-columns:auto 1fr;align-items:center;gap:14px 28px}
+.loc{grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}
+.loc>div:last-child{margin-top:56px}
+section{padding:64px 0}
+.sim{padding:28px;margin-left:auto}
+.offer{margin:64px 0 0;padding:56px 44px 64px}
+.prods{grid-template-columns:repeat(3,1fr);align-items:start}
+.prod:nth-child(2){margin-top:36px}
+.prod:nth-child(3){margin-top:72px}
+}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="ban" role="note">Demo no oficial · sin afiliación ni aprobación del comercio</div>
+<header class="top">
+<div class="brand">
+<svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 20 H13 Q20 20 20 13 V4" fill="none" stroke="#a5571f" stroke-width="5" stroke-linecap="round"/><path d="M16 4 H24 M4 16 V24" fill="none" stroke="#2b2d2f" stroke-width="2"/></svg>
+Sanitarios Aguasur
+</div>
+<nav aria-label="Secciones">
+<ul>
+<li><a href="#ubicacion">Ubicación</a></li>
+<li><a href="#guia">Guía</a></li>
+<li><a href="#lista">Tu lista</a></li>
+</ul>
+</nav>
+</header>
+<main id="main">
+<section class="hero">
+<div>
+<span class="tag">Sanitarios · Camino General Belgrano</span>
+<h1><span>Sanitarios</span>Aguasur</h1>
+<p class="lead">Comercio del rubro sanitarios sobre Camino General Belgrano 4282. Antes de acercarte, llevá las medidas en milímetros y una foto de la pieza o del espacio: en el mostrador la consulta se resuelve más simple.</p>
+<div class="placa">
+<p class="dir"><small>Dirección</small>Camino General Belgrano 4282</p>
+<div class="acts">
+<a class="btn" href="https://www.google.com/maps/place/sanitarios+Aguasur/data=!4m7!3m6!1s0x95a328f0f444dbe5:0x37e4f1d2c2610ae1!8m2!3d-34.8026804!4d-58.2218255!16s%2Fg%2F11ckqmx8cx" rel="noopener">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.800-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg>
+Cómo llegar por Google Maps</a>
+<a class="lnk" href="#lista">Armá tu lista antes de ir</a>
+</div>
+</div>
+</div>
+<figure>
+<svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-labelledby="ht"><title id="ht">Mostrador grafito con tarjetas de muestras, una cinta métrica cobre y un caño dibujado en papel</title>
+<rect x="0" y="0" width="320" height="240" class="s-iv"/>
+<rect x="0" y="168" width="320" height="72" class="s-gr"/>
+<rect x="0" y="162" width="320" height="8" class="s-cu"/>
+<g transform="rotate(-6 90 110)"><rect x="30" y="60" width="120" height="96" class="s-pa"/><rect x="40" y="70" width="44" height="34" class="s-iv"/><rect x="94" y="70" width="44" height="34" class="s-cu"/><rect x="40" y="114" width="98" height="6" class="s-gr"/><rect x="40" y="128" width="70" height="6" class="s-gr"/></g>
+<rect x="170" y="40" width="124" height="112" class="s-iv" stroke="#2b2d2f" stroke-width="2"/>
+<path d="M186 120 H230 Q246 120 246 104 V68" class="s-pipe"/>
+<path d="M240 68 H252 M180 114 V126" class="s-ln"/>
+<text x="232" y="144" text-anchor="middle" class="s-tx">Ø ¿?</text>
+<circle cx="70" cy="196" r="22" class="s-cu"/><circle cx="70" cy="196" r="8" class="s-gr"/>
+<rect x="88" y="190" width="150" height="12" class="s-paper s-pa"/>
+<path d="M104 190 v6 M124 190 v8 M144 190 v6 M164 190 v8 M184 190 v6 M204 190 v8 M224 190 v6" class="s-ln" stroke-width="1.5"/>
+<text x="252" y="222" text-anchor="middle" class="s-txl">mm</text>
+</svg>
+<figcaption>Ilustración original; no es foto del local</figcaption>
+</figure>
+</section>
+
+<section class="loc" id="ubicacion" aria-labelledby="lh">
+<div>
+<h2 id="lh">Dónde queda</h2>
+<div class="card"><dl><dt>Dirección</dt><dd>Camino General Belgrano 4282</dd><dt>Rubro</dt><dd>Sanitarios</dd></dl>
+<p><a href="https://www.google.com/maps/place/sanitarios+Aguasur/data=!4m7!3m6!1s0x95a328f0f444dbe5:0x37e4f1d2c2610ae1!8m2!3d-34.8026804!4d-58.2218255!16s%2Fg%2F11ckqmx8cx" rel="noopener">Ver ubicación en Google Maps</a></p></div>
+</div>
+<div>
+<h2>Antes de ir</h2>
+<p class="nota">Confirmá disponibilidad y horarios directamente con el comercio. Esta demo no publica datos de atención.</p>
+</div>
+</section>
+
+<section id="guia" aria-labelledby="fh">
+<h2 id="fh">Guía para preparar tu consulta</h2>
+<div class="faq">
+<details><summary>¿Qué medidas conviene llevar?</summary><p>Ancho, alto y profundidad del espacio disponible, y la distancia entre la pared y la salida o entrada de agua. Medí en milímetros y anotá desde dónde tomaste cada medida.</p></details>
+<details><summary>¿Cómo saco una foto útil?</summary><p>Una foto general del lugar y otra de cerca de la pieza, con una cinta métrica visible. Buena luz y sin zoom digital.</p></details>
+<details><summary>Quiero reemplazar una pieza, ¿qué llevo?</summary><p>Si podés, la pieza original o fotos de sus marcas, roscas y uniones. Ayuda a comparar opciones equivalentes en el mostrador.</p></details>
+<details><summary>¿La instalación la resuelve el comercio?</summary><p>Esta demo no tiene esa información. Consultalo en el local; para trabajos con presión, gas o electricidad, recurrí a un profesional matriculado.</p></details>
+</div>
+</section>
+
+<section id="lista" aria-labelledby="sh">
+<h2 id="sh">Armá tu lista de consulta</h2>
+<div class="sim">
+<p class="lab">Simulación local; no envía consultas ni guarda datos</p>
+<p>Elegí qué vas a consultar y te mostramos qué conviene llevar.</p>
+<div class="opts" role="group" aria-label="Tipo de consulta">
+<button type="button" aria-pressed="false" data-k="b">Baño</button>
+<button type="button" aria-pressed="false" data-k="c">Cocina</button>
+<button type="button" aria-pressed="false" data-k="r">Repuesto</button>
+<button type="button" aria-pressed="false" data-k="o">Obra nueva</button>
+</div>
+<ul id="out" aria-live="polite"><li>Elegí una opción.</li></ul>
+</div>
+</section>
+
+<section class="offer" aria-labelledby="oh">
+<p class="lab">Propuesta de PrintFactory · separada del comercio</p>
+<h2 id="oh">Piezas impresas para mostrador</h2>
+<p>Ideas de PrintFactory para ordenar el mostrador de un comercio de sanitarios. No son productos ofrecidos por Sanitarios Aguasur.</p>
+<div class="prods">
+<figure class="prod"><span class="st">Catálogo de referencia demo</span><h3>Stand doble QR</h3>
+<svg viewBox="0 0 360 260" width="360" height="260" role="img" aria-labelledby="s1t"><title id="s1t">Stand de dos paneles con recuadros que dicen QR, sobre una base grafito</title>
+<ellipse cx="180" cy="234" rx="146" ry="9" class="s-pa"/><rect x="48" y="204" width="264" height="26" rx="4" class="s-gr"/><rect x="58" y="198" width="244" height="8" class="s-cu"/>
+<rect x="62" y="36" width="112" height="164" rx="6" class="s-iv" stroke="#2b2d2f"/><rect x="186" y="36" width="112" height="164" rx="6" class="s-iv" stroke="#2b2d2f"/>
+<rect x="63" y="37" width="110" height="28" class="s-gr"/><rect x="187" y="37" width="110" height="28" class="s-gr"/>
+<text x="118" y="56" text-anchor="middle" class="s-txl">CONSULTA</text><text x="242" y="56" text-anchor="middle" class="s-txl">CATÁLOGO</text>
+<rect x="82" y="80" width="72" height="72" class="s-dash"/><rect x="206" y="80" width="72" height="72" class="s-dash"/>
+<text x="118" y="124" text-anchor="middle" class="s-qr">QR</text><text x="242" y="124" text-anchor="middle" class="s-qr">QR</text>
+<rect x="82" y="164" width="72" height="5" class="s-pa"/><rect x="206" y="164" width="72" height="5" class="s-pa"/>
+<text x="180" y="254" text-anchor="middle" class="s-txs">Panel ilustrativo: solo dice «QR»</text></svg>
+<figcaption>Uso: dos accesos en el mostrador, consulta comercial y catálogo. El QR es solo un rótulo. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption></figure>
+
+<figure class="prod"><span class="st">Nuevo concepto</span><h3>Expositor de etiquetas de medidas</h3>
+<svg viewBox="0 0 360 260" width="360" height="260" role="img" aria-labelledby="s2t"><title id="s2t">Expositor escalonado de tres niveles con etiquetas y cotas de 150, 100 y 60 milímetros</title>
+<rect x="40" y="180" width="220" height="32" class="s-gr"/><polygon points="40,180 64,166 284,166 260,180" class="s-iv"/>
+<rect x="64" y="138" width="220" height="28" class="s-gr"/><polygon points="64,138 88,124 308,124 284,138" class="s-iv"/>
+<rect x="88" y="96" width="220" height="28" class="s-gr"/><polygon points="88,96 112,82 332,82 308,96" class="s-iv"/>
+<g class="s-iv"><rect x="52" y="186" width="58" height="20"/><rect x="121" y="186" width="58" height="20"/><rect x="190" y="186" width="58" height="20"/><rect x="76" y="142" width="58" height="20"/><rect x="145" y="142" width="58" height="20"/><rect x="214" y="142" width="58" height="20"/><rect x="100" y="100" width="58" height="20"/><rect x="169" y="100" width="58" height="20"/><rect x="238" y="100" width="58" height="20"/></g>
+<g class="s-cu"><rect x="58" y="194" width="30" height="4"/><rect x="127" y="194" width="30" height="4"/><rect x="196" y="194" width="30" height="4"/><rect x="82" y="150" width="30" height="4"/><rect x="151" y="150" width="30" height="4"/><rect x="220" y="150" width="30" height="4"/><rect x="106" y="108" width="30" height="4"/><rect x="175" y="108" width="30" height="4"/><rect x="244" y="108" width="30" height="4"/></g>
+<path d="M40 226 H260 M40 220 V232 M260 220 V232" class="s-dim"/><text x="150" y="248" text-anchor="middle" class="s-tx">150 mm</text>
+<path d="M24 82 V212 M18 82 H30 M18 212 H30" class="s-dim"/><text x="14" y="150" text-anchor="middle" class="s-tx" transform="rotate(-90 14 150)">100 mm</text>
+<path d="M112 74 L136 60" class="s-dim"/><text x="142" y="60" class="s-tx">60 mm</text>
+<rect x="226" y="24" width="122" height="26" class="s-cu"/><text x="287" y="42" text-anchor="middle" class="s-txl">Solo mostrador</text></svg>
+<figcaption>Uso: etiquetas de medidas genéricas a la vista del cliente, 150×100×60 mm, solo mostrador. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption></figure>
+
+<figure class="prod"><span class="st">Nuevo concepto</span><h3>Organizador de muestras secas</h3>
+<svg viewBox="0 0 360 270" width="360" height="270" role="img" aria-labelledby="s3t"><title id="s3t">Bandeja vista desde arriba con doce compartimentos y muestras genéricas, cotas de 150, 120 y 30 milímetros</title>
+<rect x="40" y="30" width="280" height="180" rx="8" class="s-gr"/><rect x="40" y="206" width="280" height="16" rx="3" class="s-pa" stroke="#2b2d2f" stroke-width="2"/>
+<rect x="50" y="40" width="260" height="160" class="s-iv"/><path d="M115 40 V200 M180 40 V200 M245 40 V200 M50 93 H310 M50 147 H310" class="s-ln"/>
+<rect x="64" y="52" width="36" height="30" class="s-cu"/><circle cx="147" cy="67" r="15" class="s-cu"/><rect x="194" y="52" width="38" height="30" rx="3" class="s-pa"/><circle cx="82" cy="120" r="16" class="s-pa"/><circle cx="82" cy="120" r="7" class="s-cu"/><rect x="128" y="104" width="40" height="32" class="s-pa"/><rect x="196" y="106" width="34" height="28" class="s-cu"/><circle cx="276" cy="120" r="12" class="s-cu"/><rect x="62" y="160" width="42" height="28" class="s-pa"/><circle cx="212" cy="174" r="14" class="s-cu"/><rect x="258" y="160" width="40" height="28" class="s-pa"/>
+<path d="M40 236 H320 M40 230 V242 M320 230 V242" class="s-dim"/><text x="180" y="260" text-anchor="middle" class="s-tx">150 mm</text>
+<path d="M332 30 V210 M326 30 H338 M326 210 H338" class="s-dim"/><text x="346" y="120" text-anchor="middle" class="s-tx" transform="rotate(90 346 120)">120 mm</text>
+<text x="24" y="219" text-anchor="middle" class="s-txs">30</text>
+<rect x="50" y="4" width="180" height="22" class="s-cu"/><text x="140" y="20" text-anchor="middle" class="s-txl">Solo muestras secas</text></svg>
+<figcaption>Uso: ordenar muestras secas de exhibición, 150×120×30 mm. No usar como pieza sanitaria ni de presión. Concepto ilustrado; no es foto ni pieza fabricada validada</figcaption></figure>
+</div>
+</section>
+</main>
+<footer>
+<p><strong>Demo no oficial</strong>, sin afiliación ni aprobación de Sanitarios Aguasur. Fuentes: nombre, rubro y dirección tomados de la ficha pública de Google Maps. No se encontró web propia en búsqueda nominal; figura en directorios (GuíaUrbana, ObraMaestra, suAmarillas). Horarios, teléfono, servicios y stock no verificados y omitidos. Ilustraciones originales.</p>
+<p><a href="../index.html">Volver a la galería</a></p>
+</footer>
+<script>
+const L={b:["Medidas del espacio (ancho, alto, profundidad)","Distancia de la pared a la salida de agua","Foto general y de detalle con cinta"],c:["Medidas de la mesada y la bacha actual","Foto de la conexión bajo mesada","Altura disponible sobre la mesada"],r:["La pieza original o fotos de marcas y roscas","Medidas en milímetros","Foto de dónde va instalada"],o:["Plano o croquis con medidas","Lista de ambientes a equipar","Fotos del avance de obra"]};
+const out=document.getElementById("out");
+document.querySelectorAll(".opts button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".opts button").forEach(x=>x.setAttribute("aria-pressed",x===b));out.innerHTML=L[b.dataset.k].map(t=>"<li>"+t+"</li>").join("")}));
+</script>
+</body>
+</html>

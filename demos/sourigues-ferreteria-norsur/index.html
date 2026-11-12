@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Demo de propuesta no oficial para Ferretería NorSur, Camino General Belgrano 4582: ubicación y guía para llegar al mostrador con la consulta lista.">
+<meta name="theme-color" content="#17171a">
+<title>Ferretería NorSur · Camino General Belgrano 4582</title>
+<style>
+:root{--iron:#17171a;--paper:#f2ece1;--card:#fff8ee;--pri:#b9481b;--pri-d:#9c3a14;--pri-l:#e98a5c;--acc:#2f6f73;--mute:#625b51;--line:#cbbfac;--line-d:#4a4640;
+--disp:"Bahnschrift SemiCondensed","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+--body:ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--paper);color:var(--iron);font:15px/1.65 var(--body);overflow-x:hidden;overflow-wrap:anywhere;-webkit-text-size-adjust:100%}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.offer :focus-visible{outline-color:var(--pri-l)}
+.skip{position:absolute;left:-999px;top:0;background:var(--iron);color:var(--paper);padding:.8rem 1rem;z-index:9}
+.skip:focus{left:.5rem;top:.5rem}
+.note{background:var(--iron);color:var(--paper);font-size:12px;line-height:1.4;padding:.55rem 1rem;text-align:center;letter-spacing:.02em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.1rem}
+
+/* Cabecera */
+header .wrap{display:flex;flex-wrap:wrap;gap:0 1.5rem;justify-content:space-between;align-items:center;padding-block:.5rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;min-height:44px;font:700 1.3rem var(--disp);text-transform:uppercase;letter-spacing:.04em;text-decoration:none}
+.brand svg{width:26px;height:26px;flex:none}
+nav{display:flex;flex-wrap:wrap;gap:0 1.1rem;font-size:13px}
+nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--pri)}
+.rule{height:18px;border-block:2px solid var(--iron);background:
+linear-gradient(90deg,var(--iron) 1px,transparent 1px) 0 0/40px 100% repeat-x,
+linear-gradient(90deg,var(--iron) 1px,transparent 1px) 0 0/8px 45% repeat-x}
+
+/* Tipografía */
+h1,h2,h3{font-family:var(--disp);text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+.kick{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pri-d);font-weight:700}
+h2{font-size:clamp(2rem,8vw,3.6rem);margin:.5rem 0 1rem}
+
+/* Hero */
+.hero{display:grid;gap:2.2rem;padding-block:2.2rem 3rem}
+.hero>div{min-width:0}
+h1{font-size:clamp(3rem,14vw,7rem);margin:.5rem 0 1.1rem;overflow-wrap:normal;word-break:normal;hyphens:none}
+h1 span{display:block;color:var(--pri)}
+.lead{max-width:34rem;font-size:1rem}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-top:1.6rem}
+.cta{display:inline-flex;align-items:center;min-height:48px;background:var(--pri-d);color:var(--paper);padding:.7rem 1.2rem;font-weight:700;text-decoration:none;border:2px solid var(--iron);box-shadow:4px 4px 0 var(--iron);transition:transform .15s,box-shadow .15s,background-color .15s}
+.cta:hover{background:var(--iron)}
+.cta:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--iron)}
+.link{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.link:hover{color:var(--pri-d)}
+
+/* Ficha */
+.ledger{border:2px solid var(--iron);background:var(--card);align-self:end;box-shadow:6px 6px 0 var(--line)}
+.ledger h2{font-size:1.1rem;line-height:1.2;margin:0;padding:.65rem .9rem;background:var(--iron);color:var(--paper);letter-spacing:.06em}
+.ledger dl{display:grid;grid-template-columns:auto 1fr}
+.ledger dt,.ledger dd{padding:.7rem .9rem;border-top:1px solid var(--line)}
+.ledger dt{font-size:11px;line-height:2.1;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);border-right:1px solid var(--line)}
+.ledger dd.na{color:var(--mute);font-size:13px}
+
+/* Secciones */
+section{padding-block:3rem;border-top:2px solid var(--iron);scroll-margin-top:.5rem}
+.grid2{display:grid;gap:1.8rem}
+.grid2>*{min-width:0}
+
+/* Chapa de dirección */
+.plate{display:inline-block;max-width:100%;margin:.7rem 0 0;padding:1.1rem 1.3rem 1rem;background:var(--acc);color:var(--paper);border:2px solid var(--iron);outline:2px solid var(--paper);outline-offset:-9px;font-size:1rem}
+.plate-st{display:block;font-size:clamp(1.15rem,5vw,1.5rem);letter-spacing:.06em;line-height:1.1}
+.plate-n{display:block;font-size:clamp(4.2rem,22vw,7rem);line-height:.86;margin-top:.35rem;letter-spacing:.02em}
+.where p{max-width:36rem}
+.where p+p{margin-top:.9rem}
+.src{font-size:12px;color:var(--mute);border-left:3px solid var(--pri);padding-left:.8rem}
+
+/* Guía */
+.guide-intro p{max-width:30rem}
+.measure{margin-top:1.5rem;max-width:26rem}
+ol.steps{list-style:none;padding:0;counter-reset:s;border-top:2px solid var(--iron)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:.8rem;padding:1rem 0;border-bottom:1px dashed var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 1.9rem/1 var(--disp);color:var(--pri-d)}
+.steps b{display:block;font-size:1rem}
+.steps li:last-child{border-bottom:2px solid var(--iron)}
+
+/* Propuesta para el comercio */
+.offer{background:var(--iron);color:var(--paper);background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);background-size:40px 40px;background-position:-1px -1px}
+.offer .wrap{background:var(--iron);padding-block:.1rem}
+.offer .kick{color:var(--pri-l)}
+.offer .intro{max-width:44rem;margin-bottom:2rem;color:#e4dccd}
+.part{display:grid;gap:1.4rem;padding:2.2rem 0;border-top:1px solid var(--line-d)}
+.part>*{min-width:0}
+.pn{font:700 clamp(4rem,20vw,8rem)/.8 var(--disp);color:var(--pri);margin-bottom:.9rem}
+.part h3{font-size:clamp(1.6rem,6vw,2.4rem);margin:.6rem 0}
+.tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border:1px solid currentColor;padding:.2rem .55rem;margin-bottom:.4rem}
+.tag.new{background:var(--pri-d);border-color:var(--pri-d)}
+.part ul{padding-left:1.1rem;margin-top:.8rem;font-size:14px;color:#e4dccd}
+.part li+li{margin-top:.3rem}
+.part li::marker{color:var(--pri-l)}
+
+figure{background:var(--paper);color:var(--iron);border:2px solid var(--pri);padding:.9rem;background-image:linear-gradient(rgba(23,23,26,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(23,23,26,.07) 1px,transparent 1px);background-size:16px 16px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:11px;color:var(--mute);margin-top:.5rem;padding-top:.45rem;border-top:1px dashed var(--line);background:var(--paper)}
+.measure{border-color:var(--iron);background-color:var(--card)}
+.measure figcaption{background:var(--card)}
+
+.sim{margin-top:1.1rem;border:1px dashed var(--pri-l);padding:.9rem}
+.sim p{font-size:12px}
+.sw{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0}
+.sw button{font:inherit;font-size:13px;min-height:44px;background:transparent;color:var(--paper);border:1px solid var(--paper);padding:.45rem .9rem;cursor:pointer;transition:background-color .15s,border-color .15s}
+.sw button:hover{border-color:var(--pri-l)}
+.sw button[aria-pressed=true]{background:var(--pri-d);border-color:var(--pri-l);font-weight:700}
+#st{color:var(--pri-l);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* Pie */
+footer{border-top:2px solid var(--iron);padding-block:2rem 2.5rem;font-size:12px;color:var(--mute)}
+footer p{margin-bottom:.7rem;max-width:60rem}
+footer .note{margin-bottom:1.2rem}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--iron);font-weight:700}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+
+@media(min-width:800px){
+header .wrap{padding-block:.7rem}
+.hero{grid-template-columns:7fr 4fr;gap:3rem;padding-block:4rem 4.5rem}
+section{padding-block:4.5rem}
+.grid2{grid-template-columns:5fr 7fr;gap:3.5rem}
+.where{align-self:end;padding-bottom:.4rem}
+.guide-intro{position:sticky;top:1.5rem;align-self:start}
+.part{grid-template-columns:5fr 6fr;gap:3.5rem;align-items:center;padding:3rem 0}
+.part:nth-of-type(even){grid-template-columns:6fr 5fr}
+.part:nth-of-type(even) figure{order:-1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="note" role="note">Propuesta no oficial · diseño de demostración · sin afiliación ni aprobación del comercio</div>
+<header><div class="wrap">
+<a class="brand" href="#main"><svg viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M13 2l9.5 5.5v11L13 24l-9.5-5.5v-11z" fill="#b9481b" stroke="#17171a" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="13" r="4" fill="#f2ece1" stroke="#17171a" stroke-width="2"/></svg>Ferretería NorSur</a>
+<nav aria-label="Secciones"><a href="#ubicacion">Ubicación</a><a href="#guia">Guía</a><a href="#conceptos">Para el comercio</a></nav>
+</div>
+<div class="rule" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="wrap hero">
+<div>
+<p class="kick">Ferretería · Camino General Belgrano 4582</p>
+<h1>Ferretería <span>NorSur</span></h1>
+<p class="lead">Ferretería de barrio sobre Camino General Belgrano. Acá tenés la dirección y una guía corta para llegar al mostrador con la consulta lista: medidas, foto y cantidad, sin vueltas.</p>
+<div class="actions">
+<a class="cta" href="#conceptos">Ver las 3 piezas impresas propuestas ↓</a>
+<a class="link" href="#guia">Guía de mostrador</a>
+</div>
+</div>
+<aside class="ledger" aria-labelledby="ficha">
+<h2 id="ficha">Ficha del local</h2>
+<dl>
+<dt>Rubro</dt><dd>Ferretería</dd>
+<dt>Dirección</dt><dd>Camino General Belgrano 4582</dd>
+<dt>Registro</dt><dd>Góndola Local, Municipio de Berazategui</dd>
+<dt>Horario y teléfono</dt><dd class="na">No provistos: consultalos en el local.</dd>
+</dl>
+</aside>
+</div>
+
+<section id="ubicacion"><div class="wrap grid2">
+<div><p class="kick">Cómo encontrarnos</p>
+<h2 class="plate"><span class="plate-st">Camino General Belgrano</span> <span class="plate-n">4582</span></h2></div>
+<div class="where">
+<p>Buscá «Camino General Belgrano 4582» en tu app de mapas antes de salir.</p>
+<p class="src">La dirección figura en el registro municipal de comercios locales; si algo no coincide al llegar, confirmá en el lugar.</p>
+</div>
+</div></section>
+
+<section id="guia"><div class="wrap grid2">
+<div class="guide-intro"><p class="kick">Guía de mostrador</p><h2>Antes de venir, anotá esto</h2>
+<p>Una consulta de ferretería sale más rápido cuando la pieza está bien descripta. Esta guía es general: no informa precios, stock ni recomendaciones técnicas.</p>
+<figure class="measure">
+<svg viewBox="0 0 360 170" role="img" aria-labelledby="t0"><title id="t0">Esquema de un tornillo que señala qué anotar: tipo de cabeza, largo y diámetro</title>
+<g stroke="#17171a" stroke-width="3" stroke-linejoin="round">
+<path d="M40 50v60l30-18V68z" fill="#b9481b"/>
+<rect x="70" y="68" width="200" height="24" fill="#fff8ee"/>
+<path d="M270 68l40 12-40 12z" fill="#fff8ee"/>
+<path d="M130 68l-8 24M144 68l-8 24M158 68l-8 24M172 68l-8 24M186 68l-8 24M200 68l-8 24M214 68l-8 24M228 68l-8 24M242 68l-8 24M256 68l-8 24M270 68l-8 24" stroke-width="2" fill="none"/>
+</g>
+<g stroke="#17171a" stroke-width="1.2" fill="none">
+<path d="M40 136h270M40 129v14M310 129v14M330 68v24M324 68h12M324 92h12M55 34v12"/>
+<path d="M276 68h44M276 92h44" stroke-dasharray="3 3"/>
+</g>
+<g font-family="Arial Narrow,sans-serif" font-size="13" fill="#17171a">
+<text x="175" y="156" text-anchor="middle">largo (mm)</text>
+<text x="341" y="85">Ø</text>
+<text x="34" y="26">tipo de cabeza</text>
+</g>
+</svg>
+<figcaption>Ilustración conceptual de qué medir; no representa un producto del local</figcaption>
+</figure>
+</div>
+<ol class="steps">
+<li><div><b>Sacá una foto de la pieza</b>De frente y de costado, con algo al lado que dé escala.</div></li>
+<li><div><b>Traé la pieza vieja si podés</b>Comparar en mano evita confusiones de rosca o de cabeza.</div></li>
+<li><div><b>Medí largo y diámetro</b>En milímetros, con regla o calibre. Anotá también el tipo de cabeza.</div></li>
+<li><div><b>Anotá la cantidad</b>Cuántas unidades necesitás y si te sobran algunas de reserva.</div></li>
+<li><div><b>Contá dónde va</b>Madera, chapa, pared: describilo, y que la decisión técnica la tome alguien idóneo.</div></li>
+<li><div><b>Disponibilidad y precio, en el mostrador</b>Esta página no los muestra; consultalos directamente en el local.</div></li>
+</ol>
+</div></section>
+
+<section class="offer" id="conceptos" aria-labelledby="ofh"><div class="wrap">
+<p class="kick">Para el comercio · propuesta PrintFactory</p>
+<h2 id="ofh">Tres piezas impresas para el mostrador</h2>
+<p class="intro">Sección dirigida al comercio, separada del contenido para clientes. Las piezas 01 y 02 son referencias de un catálogo de demostración (no verificadas en Instagram ni oferta vigente); la 03 es un concepto nuevo. Todas son decorativas u organizadoras, sin uso estructural, alimentario, médico, térmico ni eléctrico.</p>
+
+<article class="part">
+<div>
+<div class="pn" aria-hidden="true">01</div>
+<span class="tag">Referencia de catálogo demo</span>
+<h3>Stand doble QR</h3>
+<p>Dos caras para el mostrador: una para consultas con foto y otra para catálogo.</p>
+<ul><li>Los paneles dicen «QR» como marcador: no contienen código, no son pago y no están operativos.</li><li>Sin chip NFC.</li></ul>
+</div>
+<figure>
+<svg viewBox="0 0 360 260" role="img" aria-labelledby="t1"><title id="t1">Stand de mostrador con dos paneles marcados QR, no operativos</title>
+<g fill="none" stroke="#17171a" stroke-width="3">
+<rect x="40" y="214" width="280" height="22" fill="#b9481b"/>
+<rect x="62" y="44" width="112" height="170" fill="#fff8ee"/><rect x="186" y="44" width="112" height="170" fill="#fff8ee"/>
+<rect x="83" y="88" width="70" height="70" stroke-dasharray="6 4"/><rect x="207" y="88" width="70" height="70" stroke-dasharray="6 4"/>
+<path d="M174 60v154M186 60v154" stroke-width="1.5"/></g>
+<g font-family="Arial Narrow,sans-serif" text-anchor="middle" fill="#17171a">
+<text x="118" y="72" font-size="14" font-weight="700">FOTO</text><text x="242" y="72" font-size="14" font-weight="700">CATÁLOGO</text>
+<text x="118" y="131" font-size="24" font-weight="700">QR</text><text x="242" y="131" font-size="24" font-weight="700">QR</text>
+<text x="118" y="182" font-size="11">no operativo</text><text x="242" y="182" font-size="11">no operativo</text></g>
+</svg>
+<figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</article>
+
+<article class="part">
+<div>
+<div class="pn" aria-hidden="true">02</div>
+<span class="tag">Referencia de catálogo demo</span>
+<h3>Llaveros con logo</h3>
+<p>Pensados para entregar a clientes de obra. El espacio de logo queda libre hasta que el comercio aporte el suyo.</p>
+<ul><li>No se reproduce ninguna marca existente.</li><li>Sin medidas definidas para esta pieza.</li></ul>
+</div>
+<figure>
+<svg viewBox="0 0 360 240" role="img" aria-labelledby="t2"><title id="t2">Tres llaveros con espacio vacío para logo</title>
+<defs><g id="k"><circle cx="0" cy="-12" r="16" fill="none" stroke="#17171a" stroke-width="3"/><rect x="-42" y="0" width="84" height="124" rx="14" fill="#b9481b" stroke="#17171a" stroke-width="3"/><circle cx="0" cy="16" r="6" fill="#f2ece1" stroke="#17171a" stroke-width="2"/><rect x="-28" y="40" width="56" height="56" fill="#f2ece1" stroke="#17171a" stroke-dasharray="4 3"/><text x="0" y="73" font-size="11" text-anchor="middle" font-family="Arial Narrow,sans-serif">logo</text></g></defs>
+<use href="#k" transform="translate(80 70) rotate(-10)"/><use href="#k" transform="translate(180 50)"/><use href="#k" transform="translate(280 70) rotate(10)"/>
+</svg>
+<figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</article>
+
+<article class="part">
+<div>
+<div class="pn" aria-hidden="true">03</div>
+<span class="tag new">Concepto nuevo</span>
+<h3>Bandeja organizadora de tornillos</h3>
+<p>Medidas propuestas: 150 × 100 × 30 mm, bajo el límite de 180 mm. No validadas para fabricación. Pieza no estructural, para tornillos secos y piezas chicas de mostrador.</p>
+<div class="sim">
+<p><b>Simulación local; no envía consultas ni guarda datos</b> · Cambia solo la ilustración.</p>
+<div class="sw" role="group" aria-label="Divisiones de la bandeja">
+<button type="button" data-c="2" data-r="1" aria-pressed="false">2 divisiones</button>
+<button type="button" data-c="2" data-r="2" aria-pressed="false">4 divisiones</button>
+<button type="button" data-c="3" data-r="2" aria-pressed="true">6 divisiones</button>
+</div>
+<p id="st" aria-live="polite">Vista: 6 divisiones</p>
+</div>
+</div>
+<figure>
+<svg viewBox="0 0 360 290" role="img" aria-labelledby="t3"><title id="t3">Vista superior de bandeja de 150 por 100 milímetros con divisiones</title>
+<rect x="30" y="30" width="300" height="200" fill="#fff8ee" stroke="#17171a" stroke-width="6"/>
+<g id="div" stroke="#b9481b" stroke-width="4"></g>
+<g stroke="#17171a" stroke-width="1.2" font-family="Arial Narrow,sans-serif" font-size="13" fill="#17171a">
+<path d="M30 256h300M30 250v12M330 250v12M346 30v200M340 30h12M340 230h12"/>
+<text x="180" y="276" text-anchor="middle" stroke="none">150 mm (propuesto)</text>
+<text x="0" y="0" stroke="none" text-anchor="middle" transform="translate(342 130) rotate(90)">100 mm</text>
+<text x="34" y="20" stroke="none">alto 30 mm · no estructural</text></g>
+</svg>
+<figcaption>Ilustración conceptual; no es foto ni pieza fabricada validada</figcaption>
+</figure>
+</article>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="note" role="note">Propuesta no oficial · diseño de demostración · sin afiliación ni aprobación del comercio</div>
+<p>Fuente: nombre, rubro y dirección tomados del registro municipal Góndola Local (berazategui.gob.ar/gondolalocal/). Pueden estar desactualizados o incompletos; verificá en el lugar.</p>
+<p>No se encontró web propia en una búsqueda nominal limitada; si el comercio tiene sitio, esta página es una alternativa de diseño, no un reemplazo. No se publican horarios, teléfonos, precios, stock ni garantías porque no fueron provistos.</p>
+<p>Todas las ilustraciones son originales, encargadas para esta demo; no son fotos del local ni de productos fabricados.</p>
+<p><a href="../index.html">← Volver a la galería</a></p>
+</div></footer>
+
+<script>
+const g=document.getElementById('div'),st=document.getElementById('st'),bs=document.querySelectorAll('.sw button');
+function lay(c,r){let s='';for(let i=1;i<c;i++){const x=30+300*i/c;s+=`<line x1="${x}" y1="33" x2="${x}" y2="227"/>`}
+for(let j=1;j<r;j++){const y=30+200*j/r;s+=`<line x1="33" y1="${y}" x2="327" y2="${y}"/>`}g.innerHTML=s}
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');
+lay(+b.dataset.c,+b.dataset.r);st.textContent='Vista: '+b.textContent}));
+lay(3,2);
+</script>
+</body>
+</html>
