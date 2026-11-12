@@ -1,0 +1,4 @@
+Jost (Copyright The Jost Project Authors, https://github.com/indestructible-type/Jost) y
+Allura (Copyright The Allura Project Authors, https://github.com/googlefonts/allura) se distribuyen
+bajo SIL Open Font License 1.1: https://openfontlicense.org
+Los archivos de esta carpeta son subconjuntos latinos convertidos a woff2.
