@@ -83,6 +83,9 @@
       <li><a href="#c-testimonios">testimonios</a></li>
       <li><a href="#c-cta-banda">cta-banda</a></li>
       <li><a href="#c-footer">footer</a></li>
+      <li><a href="#c-ficha-producto">ficha-producto</a></li>
+      <li><a href="#c-agenda-semanal">agenda-semanal</a></li>
+      <li><a href="#c-ficha-propiedad">ficha-propiedad</a></li>
       <li><a href="#c-iconos">iconos</a></li>
       <li><a href="#c-tokens">tokens</a></li>
     </ul>
@@ -698,6 +701,145 @@
         <p class="wf-footer__credito">© {{ANIO}} {{NOMBRE_NEGOCIO}} · Sitio hecho por Web Factory</p>
       </div>
     </footer>
+  </div>
+</section>
+
+<!-- ============================================================ FICHA PRODUCTO -->
+<section id="c-ficha-producto" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Ficha de producto con stock <code>.wf-producto</code></h2>
+    <p>Un producto con foto, variantes y el estado de stock de cada una. El estado lo marca el negocio a mano (no hay sistema de stock detrás): por eso lleva la fecha de la última actualización y el botón siempre dice “consultar”.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Ferreterías, almacenes, pet shops, corralones, impresión 3D, repuestos.</dd>
+      <dt>Necesita</dt><dd><code>.wf-producto</code>, <code>.wf-stock</code>, <code>.wf-ph</code>, <code>.wf-btn</code>. Sin JS. Estados: <code>wf-stock--hay</code>, <code>--pocas</code>, <code>--pedido</code>, <code>--sin</code>.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <article class="wf-producto wf-section">
+      <div class="wf-container wf-producto__grid">
+        <div class="wf-producto__foto wf-ph" role="img" aria-label="Foto pendiente del producto">
+          <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-etiqueta"/></svg>
+          <span class="wf-ph__txt">{{FOTO_PRODUCTO}}</span>
+        </div>
+        <div class="wf-producto__info">
+          <p class="wf-kicker">{{CATEGORIA_PRODUCTO}}</p>
+          <h3 class="wf-titulo">{{NOMBRE_PRODUCTO}}</h3>
+          <p class="wf-bajada">{{DESCRIPCION_PRODUCTO}}</p>
+          <p class="wf-producto__precio"><span class="wf-producto__precio-rot">Precio</span> {{PRECIO_PRODUCTO}}</p>
+          <table class="wf-producto__variantes">
+            <caption>Variantes y stock · actualizado {{FECHA_ACTUALIZACION_STOCK}}</caption>
+            <thead><tr><th scope="col">Variante</th><th scope="col">Estado</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">{{VARIANTE_1}}</th><td><span class="wf-stock wf-stock--hay">Hay stock</span></td></tr>
+              <tr><th scope="row">{{VARIANTE_2}}</th><td><span class="wf-stock wf-stock--pocas">Quedan pocas</span></td></tr>
+              <tr><th scope="row">{{VARIANTE_3}}</th><td><span class="wf-stock wf-stock--pedido">A pedido · {{DEMORA_PEDIDO}}</span></td></tr>
+              <tr><th scope="row">{{VARIANTE_4}}</th><td><span class="wf-stock wf-stock--sin">Sin stock</span></td></tr>
+            </tbody>
+          </table>
+          <p class="wf-producto__aclaracion">El stock se actualiza a mano. Antes de venir, confirmá por WhatsApp que lo tengamos.</p>
+          <a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20{{NOMBRE_PRODUCTO_URLENCODED}}.%20%C2%BFLo%20tienen%3F">
+            <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+            Consultar si hay
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ AGENDA SEMANAL -->
+<section id="c-agenda-semanal" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Agenda semanal <code>.wf-agenda</code></h2>
+    <p>Las clases, turnos fijos o actividades de la semana. En el celular es una lista por día (se lee de arriba a abajo, sin scroll lateral); desde 56rem se arma la grilla de siete columnas. Los días sin actividad se marcan, no se esconden.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Gimnasios, estudios de fitness, escuelitas de fútbol, academias, talleres de arte, consultorios con días fijos.</dd>
+      <dt>Necesita</dt><dd><code>.wf-agenda</code>, <code>.wf-agenda__dia</code>, <code>.wf-agenda__item</code>. Sin JS. Opcional <code>wf-agenda__item--destacado</code> para la actividad que querés empujar.</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <div class="wf-agenda wf-section">
+      <div class="wf-container">
+        <p class="wf-kicker">{{AGENDA_KICKER}}</p>
+        <h3 class="wf-titulo">La semana</h3>
+        <p class="wf-bajada">Vigente desde {{FECHA_VIGENCIA_AGENDA}}. Cupos limitados: reservá por WhatsApp.</p>
+        <ol class="wf-agenda__semana">
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Lunes</h4>
+            <ul><li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_1}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_1}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_1}}</span></li>
+                <li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_2}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_2}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_2}}</span></li></ul></li>
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Martes</h4>
+            <ul><li class="wf-agenda__item wf-agenda__item--destacado"><span class="wf-agenda__hora">{{HORA_3}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_3}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_3}}</span></li></ul></li>
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Miércoles</h4>
+            <ul><li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_1}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_1}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_1}}</span></li>
+                <li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_2}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_2}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_2}}</span></li></ul></li>
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Jueves</h4>
+            <ul><li class="wf-agenda__item wf-agenda__item--destacado"><span class="wf-agenda__hora">{{HORA_3}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_3}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_3}}</span></li></ul></li>
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Viernes</h4>
+            <ul><li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_4}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_4}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_4}}</span></li></ul></li>
+          <li class="wf-agenda__dia"><h4 class="wf-agenda__nombre">Sábado</h4>
+            <ul><li class="wf-agenda__item"><span class="wf-agenda__hora">{{HORA_5}}</span> <span class="wf-agenda__act">{{ACTIVIDAD_5}}</span> <span class="wf-agenda__quien">{{PROFE_O_SALA_5}}</span></li></ul></li>
+          <li class="wf-agenda__dia wf-agenda__dia--cerrado"><h4 class="wf-agenda__nombre">Domingo</h4>
+            <p class="wf-agenda__vacio">Sin actividad</p></li>
+        </ol>
+        <p class="wf-agenda__pie"><a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=Hola%2C%20quer%C3%ADa%20reservar%20un%20lugar%20en%20una%20clase.%20%C2%BFHay%20cupo%3F">
+          <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+          Reservar lugar</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FICHA PROPIEDAD -->
+<section id="c-ficha-propiedad" class="doc-sec">
+  <header class="doc-head wf-container">
+    <h2 class="wf-display">Ficha de propiedad <code>.wf-propiedad</code></h2>
+    <p>Una propiedad en venta o alquiler: fotos, código de referencia, los datos que se comparan (ambientes, superficie, expensas) y la zona aproximada, sin la dirección exacta. La consulta por WhatsApp sale con la referencia, así la inmobiliaria sabe por cuál le escriben.</p>
+    <dl>
+      <dt>Rinde en</dt><dd>Inmobiliarias de barrio, martilleros, dueños que alquilan directo, alquileres temporarios.</dd>
+      <dt>Necesita</dt><dd><code>.wf-propiedad</code>, <code>.wf-ph</code>, <code>.wf-chip</code>, <code>.wf-btn</code>. Sin JS (las fotos pueden ir dentro de <code>.wf-galeria</code> si querés lightbox).</dd>
+    </dl>
+  </header>
+
+  <div class="doc-demo">
+    <article class="wf-propiedad wf-section">
+      <div class="wf-container">
+        <div class="wf-propiedad__cabeza">
+          <p class="wf-propiedad__op"><span class="wf-propiedad__badge">{{OPERACION}}</span> <span class="wf-propiedad__ref">Ref. {{REFERENCIA}}</span></p>
+          <h3 class="wf-titulo">{{TIPO_PROPIEDAD}} en {{BARRIO}}</h3>
+          <p class="wf-propiedad__precio">{{PRECIO_PROPIEDAD}} <small>{{MONEDA_Y_CONDICION}}</small></p>
+        </div>
+        <div class="wf-propiedad__fotos">
+          <div class="wf-ph wf-propiedad__foto--principal" role="img" aria-label="Foto principal pendiente"><svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-casa"/></svg><span class="wf-ph__txt">{{FOTO_FRENTE}}</span></div>
+          <div class="wf-ph" role="img" aria-label="Foto 2 pendiente"><span class="wf-ph__txt">{{FOTO_2}}</span></div>
+          <div class="wf-ph" role="img" aria-label="Foto 3 pendiente"><span class="wf-ph__txt">{{FOTO_3}}</span></div>
+        </div>
+        <div class="wf-propiedad__cuerpo">
+          <dl class="wf-propiedad__datos">
+            <div><dt>Ambientes</dt><dd>{{AMBIENTES}}</dd></div>
+            <div><dt>Dormitorios</dt><dd>{{DORMITORIOS}}</dd></div>
+            <div><dt>Baños</dt><dd>{{BANOS}}</dd></div>
+            <div><dt>Sup. cubierta</dt><dd>{{M2_CUBIERTOS}} m²</dd></div>
+            <div><dt>Sup. total</dt><dd>{{M2_TOTALES}} m²</dd></div>
+            <div><dt>Expensas</dt><dd>{{EXPENSAS}}</dd></div>
+            <div><dt>Antigüedad</dt><dd>{{ANTIGUEDAD}}</dd></div>
+            <div><dt>Apto crédito</dt><dd>{{APTO_CREDITO}}</dd></div>
+          </dl>
+          <div class="wf-propiedad__texto">
+            <p>{{DESCRIPCION_PROPIEDAD}}</p>
+            <ul class="wf-propiedad__extras">
+              <li class="wf-chip">{{EXTRA_1}}</li><li class="wf-chip">{{EXTRA_2}}</li><li class="wf-chip">{{EXTRA_3}}</li>
+            </ul>
+            <p class="wf-propiedad__zona">Zona: {{ZONA_APROXIMADA}}. La dirección exacta se pasa al coordinar la visita.</p>
+            <a class="wf-btn" href="https://wa.me/{{WHATSAPP}}?text=Hola%2C%20me%20interesa%20la%20propiedad%20Ref.%20{{REFERENCIA}}.%20%C2%BFPodemos%20coordinar%20una%20visita%3F">
+              <svg class="wf-icon" aria-hidden="true" focusable="false"><use href="#wf-i-chat"/></svg>
+              Consultar por Ref. {{REFERENCIA}}</a>
+          </div>
+        </div>
+        <p class="wf-propiedad__legal">{{DATOS_MATRICULA_CORREDOR}} · Las medidas y valores son informativos; confirmalos con la inmobiliaria.</p>
+      </div>
+    </article>
   </div>
 </section>
 

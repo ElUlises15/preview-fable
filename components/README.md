@@ -71,6 +71,9 @@ Reglas:
 | Testimonios | `.wf-testimonios` | No | `{{TESTIMONIO_n}}` `{{NOMBRE_CLIENTE_n}}` `{{FUENTE_RESENA_n}}` |
 | CTA banda | `.wf-cta` | No | `{{HORARIO_RESUMEN}}` `{{BARRIO}}` `{{WHATSAPP}}` |
 | Footer | `.wf-footer` | No | `{{NOMBRE_NEGOCIO}}` `{{RUBRO}}` `{{BARRIO}}` `{{LOCALIDAD}}` `{{DIRECCION}}` `{{DIRECCION_URLENCODED}}` `{{TELEFONO}}` `{{TELEFONO_LINK}}` `{{WHATSAPP}}` `{{WHATSAPP_VISIBLE}}` `{{EMAIL}}` `{{INSTAGRAM_USUARIO}}` `{{FACEBOOK_USUARIO}}` `{{ANIO}}` |
+| Ficha de producto con stock | `.wf-producto` + `.wf-stock` | No | `{{FOTO_PRODUCTO}}` `{{CATEGORIA_PRODUCTO}}` `{{NOMBRE_PRODUCTO}}` `{{DESCRIPCION_PRODUCTO}}` `{{PRECIO_PRODUCTO}}` `{{FECHA_ACTUALIZACION_STOCK}}` `{{VARIANTE_n}}` `{{DEMORA_PEDIDO}}` `{{NOMBRE_PRODUCTO_URLENCODED}}` `{{WHATSAPP}}` |
+| Agenda semanal | `.wf-agenda` | No | `{{AGENDA_KICKER}}` `{{FECHA_VIGENCIA_AGENDA}}` `{{HORA_n}}` `{{ACTIVIDAD_n}}` `{{PROFE_O_SALA_n}}` `{{WHATSAPP}}` |
+| Ficha de propiedad | `.wf-propiedad` | No | `{{OPERACION}}` `{{REFERENCIA}}` `{{TIPO_PROPIEDAD}}` `{{BARRIO}}` `{{PRECIO_PROPIEDAD}}` `{{MONEDA_Y_CONDICION}}` `{{FOTO_FRENTE}}` `{{FOTO_n}}` `{{AMBIENTES}}` `{{DORMITORIOS}}` `{{BANOS}}` `{{M2_CUBIERTOS}}` `{{M2_TOTALES}}` `{{EXPENSAS}}` `{{ANTIGUEDAD}}` `{{APTO_CREDITO}}` `{{DESCRIPCION_PROPIEDAD}}` `{{EXTRA_n}}` `{{ZONA_APROXIMADA}}` `{{DATOS_MATRICULA_CORREDOR}}` `{{WHATSAPP}}` |
 | Íconos | `.wf-icon` + `.wf-sprite` | No | — |
 | Tokens (muestra) | `.wf-tokens` | No | — (uso interno) |
 
@@ -93,6 +96,12 @@ Piezas sueltas que usan varios componentes: `.wf-container`, `.wf-section`, `.wf
 | Paleta (solo galería) | `data-wf-paleta` (grupo, arranca con `hidden`), `data-wf-paleta-op="taller"` (botón) |
 
 Si falta un componente en la página, su bloque de JS no hace nada y no tira errores.
+
+### Lote 2 (12/11/2026): cómo personalizar
+
+- **Ficha de producto con stock:** el estado se marca a mano cambiando la clase (`wf-stock--hay`, `--pocas`, `--pedido`, `--sin`) y el texto. No hay stock en tiempo real: actualizá `{{FECHA_ACTUALIZACION_STOCK}}` cada vez que lo toques y dejá la aclaración de “confirmá por WhatsApp”. El estado no depende solo del color (punto lleno / medio / punteado / tachado).
+- **Agenda semanal:** cada `<li class="wf-agenda__dia">` es un día; repetí `.wf-agenda__item` por actividad. Si un día no hay nada, dejá `wf-agenda__dia--cerrado` con “Sin actividad” (no lo borres: la gente busca el día). Marcá como `--destacado` como mucho una actividad.
+- **Ficha de propiedad:** usá una ficha por propiedad con su `{{REFERENCIA}}` (la misma que usa la inmobiliaria en sus carteles/portales). No pongas la dirección exacta: solo `{{ZONA_APROXIMADA}}`. `{{DATOS_MATRICULA_CORREDOR}}`: nombre del corredor y matrícula tal cual se los pase el cliente (los corredores matriculados suelen tener que mostrarla en su publicidad; confirmalo con ellos). Si publica un dueño directo, reemplazalo por “Publica el propietario”. Precio, moneda, expensas y medidas los confirma el cliente; si alguno no se publica, borrá la fila entera.
 
 ## Reglas de la casa
 

@@ -1519,3 +1519,185 @@ svg {
     transform: none;
   }
 }
+
+/* ==========================================================================
+   Lote 2 (12/11/2026): ficha de producto con stock, agenda semanal,
+   ficha de propiedad. Solo tokens; sin colores escritos a mano salvo los
+   estados de stock, que derivan de --wf-ink/--wf-surface con color-mix.
+   ========================================================================== */
+
+/* --- Ficha de producto con stock --- */
+.wf-producto__grid { display: grid; gap: var(--wf-space-6); }
+.wf-producto__foto { aspect-ratio: 1 / 1; }
+.wf-producto__precio {
+  margin: var(--wf-space-4) 0 0;
+  font-family: var(--wf-font-display);
+  font-size: var(--wf-text-xl);
+  font-weight: var(--wf-display-weight);
+}
+.wf-producto__precio-rot {
+  display: block;
+  font-family: var(--wf-font-mono);
+  font-size: var(--wf-text-xs);
+  font-weight: 400;
+  color: var(--wf-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.wf-producto__variantes {
+  width: 100%;
+  margin-top: var(--wf-space-5);
+  border-collapse: collapse;
+  font-size: var(--wf-text-s);
+}
+.wf-producto__variantes caption {
+  text-align: left;
+  padding-bottom: var(--wf-space-2);
+  font-family: var(--wf-font-mono);
+  font-size: var(--wf-text-xs);
+  color: var(--wf-ink-soft);
+}
+.wf-producto__variantes th,
+.wf-producto__variantes td {
+  padding: var(--wf-space-3) var(--wf-space-2);
+  border-bottom: 1px solid var(--wf-line);
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+.wf-producto__variantes thead th {
+  font-size: var(--wf-text-xs);
+  color: var(--wf-ink-soft);
+  border-bottom: var(--wf-borde) solid var(--wf-line-strong);
+}
+.wf-producto__aclaracion {
+  margin: var(--wf-space-4) 0 var(--wf-space-5);
+  font-size: var(--wf-text-s);
+  color: var(--wf-ink-soft);
+}
+.wf-stock {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--wf-space-2);
+  font-weight: 700;
+  color: var(--wf-ink);
+}
+.wf-stock::before {
+  content: "";
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: var(--wf-borde) solid var(--wf-ink);
+  border-radius: 50%;
+}
+.wf-stock--hay::before { background: var(--wf-ink); }
+.wf-stock--pocas::before { background: linear-gradient(90deg, var(--wf-ink) 50%, transparent 50%); }
+.wf-stock--pedido::before { border-style: dashed; }
+.wf-stock--sin { color: var(--wf-ink-soft); text-decoration: line-through; }
+.wf-stock--sin::before { border-color: var(--wf-ink-soft); }
+@media (min-width: 48rem) {
+  .wf-producto__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
+}
+
+/* --- Agenda semanal --- */
+.wf-agenda__semana {
+  list-style: none;
+  margin: var(--wf-space-6) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  border-top: var(--wf-borde) solid var(--wf-line-strong);
+}
+.wf-agenda__dia {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: var(--wf-space-3);
+  padding-block: var(--wf-space-4);
+  border-bottom: 1px solid var(--wf-line);
+}
+.wf-agenda__nombre {
+  margin: 0;
+  font-family: var(--wf-font-display);
+  font-size: var(--wf-text-l);
+  font-weight: var(--wf-display-weight);
+  text-transform: var(--wf-display-case);
+  letter-spacing: var(--wf-display-tracking);
+}
+.wf-agenda__dia ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--wf-space-3); }
+.wf-agenda__item {
+  display: grid;
+  gap: 2px;
+  padding: var(--wf-space-2) var(--wf-space-3);
+  background: var(--wf-surface);
+  border-left: var(--wf-borde-grueso) solid var(--wf-line-strong);
+  border-radius: var(--wf-radius-s);
+  overflow-wrap: anywhere;
+}
+.wf-agenda__item--destacado { border-left-color: var(--wf-accent); box-shadow: var(--wf-shadow-1); }
+.wf-agenda__hora { font-family: var(--wf-font-mono); font-size: var(--wf-text-xs); color: var(--wf-ink-soft); }
+.wf-agenda__act { font-weight: 700; }
+.wf-agenda__quien { font-size: var(--wf-text-s); color: var(--wf-ink-soft); }
+.wf-agenda__vacio { margin: 0; font-size: var(--wf-text-s); color: var(--wf-ink-soft); font-style: italic; }
+.wf-agenda__dia--cerrado .wf-agenda__nombre { color: var(--wf-ink-soft); }
+.wf-agenda__pie { margin: var(--wf-space-6) 0 0; }
+@media (min-width: 56rem) {
+  .wf-agenda__semana { grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 0; gap: var(--wf-space-2); }
+  .wf-agenda__dia {
+    grid-template-columns: 1fr;
+    align-content: start;
+    padding: var(--wf-space-3) 0 0;
+    border-bottom: 0;
+    border-top: var(--wf-borde) solid var(--wf-line-strong);
+  }
+  .wf-agenda__nombre { font-size: var(--wf-text-m); }
+}
+
+/* --- Ficha de propiedad --- */
+.wf-propiedad__cabeza { display: grid; gap: var(--wf-space-2); }
+.wf-propiedad__op { margin: 0; display: flex; flex-wrap: wrap; gap: var(--wf-space-3); align-items: center; }
+.wf-propiedad__badge {
+  padding: var(--wf-space-1) var(--wf-space-3);
+  font-weight: 700;
+  font-size: var(--wf-text-s);
+  color: var(--wf-on-accent);
+  background: var(--wf-accent);
+  border-radius: var(--wf-radius-s);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.wf-propiedad__ref { font-family: var(--wf-font-mono); font-size: var(--wf-text-xs); color: var(--wf-ink-soft); }
+.wf-propiedad__precio {
+  margin: 0;
+  font-family: var(--wf-font-display);
+  font-size: var(--wf-text-xl);
+  font-weight: var(--wf-display-weight);
+}
+.wf-propiedad__precio small { font-family: var(--wf-font-body); font-size: var(--wf-text-s); font-weight: 400; color: var(--wf-ink-soft); }
+.wf-propiedad__fotos {
+  display: grid;
+  gap: var(--wf-space-2);
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--wf-space-5);
+}
+.wf-propiedad__foto--principal { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.wf-propiedad__cuerpo { display: grid; gap: var(--wf-space-6); margin-top: var(--wf-space-6); }
+.wf-propiedad__datos {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--wf-borde) solid var(--wf-line-strong);
+}
+.wf-propiedad__datos div { padding: var(--wf-space-3) var(--wf-space-2) var(--wf-space-3) 0; border-bottom: 1px solid var(--wf-line); }
+.wf-propiedad__datos dt { font-family: var(--wf-font-mono); font-size: var(--wf-text-xs); color: var(--wf-ink-soft); }
+.wf-propiedad__datos dd { margin: 2px 0 0; font-weight: 700; overflow-wrap: anywhere; }
+.wf-propiedad__texto > p:first-child { margin-top: 0; }
+.wf-propiedad__extras { list-style: none; margin: var(--wf-space-4) 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--wf-space-2); }
+.wf-propiedad__extras .wf-chip { display: inline-flex; align-items: center; cursor: default; }
+.wf-propiedad__zona { font-size: var(--wf-text-s); color: var(--wf-ink-soft); margin-bottom: var(--wf-space-5); }
+.wf-propiedad__legal { margin: var(--wf-space-6) 0 0; font-size: var(--wf-text-xs); color: var(--wf-ink-soft); }
+@media (min-width: 48rem) {
+  .wf-propiedad__fotos { grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; }
+  .wf-propiedad__foto--principal { grid-column: 1; grid-row: 1 / 3; aspect-ratio: auto; min-height: 22rem; }
+  .wf-propiedad__cuerpo { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+  .wf-propiedad__datos { grid-template-columns: repeat(2, minmax(0, 1fr)); align-self: start; }
+}
