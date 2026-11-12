@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{NOMBRE}} · Inmobiliaria en {{BARRIO}}, {{CIUDAD}}</title>
+  <meta name="description" content="Venta, alquiler y tasaciones en {{BARRIO}}, {{CIUDAD}}. {{NOMBRE}}, corredor matriculado {{MATRICULA}}. Consultas por WhatsApp al {{WHATSAPP_VISIBLE}}.">
+  <meta name="theme-color" content="#a8231b">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="tpl-banner" role="note">Plantilla Web Factory: los textos entre {{ }} son de ejemplo. Reemplazalos con datos reales del cliente antes de publicar.</div>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- Set único de íconos: trazo lineal, mismo grosor (definido en .ico) -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-llave" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M13.5 9.5l2 2"/></symbol>
+  <symbol id="i-regla" viewBox="0 0 24 24"><path d="M3 17L17 3l4 4L7 21z"/><path d="M7 13l2 2M10 10l2 2M13 7l2 2"/></symbol>
+  <symbol id="i-carpeta" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1"/><path d="M9 4V3h6v1M8 10h8M8 14h8M8 18h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-cartel" viewBox="0 0 24 24"><path d="M5 3v18"/><rect x="5" y="5" width="15" height="9" rx="1"/><path d="M8 8.5h9M8 11h6"/></symbol>
+  <symbol id="i-foto" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></symbol>
+  <symbol id="i-plano" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+  <symbol id="i-sello" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+</svg>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="#inicio">
+      <span class="marca__nombre">{{NOMBRE}}</span>
+      <span class="marca__mat">Corredor matriculado · Mat. {{MATRICULA}}</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#propiedades">Propiedades</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--chico" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20te%20escribo%20desde%20la%20web.%20">
+      <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- 1 · HERO: oferta local arriba del pliegue -->
+  <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <div class="contenedor hero__grilla">
+      <div class="hero__texto">
+        <p class="hero__ojo">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+          Inmobiliaria de barrio · {{BARRIO}}, {{CIUDAD}}
+        </p>
+        <h1 id="hero-titulo">Venta y alquiler en <span class="hero__barrio">{{BARRIO}}</span></h1>
+        <p class="hero__lead">Casas, departamentos y PH para comprar o alquilar en {{BARRIO}} y alrededores. Tasamos tu propiedad y te acompañamos hasta la firma.</p>
+
+        <div class="hero__cta">
+          <a class="btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20estoy%20buscando%20propiedad%20en%20{{BARRIO}}.%20Te%20cuento%20qu%C3%A9%20busco%3A%20">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+            Contanos qué buscás
+          </a>
+          <p class="hero__wa">WhatsApp <strong>{{WHATSAPP_VISIBLE}}</strong></p>
+        </div>
+
+        <ul class="hero__datos">
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reloj"/></svg>{{HORARIO_ATENCION}}</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>{{DIRECCION_OFICINA}}</li>
+        </ul>
+
+        <nav class="atajos" aria-label="Accesos rápidos">
+          <p class="atajos__titulo">Ir directo a</p>
+          <ul>
+            <li><a href="#ref-venta"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-casa"/></svg><span class="atajos__op">Venta</span><span class="atajos__sub">Ver propiedad</span></a></li>
+            <li><a href="#ref-alquiler"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-llave"/></svg><span class="atajos__op">Alquiler</span><span class="atajos__sub">Ver propiedad</span></a></li>
+            <li><a href="#tasacion"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-regla"/></svg><span class="atajos__op">Tasación</span><span class="atajos__sub">Pedila acá</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Carteles de chapa: decorativos, repiten datos ya visibles -->
+      <div class="carteles" aria-hidden="true">
+        <div class="chapa chapa--vende">
+          <p class="chapa__op">Vende</p>
+          <p class="chapa__nombre">{{NOMBRE}}</p>
+          <p class="chapa__tel">{{WHATSAPP_VISIBLE}}</p>
+          <p class="chapa__mat">Mat. {{MATRICULA}}</p>
+        </div>
+        <div class="chapa chapa--alquila">
+          <p class="chapa__op">Alquila</p>
+          <p class="chapa__nombre">{{NOMBRE}}</p>
+          <p class="chapa__tel">{{WHATSAPP_VISIBLE}}</p>
+          <p class="chapa__mat">Mat. {{MATRICULA}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · PROPIEDADES DESTACADAS -->
+  <section class="seccion" id="propiedades" aria-labelledby="prop-titulo">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <p class="ojo">Fichas</p>
+        <h2 id="prop-titulo">Propiedades destacadas</h2>
+        <p class="seccion__intro">Una selección de lo que tenemos en {{BARRIO}} y alrededores. Si no ves lo que buscás, escribinos y te avisamos cuando entre algo parecido.</p>
+      </div>
+
+      <div class="fichas">
+
+        <!-- Ficha 1 · Venta -->
+        <article class="ficha" id="ref-venta" aria-labelledby="ficha-1-titulo">
+          <div class="ficha__cabeza">
+            <p class="ficha__op"><span class="badge badge--venta">Venta</span> <span class="ficha__ref">Ref. {{REFERENCIA_1}}</span></p>
+            <h3 id="ficha-1-titulo">{{TIPO_PROPIEDAD_1}} en {{BARRIO_PROPIEDAD_1}}</h3>
+            <p class="ficha__precio">{{PRECIO_PROPIEDAD_1}} <small>{{MONEDA_Y_CONDICION_1}}</small></p>
+          </div>
+          <div class="ficha__fotos">
+            <div class="ph ph--principal" role="img" aria-label="Foto pendiente: frente de la propiedad Ref. {{REFERENCIA_1}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-casa"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_1_FRENTE}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: interior de la propiedad Ref. {{REFERENCIA_1}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_1_B}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: otro ambiente de la propiedad Ref. {{REFERENCIA_1}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_1_C}}</span>
+            </div>
+          </div>
+          <div class="ficha__cuerpo">
+            <dl class="datos">
+              <div><dt>Ambientes</dt><dd>{{AMBIENTES_1}}</dd></div>
+              <div><dt>Dormitorios</dt><dd>{{DORMITORIOS_1}}</dd></div>
+              <div><dt>Baños</dt><dd>{{BANOS_1}}</dd></div>
+              <div><dt>Sup. cubierta</dt><dd>{{M2_CUBIERTOS_1}} m²</dd></div>
+              <div><dt>Sup. total</dt><dd>{{M2_TOTALES_1}} m²</dd></div>
+              <div><dt>Expensas</dt><dd>{{EXPENSAS_1}}</dd></div>
+              <div><dt>Antigüedad</dt><dd>{{ANTIGUEDAD_1}}</dd></div>
+              <div><dt>Apto crédito</dt><dd>{{APTO_CREDITO_1}}</dd></div>
+            </dl>
+            <div class="ficha__texto">
+              <p>{{DESCRIPCION_PROPIEDAD_1}}</p>
+              <ul class="chips">
+                <li>{{EXTRA_1A}}</li><li>{{EXTRA_1B}}</li><li>{{EXTRA_1C}}</li>
+              </ul>
+              <p class="ficha__zona"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Zona: {{ZONA_APROXIMADA_1}}. La dirección exacta se pasa al coordinar la visita.</span></p>
+              <a class="btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20me%20interesa%20la%20propiedad%20Ref.%20{{REFERENCIA_1}}.%20%C2%BFPodemos%20coordinar%20una%20visita%3F">
+                <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+                Consultar por Ref. {{REFERENCIA_1}}
+              </a>
+            </div>
+          </div>
+          <p class="ficha__legal">{{NOMBRE_CORREDOR}} · Mat. {{MATRICULA}} · Las medidas y valores son informativos; confirmalos con la inmobiliaria.</p>
+        </article>
+
+        <!-- Ficha 2 · Alquiler -->
+        <article class="ficha ficha--invertida" id="ref-alquiler" aria-labelledby="ficha-2-titulo">
+          <div class="ficha__cabeza">
+            <p class="ficha__op"><span class="badge badge--alquiler">Alquiler</span> <span class="ficha__ref">Ref. {{REFERENCIA_2}}</span></p>
+            <h3 id="ficha-2-titulo">{{TIPO_PROPIEDAD_2}} en {{BARRIO_PROPIEDAD_2}}</h3>
+            <p class="ficha__precio">{{PRECIO_PROPIEDAD_2}} <small>{{MONEDA_Y_CONDICION_2}}</small></p>
+          </div>
+          <div class="ficha__fotos">
+            <div class="ph ph--principal" role="img" aria-label="Foto pendiente: frente de la propiedad Ref. {{REFERENCIA_2}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-casa"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_2_FRENTE}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: interior de la propiedad Ref. {{REFERENCIA_2}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_2_B}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: otro ambiente de la propiedad Ref. {{REFERENCIA_2}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_2_C}}</span>
+            </div>
+          </div>
+          <div class="ficha__cuerpo">
+            <dl class="datos">
+              <div><dt>Ambientes</dt><dd>{{AMBIENTES_2}}</dd></div>
+              <div><dt>Dormitorios</dt><dd>{{DORMITORIOS_2}}</dd></div>
+              <div><dt>Baños</dt><dd>{{BANOS_2}}</dd></div>
+              <div><dt>Sup. cubierta</dt><dd>{{M2_CUBIERTOS_2}} m²</dd></div>
+              <div><dt>Expensas</dt><dd>{{EXPENSAS_2}}</dd></div>
+              <div><dt>Contrato</dt><dd>{{DURACION_CONTRATO_2}}</dd></div>
+              <div><dt>Ajuste</dt><dd>{{AJUSTE_ALQUILER_2}}</dd></div>
+              <div><dt>Garantía</dt><dd>{{GARANTIA_2}}</dd></div>
+            </dl>
+            <div class="ficha__texto">
+              <p>{{DESCRIPCION_PROPIEDAD_2}}</p>
+              <ul class="chips">
+                <li>{{EXTRA_2A}}</li><li>{{EXTRA_2B}}</li><li>{{EXTRA_2C}}</li>
+              </ul>
+              <p class="ficha__zona"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Zona: {{ZONA_APROXIMADA_2}}. La dirección exacta se pasa al coordinar la visita.</span></p>
+              <a class="btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20me%20interesa%20el%20alquiler%20Ref.%20{{REFERENCIA_2}}.%20%C2%BFSigue%20disponible%3F%20%C2%BFQu%C3%A9%20requisitos%20piden%3F">
+                <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+                Consultar por Ref. {{REFERENCIA_2}}
+              </a>
+            </div>
+          </div>
+          <p class="ficha__legal">{{NOMBRE_CORREDOR}} · Mat. {{MATRICULA}} · Las medidas y valores son informativos; confirmalos con la inmobiliaria.</p>
+        </article>
+
+        <!-- Ficha 3 · Operación a definir (PH, lote, local…) -->
+        <article class="ficha" id="ref-3" aria-labelledby="ficha-3-titulo">
+          <div class="ficha__cabeza">
+            <p class="ficha__op"><span class="badge badge--otra">{{OPERACION_3}}</span> <span class="ficha__ref">Ref. {{REFERENCIA_3}}</span></p>
+            <h3 id="ficha-3-titulo">{{TIPO_PROPIEDAD_3}} en {{BARRIO_PROPIEDAD_3}}</h3>
+            <p class="ficha__precio">{{PRECIO_PROPIEDAD_3}} <small>{{MONEDA_Y_CONDICION_3}}</small></p>
+          </div>
+          <div class="ficha__fotos">
+            <div class="ph ph--principal" role="img" aria-label="Foto pendiente: frente de la propiedad Ref. {{REFERENCIA_3}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-casa"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_3_FRENTE}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: interior de la propiedad Ref. {{REFERENCIA_3}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_3_B}}</span>
+            </div>
+            <div class="ph" role="img" aria-label="Foto pendiente: plano de la propiedad Ref. {{REFERENCIA_3}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plano"/></svg>
+              <span class="ph__txt">{{FOTO_PROPIEDAD_3_PLANO}}</span>
+            </div>
+          </div>
+          <div class="ficha__cuerpo">
+            <dl class="datos">
+              <div><dt>Ambientes</dt><dd>{{AMBIENTES_3}}</dd></div>
+              <div><dt>Dormitorios</dt><dd>{{DORMITORIOS_3}}</dd></div>
+              <div><dt>Baños</dt><dd>{{BANOS_3}}</dd></div>
+              <div><dt>Sup. cubierta</dt><dd>{{M2_CUBIERTOS_3}} m²</dd></div>
+              <div><dt>Sup. total</dt><dd>{{M2_TOTALES_3}} m²</dd></div>
+              <div><dt>Expensas</dt><dd>{{EXPENSAS_3}}</dd></div>
+              <div><dt>Antigüedad</dt><dd>{{ANTIGUEDAD_3}}</dd></div>
+              <div><dt>Apto crédito</dt><dd>{{APTO_CREDITO_3}}</dd></div>
+            </dl>
+            <div class="ficha__texto">
+              <p>{{DESCRIPCION_PROPIEDAD_3}}</p>
+              <ul class="chips">
+                <li>{{EXTRA_3A}}</li><li>{{EXTRA_3B}}</li><li>{{EXTRA_3C}}</li>
+              </ul>
+              <p class="ficha__zona"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Zona: {{ZONA_APROXIMADA_3}}. La dirección exacta se pasa al coordinar la visita.</span></p>
+              <a class="btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20me%20interesa%20la%20propiedad%20Ref.%20{{REFERENCIA_3}}.%20%C2%BFPodemos%20coordinar%20una%20visita%3F">
+                <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+                Consultar por Ref. {{REFERENCIA_3}}
+              </a>
+            </div>
+          </div>
+          <p class="ficha__legal">{{NOMBRE_CORREDOR}} · Mat. {{MATRICULA}} · Las medidas y valores son informativos; confirmalos con la inmobiliaria.</p>
+        </article>
+      </div>
+
+      <div class="tasacion" id="tasacion">
+        <div>
+          <h3>¿Querés vender o alquilar tu propiedad?</h3>
+          <p>Pedí una tasación: pasamos a verla, la medimos y te decimos a qué valor publicarla en {{BARRIO}}.</p>
+        </div>
+        <a class="btn btn--acento" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20quiero%20pedir%20una%20tasaci%C3%B3n.%20La%20propiedad%20est%C3%A1%20en%3A%20">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-regla"/></svg>
+          Pedir tasación
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · SERVICIOS (layout asimétrico) -->
+  <section class="seccion seccion--papel" id="servicios" aria-labelledby="serv-titulo">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <p class="ojo">Servicios</p>
+        <h2 id="serv-titulo">Qué hacemos por tu propiedad</h2>
+      </div>
+
+      <div class="servicios">
+        <article class="serv serv--destacado">
+          <p class="serv__num"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-cartel"/></svg>01 · Vender</p>
+          <h3>{{SERVICIO_1}}</h3>
+          <p>{{DETALLE_SERVICIO_1}}</p>
+          <a class="btn btn--acento" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20quiero%20consultar%20por%20{{SERVICIO_1}}.%20">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+            Consultar
+          </a>
+        </article>
+        <article class="serv serv--linea">
+          <p class="serv__num"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-llave"/></svg>02 · Alquilar</p>
+          <h3>{{SERVICIO_2}}</h3>
+          <p>{{DETALLE_SERVICIO_2}}</p>
+        </article>
+        <article class="serv serv--linea">
+          <p class="serv__num"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-regla"/></svg>03 · Tasar</p>
+          <h3>{{SERVICIO_3}}</h3>
+          <p>{{DETALLE_SERVICIO_3}}</p>
+        </article>
+        <article class="serv serv--plano">
+          <p class="serv__num"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-carpeta"/></svg>04 · Administrar alquileres</p>
+          <h3>{{SERVICIO_4}}</h3>
+          <p>{{DETALLE_SERVICIO_4}}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · CÓMO TRABAJAMOS + CORREDOR MATRICULADO -->
+  <section class="seccion" id="como-trabajamos" aria-labelledby="trabajo-titulo">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <p class="ojo">Paso a paso</p>
+        <h2 id="trabajo-titulo">Cómo trabajamos</h2>
+      </div>
+
+      <div class="trabajo">
+        <div class="credencial">
+          <p class="credencial__tira"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sello"/></svg>Corredor público matriculado</p>
+          <div class="credencial__cuerpo">
+            <div class="ph ph--retrato" role="img" aria-label="Foto pendiente: retrato de {{NOMBRE_CORREDOR}}">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-foto"/></svg>
+              <span class="ph__txt">{{FOTO_CORREDOR}}</span>
+            </div>
+            <div>
+              <h3>{{NOMBRE_CORREDOR}}</h3>
+              <p class="credencial__rol">Martillero y corredor público a cargo de {{NOMBRE}}</p>
+            </div>
+            <dl class="credencial__datos">
+              <div><dt>Matrícula</dt><dd>{{MATRICULA}}</dd></div>
+              <div><dt>Colegio</dt><dd>{{COLEGIO_PROFESIONAL}}</dd></div>
+              <div><dt>Oficina</dt><dd>{{DIRECCION_OFICINA}}, {{BARRIO}}</dd></div>
+            </dl>
+          </div>
+          <p class="credencial__nota">Podés verificar la matrícula en el colegio profesional antes de firmar.</p>
+        </div>
+
+        <ol class="pasos" role="list">
+          <li class="paso">
+            <div>
+              <h3>Nos contás qué buscás</h3>
+              <p>Por WhatsApp o en la oficina: operación, zona, presupuesto y plazos.</p>
+            </div>
+          </li>
+          <li class="paso">
+            <div>
+              <h3>Vemos la propiedad</h3>
+              <p>Visitamos, medimos y revisamos la documentación antes de publicar o de mostrarte opciones.</p>
+            </div>
+          </li>
+          <li class="paso">
+            <div>
+              <h3>Visitas coordinadas</h3>
+              <p>Cada visita se arregla con día y horario. La dirección exacta se pasa al confirmar.</p>
+            </div>
+          </li>
+          <li class="paso">
+            <div>
+              <h3>Reserva, boleto o contrato</h3>
+              <p>Te acompañamos hasta la firma, con el corredor matriculado presente.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · FAQ + CONTACTO -->
+  <section class="seccion seccion--papel" id="contacto" aria-labelledby="consultas-titulo">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <p class="ojo">Consultas</p>
+        <h2 id="consultas-titulo">Preguntas y contacto</h2>
+      </div>
+
+      <div class="consultas">
+        <div class="faq">
+          <h3 class="subtitulo">Preguntas frecuentes</h3>
+          <details>
+            <summary>¿Qué necesito para alquilar?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">{{RESPUESTA_REQUISITOS_ALQUILER}}</p>
+          </details>
+          <details>
+            <summary>¿Qué garantías aceptan?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">{{RESPUESTA_GARANTIAS}}</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cobran de honorarios?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">{{RESPUESTA_HONORARIOS}}</p>
+          </details>
+          <details>
+            <summary>¿La tasación tiene costo?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">{{RESPUESTA_TASACION}}</p>
+          </details>
+          <details>
+            <summary>¿Trabajan con propiedades aptas crédito?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">{{RESPUESTA_CREDITO}}</p>
+          </details>
+          <details>
+            <summary>¿Por qué no publican la dirección exacta?<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-abajo"/></svg></summary>
+            <p class="faq__resp">Por seguridad de propietarios e inquilinos mostramos solo la zona aproximada. La dirección se pasa al coordinar la visita.</p>
+          </details>
+        </div>
+
+        <div class="contacto">
+          <h3 class="subtitulo">Oficina en {{BARRIO}}</h3>
+          <div class="ph ph--mapa" role="img" aria-label="Mapa pendiente: ubicación de la oficina en {{DIRECCION_OFICINA}}">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plano"/></svg>
+            <span class="ph__txt">{{MAPA_OFICINA}}</span>
+          </div>
+          <ul class="contacto__lista">
+            <li>
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+              <p><span class="contacto__etq">Dirección</span>{{DIRECCION_OFICINA}}, {{BARRIO}}, {{CIUDAD}}</p>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reloj"/></svg>
+              <p><span class="contacto__etq">Horario de atención</span>{{HORARIO_ATENCION}}</p>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+              <p><span class="contacto__etq">Email</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg>
+              <p><span class="contacto__etq">Instagram</span><a href="https://www.instagram.com/{{INSTAGRAM}}/">@{{INSTAGRAM}}</a></p>
+            </li>
+          </ul>
+          <a class="btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%20{{NOMBRE}}%2C%20te%20escribo%20desde%20la%20web.%20Quer%C3%ADa%20consultar%20por%3A%20">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+            Escribinos al {{WHATSAPP_VISIBLE}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__grid">
+    <div>
+      <p class="pie__nombre">{{NOMBRE}}</p>
+      <p class="pie__legal">{{NOMBRE_CORREDOR}} · Martillero y corredor público · Mat. {{MATRICULA}} · {{COLEGIO_PROFESIONAL}}</p>
+      <p class="pie__legal">{{DIRECCION_OFICINA}}, {{BARRIO}}, {{CIUDAD}}</p>
+    </div>
+    <p class="pie__aviso">Las medidas y valores son informativos; confirmalos con la inmobiliaria antes de reservar.</p>
+    <p class="pie__creditos">© {{ANIO}} {{NOMBRE}} · Sitio hecho por Web Factory</p>
+  </div>
+</footer>
+</body>
+</html>
