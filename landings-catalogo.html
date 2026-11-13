@@ -1,0 +1,2865 @@
+<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Catálogo de landings · noviembre 2026</title>
+<style>body{font:16px/1.55 system-ui,sans-serif;max-width:72rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fbfaf7}h1{font-size:clamp(1.6rem,4vw,2.4rem)}h2{margin-top:2.5rem;border-top:2px solid #1d1d1f;padding-top:.8rem}h3{font-size:1.05rem;margin:1.6rem 0 .3rem}
+table{border-collapse:collapse;width:100%;font-size:.88rem;display:block;overflow-x:auto}th,td{border:1px solid #ddd;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#efece4}a{color:#0b57d0;overflow-wrap:anywhere}code{background:#efece4;padding:0 .25rem;overflow-wrap:anywhere}ul{padding-left:1.2rem}</style></head><body>
+<p><a href="landings-catalogo.md">Descargar en Markdown</a> · <a href="./">Volver a preview-fable</a></p><h1>Catálogo de landings y demos — Web Factory / PrintFactory (noviembre 2026)</h1>
+<p>Armado el 13/11/2026 con scripts y lectura de archivos (sin Claude ni Fable, no gastó cuota). Todas las URLs se chequearon con HTTP el 2026-11-13 11:36-03:00 (hora de Buenos Aires). Los datos de modelo, fecha y commit salen de <code>outcome.json</code>, <code>manifest.json</code>, <code>STATUS.md</code> y <code>git log</code>; si no figuran, dice <strong>no consta</strong>. Los planes y precios salen de <code>propuesta.html</code> o de la web real de Web Factory (<code>web-factory-hjs.pages.dev/data/paquetes.json</code>): Básica $150.000 + $30.000/mes · Intermedia $280.000 + $45.000/mes · Completa $450.000 + $60.000/mes.</p>
+<h2>Resumen</h2>
+<ul>
+<li><strong>Total de entradas:</strong> 136 · <strong>URLs chequeadas:</strong> 141 · <strong>Responden 200:</strong> 139 · <strong>Caídas o sin publicar:</strong> 2</li>
+<li><strong>Copias de prueba en preview-fable:</strong> 59 (40 demos + 13 plantillas + componentes + copias de PrintFactory y Web Factory + 3 galerías)</li>
+<li><strong>Producción:</strong> 2 sitios .com.ar, solo listados, sin tocar</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th style="text-align: right;">Entradas</th>
+<th style="text-align: right;">200 OK</th>
+<th style="text-align: right;">Caídas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#a1">preview-fable · Galería Web Factory mejorada (landings, multipágina, webapps, bonus)</a></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#a2">preview-fable · Sourigues mejoradas</a></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#a3">preview-fable · Kit-demos de clientes mejoradas</a></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#a4">preview-fable · Plantillas reutilizables</a></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#a5">preview-fable · Componentes, copias de PrintFactory/Web Factory y galerías</a></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#b">sourigues-demos · Originales del recorrido Sourigues</a></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#c1">Galería Web Factory · Demos originales en GitHub Pages</a></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#c2">demos-clientes · Kit-demos originales en GitHub Pages</a></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#c3">Cloudflare Pages y otras demos/sitios de marca</a></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td><a href="#c4">web-factory-prospectos-review · Propuestas conceptuales por comercio</a></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#d">Producción de clientes (solo listadas, no se tocaron)</a></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><a href="#e">Otros proyectos web propios publicados (no son landings de cliente)</a></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>URLs que no respondieron 200:</strong></p>
+<ul>
+<li>❌ 404 — Apes Peluquería (repo GitHub Pages): <a href="https://elulises15.github.io/apes-peluqueria-demo/">https://elulises15.github.io/apes-peluqueria-demo/</a> — el repo existe en GitHub pero no tiene GitHub Pages activado (la API de Pages da 404). La versión que sí está online figura en la sección C3.</li>
+<li>❌ 404 — Web Factory landing (zona sur): <a href="https://elulises15.github.io/web-factory-landing/">https://elulises15.github.io/web-factory-landing/</a> — el repo existe en GitHub pero no tiene GitHub Pages activado (la API de Pages da 404). La versión que sí está online figura en la sección C3.</li>
+</ul>
+<h2>Tabla índice</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Nombre</th>
+<th>Tipo</th>
+<th>Grupo</th>
+<th>URL</th>
+<th>Estado</th>
+<th>HTTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Café Luna (copia mejorada)</td>
+<td>landing</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/cafe-luna/">https://elulises15.github.io/preview-fable/demos/cafe-luna/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Florería Pétalos (copia mejorada)</td>
+<td>landing</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/floreria-petalos/">https://elulises15.github.io/preview-fable/demos/floreria-petalos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Taller Cadena (copia mejorada)</td>
+<td>landing</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/taller-cadena/">https://elulises15.github.io/preview-fable/demos/taller-cadena/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Hogaza (copia mejorada)</td>
+<td>landing</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/panaderia-hogaza/">https://elulises15.github.io/preview-fable/demos/panaderia-hogaza/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Estudio Vinilo (copia mejorada)</td>
+<td>landing</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/estudio-vinilo/">https://elulises15.github.io/preview-fable/demos/estudio-vinilo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Barbería Bruma (copia mejorada)</td>
+<td>multipágina</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/barberia-bruma/">https://elulises15.github.io/preview-fable/demos/barberia-bruma/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Patitas del Sur (copia mejorada)</td>
+<td>multipágina</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/vet-patitas/">https://elulises15.github.io/preview-fable/demos/vet-patitas/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Hierro (copia mejorada)</td>
+<td>multipágina</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/gym-hierro/">https://elulises15.github.io/preview-fable/demos/gym-hierro/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Casa Fuego (copia mejorada)</td>
+<td>multipágina</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/casa-fuego/">https://elulises15.github.io/preview-fable/demos/casa-fuego/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Salón Aurora (copia mejorada)</td>
+<td>multipágina</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/salon-aurora/">https://elulises15.github.io/preview-fable/demos/salon-aurora/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>TodoHierro (copia mejorada)</td>
+<td>webapp</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/mercadolocal/">https://elulises15.github.io/preview-fable/demos/mercadolocal/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Sonrisa Clara (copia mejorada)</td>
+<td>webapp</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/turnos-dental/">https://elulises15.github.io/preview-fable/demos/turnos-dental/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>VozClara (copia mejorada)</td>
+<td>webapp</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/vozclara/">https://elulises15.github.io/preview-fable/demos/vozclara/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Cancha Norte (copia mejorada)</td>
+<td>webapp</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/club-cancha/">https://elulises15.github.io/preview-fable/demos/club-cancha/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Lo de Mabel (copia mejorada)</td>
+<td>webapp</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/cocina-carta/">https://elulises15.github.io/preview-fable/demos/cocina-carta/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Mate &amp; Magia (copia mejorada)</td>
+<td>webapp (juego)</td>
+<td>A1</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/rpg-ligero/">https://elulises15.github.io/preview-fable/demos/rpg-ligero/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>Peluquería de barrio (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-carlitos/">https://elulises15.github.io/preview-fable/demos/sourigues-carlitos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Distribuidora (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-distribuidora-lusitano/">https://elulises15.github.io/preview-fable/demos/sourigues-distribuidora-lusitano/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>Electricidad (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-electro-ranelagh/">https://elulises15.github.io/preview-fable/demos/sourigues-electro-ranelagh/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>Farmacia (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-martinenco/">https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-martinenco/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td>Farmacia (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-perez/">https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-perez/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td>Ferretería (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-ferreteria-norsur/">https://elulises15.github.io/preview-fable/demos/sourigues-ferreteria-norsur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td>Veterinaria (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-gaddi-veterinaria/">https://elulises15.github.io/preview-fable/demos/sourigues-gaddi-veterinaria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td>Ferretería (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-isamac-ferreteria/">https://elulises15.github.io/preview-fable/demos/sourigues-isamac-ferreteria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td>Juguetería y bazar (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-jugueteria-bazar/">https://elulises15.github.io/preview-fable/demos/sourigues-jugueteria-bazar/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td>Fútbol 5 (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-la-flecha-futbol-5/">https://elulises15.github.io/preview-fable/demos/sourigues-la-flecha-futbol-5/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td>Taller automotor (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-metal-motor/">https://elulises15.github.io/preview-fable/demos/sourigues-metal-motor/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td>Sanitarios (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-sanitarios-aguasur/">https://elulises15.github.io/preview-fable/demos/sourigues-sanitarios-aguasur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td>Outlet de electrodomésticos (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-sourigues-outlet/">https://elulises15.github.io/preview-fable/demos/sourigues-sourigues-outlet/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td>Salón de eventos (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-tata-eventos/">https://elulises15.github.io/preview-fable/demos/sourigues-tata-eventos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">31</td>
+<td>Fiambrería (copia mejorada)</td>
+<td>landing</td>
+<td>A2</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/sourigues-una-feta-mas/">https://elulises15.github.io/preview-fable/demos/sourigues-una-feta-mas/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">32</td>
+<td>Casa de Pastas E&amp;Y (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/casa-de-pastas-ey/">https://elulises15.github.io/preview-fable/demos/casa-de-pastas-ey/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">33</td>
+<td>Churi (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/churi/">https://elulises15.github.io/preview-fable/demos/churi/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">34</td>
+<td>Consul Vet (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/consul-vet/">https://elulises15.github.io/preview-fable/demos/consul-vet/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">35</td>
+<td>Hospital Veterinario del Sur (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/hospital-veterinario-del-sur/">https://elulises15.github.io/preview-fable/demos/hospital-veterinario-del-sur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">36</td>
+<td>Jesi Estudio Fitness (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/jesi-estudio-fitness/">https://elulises15.github.io/preview-fable/demos/jesi-estudio-fitness/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">37</td>
+<td>Swagg Barber (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/swagg-barber/">https://elulises15.github.io/preview-fable/demos/swagg-barber/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">38</td>
+<td>Complejo Aylen (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/complejo-aylen-kit-demo/">https://elulises15.github.io/preview-fable/demos/complejo-aylen-kit-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">39</td>
+<td>El Origen Eventos (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/el-origen-eventos-kit-demo/">https://elulises15.github.io/preview-fable/demos/el-origen-eventos-kit-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">40</td>
+<td>Apes Peluquería (copia mejorada)</td>
+<td>landing</td>
+<td>A3</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/apes-peluqueria/">https://elulises15.github.io/preview-fable/demos/apes-peluqueria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">41</td>
+<td>Plantilla gastro-cafe</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/gastro-cafe/">https://elulises15.github.io/preview-fable/templates/gastro-cafe/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">42</td>
+<td>Plantilla gastro-panaderia</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/gastro-panaderia/">https://elulises15.github.io/preview-fable/templates/gastro-panaderia/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">43</td>
+<td>Plantilla comercio-local</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/comercio-local/">https://elulises15.github.io/preview-fable/templates/comercio-local/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">44</td>
+<td>Plantilla servicios-oficio</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/servicios-oficio/">https://elulises15.github.io/preview-fable/templates/servicios-oficio/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">45</td>
+<td>Plantilla barberia</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/barberia/">https://elulises15.github.io/preview-fable/templates/barberia/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">46</td>
+<td>Plantilla veterinaria</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/veterinaria/">https://elulises15.github.io/preview-fable/templates/veterinaria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">47</td>
+<td>Plantilla gym-fitness</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/gym-fitness/">https://elulises15.github.io/preview-fable/templates/gym-fitness/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td>Plantilla servicios-profesionales</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/servicios-profesionales/">https://elulises15.github.io/preview-fable/templates/servicios-profesionales/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">49</td>
+<td>Plantilla ferreteria</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/ferreteria/">https://elulises15.github.io/preview-fable/templates/ferreteria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td>Plantilla odontologia</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/odontologia/">https://elulises15.github.io/preview-fable/templates/odontologia/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">51</td>
+<td>Plantilla almacen</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/almacen/">https://elulises15.github.io/preview-fable/templates/almacen/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">52</td>
+<td>Plantilla estetica</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/estetica/">https://elulises15.github.io/preview-fable/templates/estetica/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">53</td>
+<td>Plantilla inmobiliaria</td>
+<td>plantilla</td>
+<td>A4</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/inmobiliaria/">https://elulises15.github.io/preview-fable/templates/inmobiliaria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">54</td>
+<td>Librería de componentes Web Factory (16 bloques)</td>
+<td>componente</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/components/">https://elulises15.github.io/preview-fable/components/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">55</td>
+<td>PrintFactory 3D (copia mejorada)</td>
+<td>landing / sitio</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/printfactory/">https://elulises15.github.io/preview-fable/printfactory/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">56</td>
+<td>Web Factory (copia mejorada)</td>
+<td>landing / sitio</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/webfactory/">https://elulises15.github.io/preview-fable/webfactory/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">57</td>
+<td>Índice preview-fable</td>
+<td>galería</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/">https://elulises15.github.io/preview-fable/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">58</td>
+<td>Galería de demos mejoradas</td>
+<td>galería</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/demos/">https://elulises15.github.io/preview-fable/demos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">59</td>
+<td>Galería de plantillas</td>
+<td>galería</td>
+<td>A5</td>
+<td><a href="https://elulises15.github.io/preview-fable/templates/">https://elulises15.github.io/preview-fable/templates/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">60</td>
+<td>Índice Sourigues · Propuestas locales</td>
+<td>galería</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/">https://elulises15.github.io/sourigues-demos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">61</td>
+<td>Carlitos (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/carlitos/">https://elulises15.github.io/sourigues-demos/carlitos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">62</td>
+<td>Distribuidora Lusitano (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/">https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">63</td>
+<td>Electro Ranelagh (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/electro-ranelagh/">https://elulises15.github.io/sourigues-demos/electro-ranelagh/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">64</td>
+<td>Farmacia Martinenco (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/farmacia-martinenco/">https://elulises15.github.io/sourigues-demos/farmacia-martinenco/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">65</td>
+<td>Farmacia Perez (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/farmacia-perez/">https://elulises15.github.io/sourigues-demos/farmacia-perez/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">66</td>
+<td>Ferreteria Norsur (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/ferreteria-norsur/">https://elulises15.github.io/sourigues-demos/ferreteria-norsur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">67</td>
+<td>Gaddi Veterinaria (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/">https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">68</td>
+<td>Isamac Ferreteria (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/isamac-ferreteria/">https://elulises15.github.io/sourigues-demos/isamac-ferreteria/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">69</td>
+<td>Jugueteria Bazar (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/jugueteria-bazar/">https://elulises15.github.io/sourigues-demos/jugueteria-bazar/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">70</td>
+<td>La Flecha Futbol 5 (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/">https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">71</td>
+<td>Metal Motor (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/metal-motor/">https://elulises15.github.io/sourigues-demos/metal-motor/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">72</td>
+<td>Sanitarios Aguasur (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/">https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">73</td>
+<td>Sourigues Outlet (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/sourigues-outlet/">https://elulises15.github.io/sourigues-demos/sourigues-outlet/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">74</td>
+<td>Tata Eventos (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/tata-eventos/">https://elulises15.github.io/sourigues-demos/tata-eventos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">75</td>
+<td>Una Feta Mas (original)</td>
+<td>landing</td>
+<td>B</td>
+<td><a href="https://elulises15.github.io/sourigues-demos/una-feta-mas/">https://elulises15.github.io/sourigues-demos/una-feta-mas/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">76</td>
+<td>Café Luna</td>
+<td>landing</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/cafe-luna/">https://elulises15.github.io/cafe-luna/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">77</td>
+<td>Taller Cadena</td>
+<td>landing</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/taller-cadena/">https://elulises15.github.io/taller-cadena/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">78</td>
+<td>Florería Pétalos</td>
+<td>landing</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/floreria-petalos/">https://elulises15.github.io/floreria-petalos/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">79</td>
+<td>Estudio Vinilo</td>
+<td>landing</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/estudio-vinilo/">https://elulises15.github.io/estudio-vinilo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">80</td>
+<td>Hogaza</td>
+<td>landing</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/panaderia-hogaza/">https://elulises15.github.io/panaderia-hogaza/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">81</td>
+<td>Barbería Bruma</td>
+<td>multipágina</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/barberia-bruma/">https://elulises15.github.io/barberia-bruma/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">82</td>
+<td>Patitas del Sur</td>
+<td>multipágina</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/vet-patitas/">https://elulises15.github.io/vet-patitas/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">83</td>
+<td>Hierro</td>
+<td>multipágina</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/gym-hierro/">https://elulises15.github.io/gym-hierro/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">84</td>
+<td>Casa Fuego</td>
+<td>multipágina</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/casa-fuego/">https://elulises15.github.io/casa-fuego/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">85</td>
+<td>Salón Aurora</td>
+<td>multipágina</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/salon-aurora/">https://elulises15.github.io/salon-aurora/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">86</td>
+<td>TodoHierro</td>
+<td>webapp</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/mercadolocal/">https://elulises15.github.io/mercadolocal/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">87</td>
+<td>Sonrisa Clara</td>
+<td>webapp</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/turnos-dental/">https://elulises15.github.io/turnos-dental/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">88</td>
+<td>VozClara</td>
+<td>webapp</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/vozclara/">https://elulises15.github.io/vozclara/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">89</td>
+<td>Cancha Norte</td>
+<td>webapp</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/club-cancha/">https://elulises15.github.io/club-cancha/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">90</td>
+<td>Lo de Mabel</td>
+<td>webapp</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/cocina-carta/">https://elulises15.github.io/cocina-carta/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">91</td>
+<td>Mate &amp; Magia</td>
+<td>webapp (juego)</td>
+<td>C1</td>
+<td><a href="https://elulises15.github.io/rpg-ligero/">https://elulises15.github.io/rpg-ligero/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">92</td>
+<td>Índice demos-clientes</td>
+<td>galería</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/">https://elulises15.github.io/demos-clientes/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">93</td>
+<td>Casa de Pastas E&amp;Y</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/">https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">94</td>
+<td>Churi</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/churi/">https://elulises15.github.io/demos-clientes/churi/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">95</td>
+<td>Consul Vet</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/consul-vet/">https://elulises15.github.io/demos-clientes/consul-vet/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">96</td>
+<td>Hospital Veterinario del Sur</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/">https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">97</td>
+<td>Jesi Estudio Fitness</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/">https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">98</td>
+<td>Swagg Barber</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/swagg-barber/">https://elulises15.github.io/demos-clientes/swagg-barber/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">99</td>
+<td>Complejo Aylen</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/complejo-aylen/">https://elulises15.github.io/demos-clientes/complejo-aylen/</a></td>
+<td>indexable</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td>El Origen Eventos</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/el-origen-eventos/">https://elulises15.github.io/demos-clientes/el-origen-eventos/</a></td>
+<td>indexable</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">101</td>
+<td>Complejo Aylen (kit-demo)</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/">https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">102</td>
+<td>El Origen Eventos (kit-demo)</td>
+<td>landing</td>
+<td>C2</td>
+<td><a href="https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/">https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">103</td>
+<td>Apes Peluquería (demo)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://apes-peluqueria.pages.dev/">https://apes-peluqueria.pages.dev/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">104</td>
+<td>Apes Peluquería (repo GitHub Pages)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/apes-peluqueria-demo/">https://elulises15.github.io/apes-peluqueria-demo/</a></td>
+<td>sin meta robots</td>
+<td>❌ 404</td>
+</tr>
+<tr>
+<td style="text-align: right;">105</td>
+<td>PrintFactory 3D</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://printfactory3d.pages.dev/">https://printfactory3d.pages.dev/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">106</td>
+<td>PrintFactory 3D (repo GitHub Pages)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/printfactory3d/">https://elulises15.github.io/printfactory3d/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">107</td>
+<td>Web Factory (sitio de la marca)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://web-factory-hjs.pages.dev/">https://web-factory-hjs.pages.dev/</a></td>
+<td>indexable</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">108</td>
+<td>Web Factory landing (zona sur)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/web-factory-landing/">https://elulises15.github.io/web-factory-landing/</a></td>
+<td>sin meta robots</td>
+<td>❌ 404</td>
+</tr>
+<tr>
+<td style="text-align: right;">109</td>
+<td>Web Factory demo (landing vieja)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/web-factory-demo/">https://elulises15.github.io/web-factory-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">110</td>
+<td>Complejo Aylen (Cloudflare Pages)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://complejo-aylen.pages.dev/">https://complejo-aylen.pages.dev/</a></td>
+<td>indexable</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">111</td>
+<td>El Origen Eventos (Cloudflare Pages)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://el-origen-eventos.pages.dev/">https://el-origen-eventos.pages.dev/</a></td>
+<td>indexable</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">112</td>
+<td>Buffet Aylen (demo)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/buffet-aylen-demo/">https://elulises15.github.io/buffet-aylen-demo/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">113</td>
+<td>Galería de prospectos Web Factory (revisión)</td>
+<td>landing</td>
+<td>C3</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/">https://elulises15.github.io/web-factory-prospectos-review/</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">114</td>
+<td>Autoserv Berchi · basica</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/basica/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">115</td>
+<td>Autoserv Berchi · intermedia</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/intermedia/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">116</td>
+<td>Autoserv Berchi · completa</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/completa/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">117</td>
+<td>Ferreteria Emmanuel · basica</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/basica/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">118</td>
+<td>Ferreteria Emmanuel · intermedia</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/intermedia/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">119</td>
+<td>Ferreteria Emmanuel · completa</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/completa/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td>Ferreteria Gutierrez · basica</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/basica/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">121</td>
+<td>Ferreteria Gutierrez · intermedia</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/intermedia/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">122</td>
+<td>Ferreteria Gutierrez · completa</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/completa/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">123</td>
+<td>Granjita Pitru · basica</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/basica/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">124</td>
+<td>Granjita Pitru · intermedia</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/intermedia/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">125</td>
+<td>Granjita Pitru · completa</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/completa/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">126</td>
+<td>La Boutique Del Panadero · basica</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/basica/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">127</td>
+<td>La Boutique Del Panadero · intermedia</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/intermedia/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">128</td>
+<td>La Boutique Del Panadero · completa</td>
+<td>landing</td>
+<td>C4</td>
+<td><a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/completa/site/index.html</a></td>
+<td>noindex</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">129</td>
+<td>Complejo Aylen</td>
+<td>producción</td>
+<td>D</td>
+<td><a href="https://complejoaylen.com.ar/">https://complejoaylen.com.ar/</a></td>
+<td>PRODUCCIÓN</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">130</td>
+<td>El Origen Eventos</td>
+<td>producción</td>
+<td>D</td>
+<td><a href="https://elorigeneventos.com.ar/">https://elorigeneventos.com.ar/</a></td>
+<td>PRODUCCIÓN</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">131</td>
+<td>Hub personal (portfolio)</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/">https://elulises15.github.io/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">132</td>
+<td>Rachazo · demo web (ex Habit Quest)</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/habit-quest-demo/">https://elulises15.github.io/habit-quest-demo/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">133</td>
+<td>Órbita (prototipo)</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/orbita/">https://elulises15.github.io/orbita/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">134</td>
+<td>Política 8D</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/politica-8d/">https://elulises15.github.io/politica-8d/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">135</td>
+<td>Speechify app (lector)</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/speechify-app/">https://elulises15.github.io/speechify-app/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+<tr>
+<td style="text-align: right;">136</td>
+<td>Paladin Survival demo web</td>
+<td>web/app (no landing de cliente)</td>
+<td>E</td>
+<td><a href="https://elulises15.github.io/paladin-survival-demo/">https://elulises15.github.io/paladin-survival-demo/</a></td>
+<td>sin meta robots</td>
+<td>✅ 200</td>
+</tr>
+</tbody>
+</table>
+<p><a id="a1"></a></p>
+<h2>A1 · preview-fable · Galería Web Factory mejorada (landings, multipágina, webapps, bonus)</h2>
+<p>Copias mejoradas de las 16 demos de la galería Web Factory (las originales, hechas con Codex, están en C1 y no se tocaron). Repo: ElUlises15/preview-fable.</p>
+<h3>1. Café Luna (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Café (gastro)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/cafe-luna/">https://elulises15.github.io/preview-fable/demos/cafe-luna/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>ce94a9f 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/cafe-luna/">https://elulises15.github.io/cafe-luna/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/cafe-luna/fable (original copiado de /workspace/webtest/cafe-luna)</code></li>
+</ul>
+<h3>2. Florería Pétalos (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Florería (comercio local)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/floreria-petalos/">https://elulises15.github.io/preview-fable/demos/floreria-petalos/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>ce94a9f 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/floreria-petalos/">https://elulises15.github.io/floreria-petalos/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/floreria-petalos/fable (original copiado de /workspace/webtest/floreria-petalos)</code></li>
+</ul>
+<h3>3. Taller Cadena (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Taller de bicis (oficio)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/taller-cadena/">https://elulises15.github.io/preview-fable/demos/taller-cadena/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>ce94a9f 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/taller-cadena/">https://elulises15.github.io/taller-cadena/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/taller-cadena/fable (original copiado de /workspace/webtest/taller-cadena)</code></li>
+</ul>
+<h3>4. Hogaza (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Panadería (gastro)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/panaderia-hogaza/">https://elulises15.github.io/preview-fable/demos/panaderia-hogaza/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>ce94a9f 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/panaderia-hogaza/">https://elulises15.github.io/panaderia-hogaza/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/panaderia-hogaza/fable (original copiado de /workspace/webtest/panaderia-hogaza)</code></li>
+</ul>
+<h3>5. Estudio Vinilo (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Sala de ensayo (servicios)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/estudio-vinilo/">https://elulises15.github.io/preview-fable/demos/estudio-vinilo/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/estudio-vinilo/">https://elulises15.github.io/estudio-vinilo/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/estudio-vinilo/fable (original copiado de /workspace/webtest/estudio-vinilo)</code></li>
+</ul>
+<h3>6. Barbería Bruma (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Barbería</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/barberia-bruma/">https://elulises15.github.io/preview-fable/demos/barberia-bruma/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/barberia-bruma/">https://elulises15.github.io/barberia-bruma/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/barberia-bruma/fable (original copiado de /workspace/webtest/barberia-bruma)</code></li>
+</ul>
+<h3>7. Patitas del Sur (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/vet-patitas/">https://elulises15.github.io/preview-fable/demos/vet-patitas/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/vet-patitas/">https://elulises15.github.io/vet-patitas/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/vet-patitas/fable (original copiado de /workspace/webtest/vet-patitas)</code></li>
+</ul>
+<h3>8. Hierro (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gimnasio</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/gym-hierro/">https://elulises15.github.io/preview-fable/demos/gym-hierro/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/gym-hierro/">https://elulises15.github.io/gym-hierro/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/gym-hierro/fable (original copiado de /workspace/webtest/gym-hierro)</code></li>
+</ul>
+<h3>9. Casa Fuego (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Parrilla</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/casa-fuego/">https://elulises15.github.io/preview-fable/demos/casa-fuego/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/casa-fuego/">https://elulises15.github.io/casa-fuego/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/casa-fuego/fable (original copiado de /workspace/webtest/casa-fuego)</code></li>
+</ul>
+<h3>10. Salón Aurora (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/salon-aurora/">https://elulises15.github.io/preview-fable/demos/salon-aurora/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/salon-aurora/">https://elulises15.github.io/salon-aurora/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/salon-aurora/fable (original copiado de /workspace/webtest/salon-aurora)</code></li>
+</ul>
+<h3>11. TodoHierro (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería con catálogo y carrito</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/mercadolocal/">https://elulises15.github.io/preview-fable/demos/mercadolocal/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>d335054 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/mercadolocal/">https://elulises15.github.io/mercadolocal/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/mercadolocal/fable (original copiado de /workspace/webtest/mercadolocal/frontend)</code></li>
+</ul>
+<h3>12. Sonrisa Clara (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Turnos odontológicos</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/turnos-dental/">https://elulises15.github.io/preview-fable/demos/turnos-dental/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>d335054 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/turnos-dental/">https://elulises15.github.io/turnos-dental/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/turnos-dental/fable (original copiado de /workspace/webtest/turnos-dental/public)</code></li>
+</ul>
+<h3>13. VozClara (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Lector de textos en voz alta (PWA)</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/vozclara/">https://elulises15.github.io/preview-fable/demos/vozclara/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>d335054 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/vozclara/">https://elulises15.github.io/vozclara/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/vozclara/fable (original copiado de /workspace/webtest/vozclara/dist)</code></li>
+</ul>
+<h3>14. Cancha Norte (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Reservas de canchas</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/club-cancha/">https://elulises15.github.io/preview-fable/demos/club-cancha/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>d335054 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/club-cancha/">https://elulises15.github.io/club-cancha/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/club-cancha/fable (original copiado de /workspace/webtest/club-cancha/public)</code></li>
+</ul>
+<h3>15. Lo de Mabel (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Carta y pedidos desde la mesa</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/cocina-carta/">https://elulises15.github.io/preview-fable/demos/cocina-carta/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>0c6c561 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/cocina-carta/">https://elulises15.github.io/cocina-carta/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/cocina-carta/fable (original copiado de /workspace/webtest/cocina-carta/dist)</code></li>
+</ul>
+<h3>16. Mate &amp; Magia (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Juego roguelite en el navegador</li>
+<li><strong>Tipo:</strong> webapp (juego)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/rpg-ligero/">https://elulises15.github.io/preview-fable/demos/rpg-ligero/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>0c6c561 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/rpg-ligero/">https://elulises15.github.io/rpg-ligero/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/rpg-ligero/fable (original copiado de /workspace/webtest/rpg-ligero)</code></li>
+</ul>
+<p><a id="a2"></a></p>
+<h2>A2 · preview-fable · Sourigues mejoradas</h2>
+<h3>17. Peluquería de barrio (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Peluquería de barrio (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-carlitos/">https://elulises15.github.io/preview-fable/demos/sourigues-carlitos/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>ca27426 2026-11-11</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/carlitos/">https://elulises15.github.io/sourigues-demos/carlitos/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-carlitos/fable (original copiado de /workspace/sourigues-demos-publicacion/carlitos)</code></li>
+</ul>
+<h3>18. Distribuidora (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Distribuidora (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-distribuidora-lusitano/">https://elulises15.github.io/preview-fable/demos/sourigues-distribuidora-lusitano/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>ca27426 2026-11-11</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/">https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-distribuidora-lusitano/fable (original copiado de /workspace/sourigues-demos-publicacion/distribuidora-lusitano)</code></li>
+</ul>
+<h3>19. Electricidad (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Electricidad (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-electro-ranelagh/">https://elulises15.github.io/preview-fable/demos/sourigues-electro-ranelagh/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>ca27426 2026-11-11</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/electro-ranelagh/">https://elulises15.github.io/sourigues-demos/electro-ranelagh/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-electro-ranelagh/fable (original copiado de /workspace/sourigues-demos-publicacion/electro-ranelagh)</code></li>
+</ul>
+<h3>20. Farmacia (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Farmacia (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-martinenco/">https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-martinenco/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/farmacia-martinenco/">https://elulises15.github.io/sourigues-demos/farmacia-martinenco/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-farmacia-martinenco/fable (original copiado de /workspace/sourigues-demos-publicacion/farmacia-martinenco)</code></li>
+</ul>
+<h3>21. Farmacia (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Farmacia (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-perez/">https://elulises15.github.io/preview-fable/demos/sourigues-farmacia-perez/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/farmacia-perez/">https://elulises15.github.io/sourigues-demos/farmacia-perez/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-farmacia-perez/fable (original copiado de /workspace/sourigues-demos-publicacion/farmacia-perez)</code></li>
+</ul>
+<h3>22. Ferretería (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-ferreteria-norsur/">https://elulises15.github.io/preview-fable/demos/sourigues-ferreteria-norsur/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/ferreteria-norsur/">https://elulises15.github.io/sourigues-demos/ferreteria-norsur/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-ferreteria-norsur/fable (original copiado de /workspace/sourigues-demos-publicacion/ferreteria-norsur)</code></li>
+</ul>
+<h3>23. Veterinaria (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-gaddi-veterinaria/">https://elulises15.github.io/preview-fable/demos/sourigues-gaddi-veterinaria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/">https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-gaddi-veterinaria/fable (original copiado de /workspace/sourigues-demos-publicacion/gaddi-veterinaria)</code></li>
+</ul>
+<h3>24. Ferretería (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-isamac-ferreteria/">https://elulises15.github.io/preview-fable/demos/sourigues-isamac-ferreteria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/isamac-ferreteria/">https://elulises15.github.io/sourigues-demos/isamac-ferreteria/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-isamac-ferreteria/fable (original copiado de /workspace/sourigues-demos-publicacion/isamac-ferreteria)</code></li>
+</ul>
+<h3>25. Juguetería y bazar (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Juguetería y bazar (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-jugueteria-bazar/">https://elulises15.github.io/preview-fable/demos/sourigues-jugueteria-bazar/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/jugueteria-bazar/">https://elulises15.github.io/sourigues-demos/jugueteria-bazar/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-jugueteria-bazar/fable (original copiado de /workspace/sourigues-demos-publicacion/jugueteria-bazar)</code></li>
+</ul>
+<h3>26. Fútbol 5 (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Fútbol 5 (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-la-flecha-futbol-5/">https://elulises15.github.io/preview-fable/demos/sourigues-la-flecha-futbol-5/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/">https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-la-flecha-futbol-5/fable (original copiado de /workspace/sourigues-demos-publicacion/la-flecha-futbol-5)</code></li>
+</ul>
+<h3>27. Taller automotor (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Taller automotor (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-metal-motor/">https://elulises15.github.io/preview-fable/demos/sourigues-metal-motor/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/metal-motor/">https://elulises15.github.io/sourigues-demos/metal-motor/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-metal-motor/fable (original copiado de /workspace/sourigues-demos-publicacion/metal-motor)</code></li>
+</ul>
+<h3>28. Sanitarios (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Sanitarios (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-sanitarios-aguasur/">https://elulises15.github.io/preview-fable/demos/sourigues-sanitarios-aguasur/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/">https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-sanitarios-aguasur/fable (original copiado de /workspace/sourigues-demos-publicacion/sanitarios-aguasur)</code></li>
+</ul>
+<h3>29. Outlet de electrodomésticos (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Outlet de electrodomésticos (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-sourigues-outlet/">https://elulises15.github.io/preview-fable/demos/sourigues-sourigues-outlet/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/sourigues-outlet/">https://elulises15.github.io/sourigues-demos/sourigues-outlet/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-sourigues-outlet/fable (original copiado de /workspace/sourigues-demos-publicacion/sourigues-outlet)</code></li>
+</ul>
+<h3>30. Salón de eventos (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-tata-eventos/">https://elulises15.github.io/preview-fable/demos/sourigues-tata-eventos/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/tata-eventos/">https://elulises15.github.io/sourigues-demos/tata-eventos/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-tata-eventos/fable (original copiado de /workspace/sourigues-demos-publicacion/tata-eventos)</code></li>
+</ul>
+<h3>31. Fiambrería (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Fiambrería (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/sourigues-una-feta-mas/">https://elulises15.github.io/preview-fable/demos/sourigues-una-feta-mas/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/sourigues-demos/una-feta-mas/">https://elulises15.github.io/sourigues-demos/una-feta-mas/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/sourigues-una-feta-mas/fable (original copiado de /workspace/sourigues-demos-publicacion/una-feta-mas)</code></li>
+</ul>
+<p><a id="a3"></a></p>
+<h2>A3 · preview-fable · Kit-demos de clientes mejoradas</h2>
+<h3>32. Casa de Pastas E&amp;Y (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Casa de pastas y pizzería (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/casa-de-pastas-ey/">https://elulises15.github.io/preview-fable/demos/casa-de-pastas-ey/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/">https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/casa-de-pastas-ey/fable (original copiado de /workspace/webteam/demos-clientes-repo/casa-de-pastas-ey)</code></li>
+</ul>
+<h3>33. Churi (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Tienda de ropa y accesorios (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/churi/">https://elulises15.github.io/preview-fable/demos/churi/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/churi/">https://elulises15.github.io/demos-clientes/churi/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/churi/fable (original copiado de /workspace/webteam/demos-clientes-repo/churi)</code></li>
+</ul>
+<h3>34. Consul Vet (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Consultorio veterinario (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/consul-vet/">https://elulises15.github.io/preview-fable/demos/consul-vet/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/consul-vet/">https://elulises15.github.io/demos-clientes/consul-vet/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/consul-vet/fable (original copiado de /workspace/webteam/demos-clientes-repo/consul-vet)</code></li>
+</ul>
+<h3>35. Hospital Veterinario del Sur (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Hospital veterinario (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/hospital-veterinario-del-sur/">https://elulises15.github.io/preview-fable/demos/hospital-veterinario-del-sur/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/">https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/hospital-veterinario-del-sur/fable (original copiado de /workspace/webteam/demos-clientes-repo/hospital-veterinario-del-sur)</code></li>
+</ul>
+<h3>36. Jesi Estudio Fitness (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Estudio de entrenamiento para mujeres (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/jesi-estudio-fitness/">https://elulises15.github.io/preview-fable/demos/jesi-estudio-fitness/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>1fee6db 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/">https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/jesi-estudio-fitness/fable (original copiado de /workspace/webteam/demos-clientes-repo/jesi-estudio-fitness)</code></li>
+</ul>
+<h3>37. Swagg Barber (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Barbería en Berazategui (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/swagg-barber/">https://elulises15.github.io/preview-fable/demos/swagg-barber/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/swagg-barber/">https://elulises15.github.io/demos-clientes/swagg-barber/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/swagg-barber/fable (original copiado de /workspace/webteam/demos-clientes-repo/swagg-barber)</code></li>
+</ul>
+<h3>38. Complejo Aylen (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Complejo de fútbol 11 en Sourigues (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/complejo-aylen-kit-demo/">https://elulises15.github.io/preview-fable/demos/complejo-aylen-kit-demo/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/">https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/complejo-aylen-kit-demo/fable (original copiado de /workspace/webteam/demos-clientes-repo/complejo-aylen-kit-demo)</code></li>
+</ul>
+<h3>39. El Origen Eventos (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos en Sourigues (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/el-origen-eventos-kit-demo/">https://elulises15.github.io/preview-fable/demos/el-origen-eventos-kit-demo/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/">https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/el-origen-eventos-kit-demo/fable (original copiado de /workspace/webteam/demos-clientes-repo/el-origen-eventos-kit-demo)</code></li>
+</ul>
+<h3>40. Apes Peluquería (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Peluquería en Quilmes (landing)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/apes-peluqueria/">https://elulises15.github.io/preview-fable/demos/apes-peluqueria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Original (sin tocar):</strong> <a href="https://apes-peluqueria.pages.dev/">https://apes-peluqueria.pages.dev/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/demos/apes-peluqueria/fable (original copiado de /workspace/webteam/apes-peluqueria/site)</code></li>
+</ul>
+<p><a id="a4"></a></p>
+<h2>A4 · preview-fable · Plantillas reutilizables</h2>
+<p>Fuente: <code>/workspace/webteam/templates-fable/</code> (cada plantilla trae README con placeholders <code>{{...}}</code>). El plan y el precio se ponen solo si figuran en <code>propuesta.html</code>. Si no hay propuesta, se aclara el plan de la demo base según la web de Web Factory.</p>
+<h3>41. Plantilla gastro-cafe</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gastronomía: café, bar, restaurante chico</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/gastro-cafe/">https://elulises15.github.io/preview-fable/templates/gastro-cafe/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Básica ($150.000 + $30.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/gastro-cafe</code></li>
+</ul>
+<h3>42. Plantilla gastro-panaderia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Panadería, pastelería, rotisería, almacén de alimentos</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/gastro-panaderia/">https://elulises15.github.io/preview-fable/templates/gastro-panaderia/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Básica ($150.000 + $30.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/gastro-panaderia</code></li>
+</ul>
+<h3>43. Plantilla comercio-local</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Comercio local / retail de barrio (florería, regalería, bazar, tienda)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/comercio-local/">https://elulises15.github.io/preview-fable/templates/comercio-local/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Básica ($150.000 + $30.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/comercio-local</code></li>
+</ul>
+<h3>44. Plantilla servicios-oficio</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Servicios de oficio (taller, service, reparaciones, cerrajería, electricista)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/servicios-oficio/">https://elulises15.github.io/preview-fable/templates/servicios-oficio/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Básica ($150.000 + $30.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/servicios-oficio</code></li>
+</ul>
+<h3>45. Plantilla barberia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Barbería / peluquería masculina (multipágina)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/barberia/">https://elulises15.github.io/preview-fable/templates/barberia/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Intermedia ($280.000 + $45.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/barberia</code></li>
+</ul>
+<h3>46. Plantilla veterinaria</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria / clínica de mascotas (multipágina)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/veterinaria/">https://elulises15.github.io/preview-fable/templates/veterinaria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Intermedia ($280.000 + $45.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/veterinaria</code></li>
+</ul>
+<h3>47. Plantilla gym-fitness</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gimnasio / estudio fitness (multipágina)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/gym-fitness/">https://elulises15.github.io/preview-fable/templates/gym-fitness/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Intermedia ($280.000 + $45.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/gym-fitness</code></li>
+</ul>
+<h3>48. Plantilla servicios-profesionales</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Servicios profesionales con turnos y tarifas (estudio, consultorio, academia)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/servicios-profesionales/">https://elulises15.github.io/preview-fable/templates/servicios-profesionales/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>dd24562 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> sin propuesta.html; demo base en la web: Básica ($150.000 + $30.000/mes)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/servicios-profesionales</code></li>
+</ul>
+<h3>49. Plantilla ferreteria</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería / corralón / pinturería con catálogo, stock y carrito de retiro (webapp)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/ferreteria/">https://elulises15.github.io/preview-fable/templates/ferreteria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Propuesta:</strong> <a href="https://elulises15.github.io/preview-fable/templates/ferreteria/propuesta.html">https://elulises15.github.io/preview-fable/templates/ferreteria/propuesta.html</a> (✅ 200)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>0c6c561 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según propuesta.html</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/ferreteria</code></li>
+</ul>
+<h3>50. Plantilla odontologia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Consultorio odontológico / salud con agenda de turnos online (webapp)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/odontologia/">https://elulises15.github.io/preview-fable/templates/odontologia/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Propuesta:</strong> <a href="https://elulises15.github.io/preview-fable/templates/odontologia/propuesta.html">https://elulises15.github.io/preview-fable/templates/odontologia/propuesta.html</a> (✅ 200)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>0c6c561 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según propuesta.html</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/odontologia</code></li>
+</ul>
+<h3>51. Plantilla almacen</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Almacén de barrio / despensa / dietética / fiambrería (landing)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/almacen/">https://elulises15.github.io/preview-fable/templates/almacen/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Propuesta:</strong> <a href="https://elulises15.github.io/preview-fable/templates/almacen/propuesta.html">https://elulises15.github.io/preview-fable/templates/almacen/propuesta.html</a> (✅ 200)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-11 · <code>ca27426 2026-11-11</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según propuesta.html</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/almacen</code></li>
+</ul>
+<h3>52. Plantilla estetica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Centro de estética / cosmetología / manicuría / depilación (multipágina con turnos por WhatsApp)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/estetica/">https://elulises15.github.io/preview-fable/templates/estetica/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Propuesta:</strong> <a href="https://elulises15.github.io/preview-fable/templates/estetica/propuesta.html">https://elulises15.github.io/preview-fable/templates/estetica/propuesta.html</a> (✅ 200)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> derivada de demo Fable 5.2 (armado por script mktpl.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>1ec8579 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según propuesta.html</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/estetica</code></li>
+</ul>
+<h3>53. Plantilla inmobiliaria</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Inmobiliaria de barrio / martillero / corredor matriculado (landing 5 secciones, plan Intermedia)</li>
+<li><strong>Tipo:</strong> plantilla</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/inmobiliaria/">https://elulises15.github.io/preview-fable/templates/inmobiliaria/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Propuesta:</strong> <a href="https://elulises15.github.io/preview-fable/templates/inmobiliaria/propuesta.html">https://elulises15.github.io/preview-fable/templates/inmobiliaria/propuesta.html</a> (✅ 200)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>1fee6db 2026-11-12</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según propuesta.html</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/templates-fable/inmobiliaria</code></li>
+</ul>
+<p><a id="a5"></a></p>
+<h2>A5 · preview-fable · Componentes, copias de PrintFactory/Web Factory y galerías</h2>
+<h3>54. Librería de componentes Web Factory (16 bloques)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> todos los rubros</li>
+<li><strong>Tipo:</strong> componente</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/components/">https://elulises15.github.io/preview-fable/components/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2 (lote 1) + a mano sin modelo (lote 2)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>7f22f72 2026-11-12</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/components-fable</code></li>
+</ul>
+<h3>55. PrintFactory 3D (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Impresión 3D</li>
+<li><strong>Tipo:</strong> landing / sitio</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/printfactory/">https://elulises15.github.io/preview-fable/printfactory/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>88edb07 2026-11-11</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://printfactory3d.pages.dev/">https://printfactory3d.pages.dev/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/printfactory-fable</code></li>
+</ul>
+<h3>56. Web Factory (copia mejorada)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Agencia de páginas web</li>
+<li><strong>Tipo:</strong> landing / sitio</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/webfactory/">https://elulises15.github.io/preview-fable/webfactory/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> Fable 5.2</li>
+<li><strong>Fecha / commit:</strong> 2026-11-10 · <code>88edb07 2026-11-11</code></li>
+<li><strong>Original (sin tocar):</strong> <a href="https://web-factory-hjs.pages.dev/">https://web-factory-hjs.pages.dev/</a> (✅ 200)</li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/webfactory-fable</code></li>
+</ul>
+<h3>57. Índice preview-fable</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> índice</li>
+<li><strong>Tipo:</strong> galería</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/">https://elulises15.github.io/preview-fable/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> script</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/publish</code></li>
+</ul>
+<h3>58. Galería de demos mejoradas</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> índice</li>
+<li><strong>Tipo:</strong> galería</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/demos/">https://elulises15.github.io/preview-fable/demos/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> script (galleries.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>6469921 2026-11-12</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/publish/demos</code></li>
+</ul>
+<h3>59. Galería de plantillas</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> índice</li>
+<li><strong>Tipo:</strong> galería</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/preview-fable/templates/">https://elulises15.github.io/preview-fable/templates/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> copia de prueba · noindex</li>
+<li><strong>Modelo:</strong> script (galleries.py)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-12 · <code>1fee6db 2026-11-12</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/preview-fable-2026-11-10/publish/templates</code></li>
+</ul>
+<p><a id="b"></a></p>
+<h2>B · sourigues-demos · Originales del recorrido Sourigues</h2>
+<h3>60. Índice Sourigues · Propuestas locales</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> índice</li>
+<li><strong>Tipo:</strong> galería</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/">https://elulises15.github.io/sourigues-demos/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado</code></li>
+</ul>
+<h3>61. Carlitos (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Peluquería de barrio</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/carlitos/">https://elulises15.github.io/sourigues-demos/carlitos/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/carlitos (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/carlitos)</code></li>
+</ul>
+<h3>62. Distribuidora Lusitano (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Distribuidora</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/">https://elulises15.github.io/sourigues-demos/distribuidora-lusitano/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/distribuidora-lusitano (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/distribuidora-lusitano)</code></li>
+</ul>
+<h3>63. Electro Ranelagh (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Electricidad</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/electro-ranelagh/">https://elulises15.github.io/sourigues-demos/electro-ranelagh/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/electro-ranelagh (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/electro-ranelagh)</code></li>
+</ul>
+<h3>64. Farmacia Martinenco (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Farmacia</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/farmacia-martinenco/">https://elulises15.github.io/sourigues-demos/farmacia-martinenco/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/farmacia-martinenco (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/farmacia-martinenco)</code></li>
+</ul>
+<h3>65. Farmacia Perez (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Farmacia</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/farmacia-perez/">https://elulises15.github.io/sourigues-demos/farmacia-perez/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/farmacia-perez (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/farmacia-perez)</code></li>
+</ul>
+<h3>66. Ferreteria Norsur (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/ferreteria-norsur/">https://elulises15.github.io/sourigues-demos/ferreteria-norsur/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/ferreteria-norsur (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/ferreteria-norsur)</code></li>
+</ul>
+<h3>67. Gaddi Veterinaria (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/">https://elulises15.github.io/sourigues-demos/gaddi-veterinaria/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/gaddi-veterinaria (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/gaddi-veterinaria)</code></li>
+</ul>
+<h3>68. Isamac Ferreteria (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ferretería</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/isamac-ferreteria/">https://elulises15.github.io/sourigues-demos/isamac-ferreteria/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/isamac-ferreteria (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/isamac-ferreteria)</code></li>
+</ul>
+<h3>69. Jugueteria Bazar (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Juguetería y bazar</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/jugueteria-bazar/">https://elulises15.github.io/sourigues-demos/jugueteria-bazar/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/jugueteria-bazar (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/jugueteria-bazar)</code></li>
+</ul>
+<h3>70. La Flecha Futbol 5 (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Fútbol 5</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/">https://elulises15.github.io/sourigues-demos/la-flecha-futbol-5/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/la-flecha-futbol-5 (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/la-flecha-futbol-5)</code></li>
+</ul>
+<h3>71. Metal Motor (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Taller automotor</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/metal-motor/">https://elulises15.github.io/sourigues-demos/metal-motor/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/metal-motor (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/metal-motor)</code></li>
+</ul>
+<h3>72. Sanitarios Aguasur (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Sanitarios</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/">https://elulises15.github.io/sourigues-demos/sanitarios-aguasur/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/sanitarios-aguasur (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/sanitarios-aguasur)</code></li>
+</ul>
+<h3>73. Sourigues Outlet (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Outlet de electrodomésticos</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/sourigues-outlet/">https://elulises15.github.io/sourigues-demos/sourigues-outlet/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/sourigues-outlet (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/sourigues-outlet)</code></li>
+</ul>
+<h3>74. Tata Eventos (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/tata-eventos/">https://elulises15.github.io/sourigues-demos/tata-eventos/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/tata-eventos (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/tata-eventos)</code></li>
+</ul>
+<h3>75. Una Feta Mas (original)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Fiambrería</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/sourigues-demos/una-feta-mas/">https://elulises15.github.io/sourigues-demos/una-feta-mas/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> Opus 5.5 (manifest.json del recorrido)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-08 · <code>1d5a08d 2026-11-08</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/sourigues-demos-publicado/una-feta-mas (trabajo: /workspace/sourigues-prospeccion-2026-11-08/demos/una-feta-mas)</code></li>
+</ul>
+<p><a id="c1"></a></p>
+<h2>C1 · Galería Web Factory · Demos originales en GitHub Pages</h2>
+<h3>76. Café Luna</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Café de especialidad en Villa Crespo. Un rincón para bajar un cambio.</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/cafe-luna/">https://elulises15.github.io/cafe-luna/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/cafe-luna</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/cafe-luna</code></li>
+</ul>
+<h3>77. Taller Cadena</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Taller de bicis en San Telmo: reparaciones, puesta a punto y usadas.</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/taller-cadena/">https://elulises15.github.io/taller-cadena/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/taller-cadena</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/taller-cadena</code></li>
+</ul>
+<h3>78. Florería Pétalos</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Flores de estación y ramos con aire de barrio, en Palermo Soho.</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/floreria-petalos/">https://elulises15.github.io/floreria-petalos/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/floreria-petalos</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/floreria-petalos</code></li>
+</ul>
+<h3>79. Estudio Vinilo</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ensayo y grabación analógica en Almagro.</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/estudio-vinilo/">https://elulises15.github.io/estudio-vinilo/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/estudio-vinilo</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/estudio-vinilo</code></li>
+</ul>
+<h3>80. Hogaza</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Pan de masa madre, corteza y tiempo. Panadería en Colegiales.</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/panaderia-hogaza/">https://elulises15.github.io/panaderia-hogaza/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/panaderia-hogaza</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/panaderia-hogaza</code></li>
+</ul>
+<h3>81. Barbería Bruma</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Cortes clásicos, fades y barba en Villa Urquiza.</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/barberia-bruma/">https://elulises15.github.io/barberia-bruma/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/barberia-bruma</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/barberia-bruma</code></li>
+</ul>
+<h3>82. Patitas del Sur</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria cercana para perros y gatos en Lanús Oeste.</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/vet-patitas/">https://elulises15.github.io/vet-patitas/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/vet-patitas</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/vet-patitas</code></li>
+</ul>
+<h3>83. Hierro</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gimnasio de barrio en Avellaneda: fuerza y comunidad.</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/gym-hierro/">https://elulises15.github.io/gym-hierro/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/gym-hierro</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/gym-hierro</code></li>
+</ul>
+<h3>84. Casa Fuego</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Parrilla a leña en San Isidro. Carta, patio y reservas.</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/casa-fuego/">https://elulises15.github.io/casa-fuego/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/casa-fuego</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/casa-fuego</code></li>
+</ul>
+<h3>85. Salón Aurora</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Cumpleaños y quince en Sourigues, zona sur GBA.</li>
+<li><strong>Tipo:</strong> multipágina</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/salon-aurora/">https://elulises15.github.io/salon-aurora/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/salon-aurora</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/salon-aurora</code></li>
+</ul>
+<h3>86. TodoHierro</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Ecommerce de ferretería con stock (mock en Pages).</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/mercadolocal/">https://elulises15.github.io/mercadolocal/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/mercadolocal</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/mercadolocal</code></li>
+</ul>
+<h3>87. Sonrisa Clara</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Agenda de turnos odontológicos (mock en Pages).</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/turnos-dental/">https://elulises15.github.io/turnos-dental/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/turnos-dental</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/turnos-dental</code></li>
+</ul>
+<h3>88. VozClara</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Texto a voz, a tu ritmo (tipo Speechify).</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/vozclara/">https://elulises15.github.io/vozclara/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/vozclara</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/vozclara</code></li>
+</ul>
+<h3>89. Cancha Norte</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Reservas de cancha para el próximo partido.</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/club-cancha/">https://elulises15.github.io/club-cancha/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/club-cancha</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/club-cancha</code></li>
+</ul>
+<h3>90. Lo de Mabel</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Carta casera y pedidos desde la mesa.</li>
+<li><strong>Tipo:</strong> webapp</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/cocina-carta/">https://elulises15.github.io/cocina-carta/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/cocina-carta</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/cocina-carta</code></li>
+</ul>
+<h3>91. Mate &amp; Magia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> RPG web pampeano: un poquito de magia, un montón de pampa.</li>
+<li><strong>Tipo:</strong> webapp (juego)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/rpg-ligero/">https://elulises15.github.io/rpg-ligero/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo publicada (original) · noindex</li>
+<li><strong>Modelo:</strong> Codex (webtest/STATUS.md)</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>repo ElUlises15/rpg-ligero</code></li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webtest/rpg-ligero</code></li>
+</ul>
+<p><a id="c2"></a></p>
+<h2>C2 · demos-clientes · Kit-demos originales en GitHub Pages</h2>
+<h3>92. Índice demos-clientes</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> índice</li>
+<li><strong>Tipo:</strong> galería</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/">https://elulises15.github.io/demos-clientes/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-18 · <code>618045e 2026-10-18</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo</code></li>
+</ul>
+<h3>93. Casa de Pastas E&amp;Y</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gastronomía</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/">https://elulises15.github.io/demos-clientes/casa-de-pastas-ey/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/casa-de-pastas-ey</code></li>
+</ul>
+<h3>94. Churi</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Indumentaria</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/churi/">https://elulises15.github.io/demos-clientes/churi/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/churi</code></li>
+</ul>
+<h3>95. Consul Vet</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/consul-vet/">https://elulises15.github.io/demos-clientes/consul-vet/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/consul-vet</code></li>
+</ul>
+<h3>96. Hospital Veterinario del Sur</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Veterinaria</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/">https://elulises15.github.io/demos-clientes/hospital-veterinario-del-sur/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/hospital-veterinario-del-sur</code></li>
+</ul>
+<h3>97. Jesi Estudio Fitness</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Gimnasio</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/">https://elulises15.github.io/demos-clientes/jesi-estudio-fitness/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/jesi-estudio-fitness</code></li>
+</ul>
+<h3>98. Swagg Barber</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Barbería</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/swagg-barber/">https://elulises15.github.io/demos-clientes/swagg-barber/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-10-17 · <code>5dc8025</code></li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/swagg-barber</code></li>
+</ul>
+<h3>99. Complejo Aylen</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> no consta</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/complejo-aylen/">https://elulises15.github.io/demos-clientes/complejo-aylen/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · indexable</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>3346248</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/complejo-aylen</code></li>
+</ul>
+<h3>100. El Origen Eventos</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> no consta</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/el-origen-eventos/">https://elulises15.github.io/demos-clientes/el-origen-eventos/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · indexable</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>3346248</code></li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/el-origen-eventos</code></li>
+</ul>
+<h3>101. Complejo Aylen (kit-demo)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Canchas de fútbol</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/">https://elulises15.github.io/demos-clientes/complejo-aylen-kit-demo/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>e4d0b1c</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/complejo-aylen-kit-demo</code></li>
+</ul>
+<h3>102. El Origen Eventos (kit-demo)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/">https://elulises15.github.io/demos-clientes/el-origen-eventos-kit-demo/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> 2026-11-06 · <code>ec9823d</code></li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/demos-clientes-repo/el-origen-eventos-kit-demo</code></li>
+</ul>
+<p><a id="c3"></a></p>
+<h2>C3 · Cloudflare Pages y otras demos/sitios de marca</h2>
+<h3>103. Apes Peluquería (demo)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Peluquería (Quilmes)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://apes-peluqueria.pages.dev/">https://apes-peluqueria.pages.dev/</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> Opus (opus-improve-log.txt)</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/apes-peluqueria/site (repo: /workspace/webteam/apes-peluqueria-repo)</code></li>
+</ul>
+<h3>104. Apes Peluquería (repo GitHub Pages)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Peluquería (Quilmes)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/apes-peluqueria-demo/">https://elulises15.github.io/apes-peluqueria-demo/</a> (❌ 404; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> Opus (opus-improve-log.txt)</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/apes-peluqueria-repo</code></li>
+</ul>
+<h3>105. PrintFactory 3D</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Impresión 3D (Sourigues)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://printfactory3d.pages.dev/">https://printfactory3d.pages.dev/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/printfactory3d/site (repo: /workspace/webteam/printfactory3d-repo)</code></li>
+</ul>
+<h3>106. PrintFactory 3D (repo GitHub Pages)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Impresión 3D</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/printfactory3d/">https://elulises15.github.io/printfactory3d/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/printfactory3d-repo</code></li>
+</ul>
+<h3>107. Web Factory (sitio de la marca)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Agencia de páginas web</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://web-factory-hjs.pages.dev/">https://web-factory-hjs.pages.dev/</a> (✅ 200; robots: <code>index, follow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · indexable</li>
+<li><strong>Modelo:</strong> Codex + Opus (codex-build.log, opus-improve-log.txt)</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/web-factory-marca/site</code></li>
+</ul>
+<h3>108. Web Factory landing (zona sur)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Agencia de páginas web</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-landing/">https://elulises15.github.io/web-factory-landing/</a> (❌ 404; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/web-factory-landing-repo</code></li>
+</ul>
+<h3>109. Web Factory demo (landing vieja)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Agencia de páginas web</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-demo/">https://elulises15.github.io/web-factory-demo/</a> (✅ 200; robots: <code>noindex</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/web-factory-demo</code></li>
+</ul>
+<h3>110. Complejo Aylen (Cloudflare Pages)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Canchas de fútbol 11 (Sourigues)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://complejo-aylen.pages.dev/">https://complejo-aylen.pages.dev/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · indexable</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/complejo-aylen/site</code></li>
+</ul>
+<h3>111. El Origen Eventos (Cloudflare Pages)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Salón de eventos (Sourigues)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://el-origen-eventos.pages.dev/">https://el-origen-eventos.pages.dev/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · indexable</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/el-origen-eventos/site</code></li>
+</ul>
+<h3>112. Buffet Aylen (demo)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Buffet del complejo (menú/QR)</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/buffet-aylen-demo/">https://elulises15.github.io/buffet-aylen-demo/</a> (✅ 200; robots: <code>noindex, nofollow</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/buffet-aylen/site (zip: /workspace/buffet-aylen-publish)</code></li>
+</ul>
+<h3>113. Galería de prospectos Web Factory (revisión)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Propuestas conceptuales por comercio</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/">https://elulises15.github.io/web-factory-prospectos-review/</a> (✅ 200; robots: <code>noindex,nofollow,noarchive</code>)</li>
+<li><strong>Estado:</strong> demo / sitio publicado · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace (solo repo ElUlises15/web-factory-prospectos-review)</code></li>
+</ul>
+<p><a id="c4"></a></p>
+<h2>C4 · web-factory-prospectos-review · Propuestas conceptuales por comercio</h2>
+<p>Propuestas conceptuales (no oficiales, formularios sin envío). No encontré la fuente local en /workspace: está solo en el repo ElUlises15/web-factory-prospectos-review.</p>
+<h3>114. Autoserv Berchi · basica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/basica/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>115. Autoserv Berchi · intermedia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/intermedia/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>116. Autoserv Berchi · completa</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/autoserv-berchi/completa/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>117. Ferreteria Emmanuel · basica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/basica/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>118. Ferreteria Emmanuel · intermedia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/intermedia/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>119. Ferreteria Emmanuel · completa</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-emmanuel/completa/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>120. Ferreteria Gutierrez · basica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/basica/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>121. Ferreteria Gutierrez · intermedia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/intermedia/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>122. Ferreteria Gutierrez · completa</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/ferreteria-gutierrez/completa/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>123. Granjita Pitru · basica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/basica/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>124. Granjita Pitru · intermedia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/intermedia/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>125. Granjita Pitru · completa</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/granjita-pitru/completa/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>126. La Boutique Del Panadero · basica</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/basica/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/basica/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>127. La Boutique Del Panadero · intermedia</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/intermedia/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/intermedia/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Intermedia ($280.000 + $45.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<h3>128. La Boutique Del Panadero · completa</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> prospecto local</li>
+<li><strong>Tipo:</strong> landing</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/completa/site/index.html">https://elulises15.github.io/web-factory-prospectos-review/projects/la-boutique-del-panadero/completa/site/index.html</a> (✅ 200; robots: <code>noindex,nofollow</code>)</li>
+<li><strong>Estado:</strong> demo conceptual (no oficial) · noindex</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Completa ($450.000 + $60.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>no encontrada en /workspace</code></li>
+</ul>
+<p><a id="d"></a></p>
+<h2>D · Producción de clientes (solo listadas, no se tocaron)</h2>
+<p>Son producción real: no se modificaron, no se desplegó nada y no se usaron como copia. Solo se hizo un GET para ver que responden.</p>
+<h3>129. Complejo Aylen</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Cliente</li>
+<li><strong>Tipo:</strong> producción</li>
+<li><strong>URL pública:</strong> <a href="https://complejoaylen.com.ar/">https://complejoaylen.com.ar/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> producción · PRODUCCIÓN</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/complejo-aylen/site (referencia; no se tocó)</code></li>
+</ul>
+<h3>130. El Origen Eventos</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> Cliente</li>
+<li><strong>Tipo:</strong> producción</li>
+<li><strong>URL pública:</strong> <a href="https://elorigeneventos.com.ar/">https://elorigeneventos.com.ar/</a> (✅ 200; robots: <code>index,follow</code>)</li>
+<li><strong>Estado:</strong> producción · PRODUCCIÓN</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Plan/precio:</strong> Básica ($150.000 + $30.000/mes) — según la galería de la web de Web Factory</li>
+<li><strong>Fuente local:</strong> <code>/workspace/webteam/el-origen-eventos/site (referencia; no se tocó)</code></li>
+</ul>
+<p><a id="e"></a></p>
+<h2>E · Otros proyectos web propios publicados (no son landings de cliente)</h2>
+<h3>131. Hub personal (portfolio)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/">https://elulises15.github.io/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/portfolio</code></li>
+</ul>
+<h3>132. Rachazo · demo web (ex Habit Quest)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/habit-quest-demo/">https://elulises15.github.io/habit-quest-demo/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/habit-quest-demo</code></li>
+</ul>
+<h3>133. Órbita (prototipo)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/orbita/">https://elulises15.github.io/orbita/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/orbita</code></li>
+</ul>
+<h3>134. Política 8D</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/politica-8d/">https://elulises15.github.io/politica-8d/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/politica8d</code></li>
+</ul>
+<h3>135. Speechify app (lector)</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/speechify-app/">https://elulises15.github.io/speechify-app/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/speechify-app</code></li>
+</ul>
+<h3>136. Paladin Survival demo web</h3>
+<ul>
+<li><strong>Rubro/vertical:</strong> proyecto propio</li>
+<li><strong>Tipo:</strong> web/app (no landing de cliente)</li>
+<li><strong>URL pública:</strong> <a href="https://elulises15.github.io/paladin-survival-demo/">https://elulises15.github.io/paladin-survival-demo/</a> (✅ 200; robots: <code>sin meta</code>)</li>
+<li><strong>Estado:</strong> publicado · sin meta robots</li>
+<li><strong>Modelo:</strong> no consta</li>
+<li><strong>Fecha / commit:</strong> no consta · no consta</li>
+<li><strong>Fuente local:</strong> <code>/workspace/paladin-publish</code></li>
+</ul>
+<h2>Notas</h2>
+<ul>
+<li><strong>Indexables a propósito o heredadas:</strong> <code>demos-clientes/complejo-aylen/</code> y <code>demos-clientes/el-origen-eventos/</code> responden <code>index,follow</code>, igual que <code>complejo-aylen.pages.dev</code> y <code>el-origen-eventos.pages.dev</code>. Son copias/espejos de los sitios de los clientes. No los cambié; si no deberían indexar, hay que revisarlo aparte.</li>
+<li><strong>Modelo de las originales:</strong> la galería Web Factory (C1) se construyó con Codex según <code>/workspace/webtest/STATUS.md</code>. Las 15 de Sourigues (B), con Opus 5.5 según <code>manifest.json</code> del recorrido. En los kit-demos originales (C2) y los sitios de Cloudflare, el modelo no consta en los archivos.</li>
+<li><strong>Fechas de las copias A1–A3:</strong> salen de la corrida (<code>outcome.json</code>). El commit es el último que tocó esa carpeta en preview-fable.</li>
+<li>Este catálogo se regenera con <code>python3 /workspace/webteam/catalogo/build.py &amp;&amp; python3 /workspace/webteam/catalogo/render.py</code>.</li>
+</ul></body></html>
